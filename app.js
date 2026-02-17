@@ -653,13 +653,34 @@
 
       // ── All checks passed ──
       STATE.selectedModules.add(uid);
+
+      // ── Auto-select prerequisites ──
+      const autoResult = autoSelectPrerequisites(uid);
+
+      const card = document.querySelector(`[data-uid="${CSS.escape(uid)}"]`);
+      if (card) card.classList.add('selected');
+
+      // Show feedback about auto-selected prerequisites
+      if (autoResult.selected.length > 0 || autoResult.failed.length > 0) {
+        let msg = '';
+        if (autoResult.selected.length > 0) {
+          const codes = autoResult.selected.map(u => {
+            const m = STATE.moduleIndex.get(u);
+            return m ? m.code : u;
+          });
+          msg += `Auto-selected ${codes.length} prereq(s): ${codes.join(', ')}`;
+        }
+        if (autoResult.failed.length > 0) {
+          if (msg) msg += '. ';
+          msg += `Could not auto-select: ${autoResult.failed.join('; ')}`;
+        }
+        const duration = msg.length > 80 ? 5500 : 3500;
+        showToast(msg, autoResult.failed.length > 0 ? 'warning' : 'info', duration);
+      }
     } else {
       STATE.selectedModules.delete(uid);
-    }
-
-    const card = document.querySelector(`[data-uid="${CSS.escape(uid)}"]`);
-    if (card) {
-      card.classList.toggle('selected', checked);
+      const card = document.querySelector(`[data-uid="${CSS.escape(uid)}"]`);
+      if (card) card.classList.remove('selected');
     }
 
     updateCreditSummary();
@@ -669,6 +690,167 @@
   function revertCheckbox(uid, value) {
     const cb = document.getElementById(`sel-${CSS.escape(uid)}`);
     if (cb) cb.checked = value;
+  }
+
+  // ===== AUTO-SELECT PREREQUISITES =====
+
+  function findBestEntryForCode(code, requiringYear) {
+    const entries = STATE.codeEntries.get(code);
+    if (!entries) return null;
+
+    const visible = entries.filter(e => isModuleVisible(e, STATE.entryYear));
+    if (visible.length === 0) return null;
+
+    // Prefer already selected
+    const selected = visible.find(e => STATE.selectedModules.has(e.uid));
+    if (selected) return selected;
+
+    // For prerequisites, prefer entries in earlier years
+    const reqYearNum = parseInt(requiringYear.match(/\d/)[0]);
+    const earlier = visible.filter(e => parseInt(e.year.match(/\d/)[0]) < reqYearNum);
+    if (earlier.length > 0) {
+      earlier.sort((a, b) => parseInt(b.year.match(/\d/)[0]) - parseInt(a.year.match(/\d/)[0]));
+      return earlier[0]; // latest earlier year (closest to requiring module)
+    }
+
+    // For corequisites (same year), return any visible
+    return visible[0];
+  }
+
+  function gatherPrereqs(uid, toSelect, visited) {
+    const mod = STATE.moduleIndex.get(uid);
+    if (!mod || !mod.rules) return;
+    if (mod.rules.type === 'exclusion') return;
+
+    // mod.rules.groups = [[codeA, codeB], [codeC]] means (A AND B) OR C
+    // Pick the OR group that requires the fewest new selections
+    let bestEntries = null;
+    let bestNewCount = Infinity;
+
+    for (const andGroup of mod.rules.groups) {
+      let groupOk = true;
+      const entries = [];
+      let newCount = 0;
+
+      for (const code of andGroup) {
+        if (STATE.ghostModules.has(code)) continue;
+        const entry = findBestEntryForCode(code, mod.year);
+        if (!entry) { groupOk = false; break; }
+        entries.push(entry);
+        if (!STATE.selectedModules.has(entry.uid) && !toSelect.has(entry.uid)) {
+          newCount++;
+        }
+      }
+
+      if (groupOk && newCount < bestNewCount) {
+        bestEntries = entries;
+        bestNewCount = newCount;
+      }
+    }
+
+    if (!bestEntries) return;
+
+    for (const entry of bestEntries) {
+      if (STATE.selectedModules.has(entry.uid) || toSelect.has(entry.uid)) continue;
+      if (visited.has(entry.uid)) continue;
+
+      toSelect.add(entry.uid);
+      visited.add(entry.uid);
+      // Recurse: gather this prereq's own prerequisites
+      gatherPrereqs(entry.uid, toSelect, visited);
+    }
+  }
+
+  function canAutoSelect(uid) {
+    const mod = STATE.moduleIndex.get(uid);
+    if (!mod) return { ok: false, reason: 'not found' };
+
+    // Exclusion conflict
+    for (const exUid of mod.exclusionPeers) {
+      if (STATE.selectedModules.has(exUid)) {
+        const exMod = STATE.moduleIndex.get(exUid);
+        return { ok: false, reason: `conflicts with ${exMod ? exMod.code : exUid}` };
+      }
+    }
+
+    // MTHF5036B conditional
+    const hasMTHF5036B = [...STATE.selectedModules].some(u => {
+      const m = STATE.moduleIndex.get(u);
+      return m && m.code === 'MTHF5036B';
+    });
+    if (hasMTHF5036B && isLevel5(mod.code) && mod.sectionKey === 'Options Range C') {
+      return { ok: false, reason: 'Level 5 Range C blocked by MTHF5036B' };
+    }
+
+    // Section credit overflow
+    const sectionInfo = STATE.visibleSections.find(s => s.year === mod.year && s.secKey === mod.sectionKey);
+    if (sectionInfo) {
+      const current = calculateSectionCredits(mod.year, mod.sectionKey);
+      if (current + mod.credits > sectionInfo.creditRule.max) {
+        return { ok: false, reason: `exceeds ${mod.sectionKey} credit limit in ${mod.year}` };
+      }
+    }
+
+    // Semester balance (Year 2U-4U: max 70 per semester)
+    if (mod.year === 'Year 2U' || mod.year === 'Year 3U' || mod.year === 'Year 4U') {
+      const { sem1, sem2 } = calculateSemesterCredits(mod.year);
+      let addSem1 = 0, addSem2 = 0;
+      if (mod.period === 'SEM1') addSem1 = mod.credits;
+      else if (mod.period === 'SEM2') addSem2 = mod.credits;
+      else if (mod.period === 'YEAR') { addSem1 = mod.credits / 2; addSem2 = mod.credits / 2; }
+      if (sem1 + addSem1 > 70 || sem2 + addSem2 > 70) {
+        return { ok: false, reason: `exceeds 70cr semester limit in ${mod.year}` };
+      }
+    }
+
+    // Year total (max 120)
+    let yearTotal = 0;
+    for (const selUid of STATE.selectedModules) {
+      const selMod = STATE.moduleIndex.get(selUid);
+      if (selMod && selMod.year === mod.year && isModuleVisible(selMod, STATE.entryYear)) {
+        yearTotal += selMod.credits;
+      }
+    }
+    if (yearTotal + mod.credits > 120) {
+      return { ok: false, reason: `exceeds 120cr in ${mod.year}` };
+    }
+
+    return { ok: true };
+  }
+
+  function autoSelectPrerequisites(uid) {
+    const result = { selected: [], failed: [] };
+    const toSelect = new Set();
+    const visited = new Set([uid]);
+
+    gatherPrereqs(uid, toSelect, visited);
+
+    // Filter out already selected, sort by year (earliest first)
+    const newToSelect = [...toSelect].filter(u => !STATE.selectedModules.has(u));
+    newToSelect.sort((a, b) => {
+      const ma = STATE.moduleIndex.get(a);
+      const mb = STATE.moduleIndex.get(b);
+      return parseInt(ma.year.match(/\d/)[0]) - parseInt(mb.year.match(/\d/)[0]);
+    });
+
+    for (const prereqUid of newToSelect) {
+      const check = canAutoSelect(prereqUid);
+      if (check.ok) {
+        STATE.selectedModules.add(prereqUid);
+        const card = document.querySelector(`[data-uid="${CSS.escape(prereqUid)}"]`);
+        if (card) {
+          card.classList.add('selected');
+          const cb = card.querySelector('.module-select');
+          if (cb) cb.checked = true;
+        }
+        result.selected.push(prereqUid);
+      } else {
+        const prereqMod = STATE.moduleIndex.get(prereqUid);
+        result.failed.push(`${prereqMod ? prereqMod.code : prereqUid}: ${check.reason}`);
+      }
+    }
+
+    return result;
   }
 
   // ===== SVG DEPENDENCY LINES =====
@@ -1099,7 +1281,7 @@
 
   // ===== TOAST NOTIFICATIONS =====
 
-  function showToast(message, type) {
+  function showToast(message, type, duration) {
     const existing = document.querySelector('.toast');
     if (existing) existing.remove();
 
@@ -1108,7 +1290,7 @@
     toast.textContent = message;
     document.body.appendChild(toast);
 
-    setTimeout(() => toast.remove(), 3500);
+    setTimeout(() => toast.remove(), duration || 3500);
   }
 
   // ===== PERSISTENCE =====
