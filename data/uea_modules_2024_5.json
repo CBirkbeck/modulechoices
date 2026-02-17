@@ -101,7 +101,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "B",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003Y AND TAKE MTHA4006Y OR TAKE MTHA4003A AND TAKE MTHA4003B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003A AND TAKE MTHA4003B",
       "prerequisite_codes": [
         "MTHA4003Y",
         "MTHA4006Y",
@@ -136,7 +136,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "A",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE MTHA4008B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
       "prerequisite_codes": [
         "MTHA4008Y",
         "MTHA4008B"
@@ -181,7 +181,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "D1, E",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE ENV-4015Y OR TAKE MTHA4008A OR TAKE MTHB4010Y",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
         "MTHA4008Y",
         "ENV-4015Y",
@@ -200,7 +200,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "D",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B OR TAKE MTHA4006Y",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B",
       "prerequisite_codes": [
         "MTHA4001A",
         "MTHA4003B",
@@ -251,7 +251,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "C",
-      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y OR TAKE CMP-4009B",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y",
       "prerequisite_codes": [
         "CMP-4008Y",
         "CMP-4009B"
@@ -296,7 +296,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "D1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHA5005A OR TAKE MTHB5011B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHA5005A",
@@ -314,7 +314,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "C2",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005B",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -346,7 +346,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "B2",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5003A AND TAKE MTHA5003B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
         "MTHA5001Y",
         "MTHA5003Y",
@@ -365,7 +365,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "A2",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -384,7 +384,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "C1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -403,7 +403,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "A1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003Y AND TAKE MTHA5001Y OR TAKE MTHA5003A AND TAKE MTHA5003B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
         "MTHA5003Y",
         "MTHA5001Y",
@@ -422,7 +422,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "B1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -441,7 +441,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "B1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5003A AND TAKE MTHA5003B AND TAKE MTHF5035A",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B AND TAKE MTHF5035A",
       "prerequisite_codes": [
         "MTHA5001Y",
         "MTHA5003Y",
@@ -507,7 +507,7 @@
       "credits": "20",
       "period": "YEAR",
       "sub_slot": "C1",
-      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE BIO-5012B",
+      "module_rules": "",
       "prerequisite_codes": [
         "BIO-5012B"
       ]
@@ -551,7 +551,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "D1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE MTHA4008A OR TAKE MTHB4010Y",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
         "MTHA4008Y",
         "MTHA4008A",
@@ -583,7 +583,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "C",
-      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y OR TAKE CMP-4009B",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y",
       "prerequisite_codes": [
         "CMP-4008Y",
         "CMP-4009B"
@@ -688,7 +688,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "D1, E",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE ENV-4015Y OR TAKE MTHA4008A OR TAKE MTHB4010Y",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
         "MTHA4008Y",
         "ENV-4015Y",
@@ -707,7 +707,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "D",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B OR TAKE MTHA4006Y",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B",
       "prerequisite_codes": [
         "MTHA4001A",
         "MTHA4003B",
@@ -816,7 +816,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "C2",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5007Y OR TAKE MTHB5007B",
+      "module_rules": "",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -849,7 +849,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "B2",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5003A AND TAKE MTHA5003B OR TAKE MTHA5004Y AND TAKE MTHA5007Y OR TAKE MTHB5011B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
         "MTHA5001Y",
         "MTHA5003Y",
@@ -871,7 +871,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "A2",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -890,7 +890,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "C1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -909,7 +909,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "A1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003Y AND TAKE MTHA5001Y OR TAKE MTHA5003A AND TAKE MTHA5003B OR TAKE MTHA5004Y AND TAKE MTHA5007Y",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
         "MTHA5003Y",
         "MTHA5001Y",
@@ -930,7 +930,7 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "B1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
         "MTHA5002B",
         "MTHB5011B",
@@ -949,7 +949,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "B1",
-      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5004Y AND TAKE MTHA5007Y OR TAKE MTHA5003A AND TAKE MTHA5003B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
         "MTHA5001Y",
         "MTHA5003Y",
