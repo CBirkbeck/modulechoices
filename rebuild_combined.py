@@ -85,13 +85,15 @@ def main():
     print(f"Found {len(year_files)} year file(s):")
 
     # Load all years
-    all_years = {}  # year_label -> {code -> module_data}
+    # Key by (module_code, year_of_study) since a module can appear
+    # under multiple study years (e.g. Year 2U Range A AND Year 3U Range C)
+    all_years = {}  # year_label -> {(code, study_year) -> module_data}
     for path in year_files:
         year_label, modules = load_year_file(path)
         print(f"  {path.name}: {year_label} — {len(modules)} modules")
         code_map = {}
         for mod in modules:
-            code_map[mod['module_code']] = mod
+            code_map[(mod['module_code'], mod['year'])] = mod
         all_years[year_label] = code_map
 
     year_labels = sorted(all_years.keys())
@@ -103,8 +105,8 @@ def main():
     combined_map = {}
 
     for year_label in year_labels:
-        for code, mod in all_years[year_label].items():
-            key = (code, mod['year'])
+        for (code, study_year), mod in all_years[year_label].items():
+            key = (code, study_year)
             if key not in combined_map:
                 combined_map[key] = {**mod, 'available_years': [], 'content_sections': {}}
             # Always update to the latest version of module data

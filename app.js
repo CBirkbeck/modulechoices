@@ -611,8 +611,8 @@
         }
       }
 
-      // 4. Semester balance check (Year 3U and 4U: max 70 per semester)
-      if (mod.year === 'Year 3U' || mod.year === 'Year 4U') {
+      // 4. Semester balance check (Year 2U-4U: max 70 per semester)
+      if (mod.year === 'Year 2U' || mod.year === 'Year 3U' || mod.year === 'Year 4U') {
         const { sem1, sem2 } = calculateSemesterCredits(mod.year);
         let addSem1 = 0, addSem2 = 0;
         if (mod.period === 'SEM1') addSem1 = mod.credits;
@@ -942,8 +942,8 @@
       }
     }
 
-    // Semester balance info for Year 3U and 4U
-    for (const year of ['Year 3U', 'Year 4U']) {
+    // Semester balance info for Year 2U-4U
+    for (const year of ['Year 2U', 'Year 3U', 'Year 4U']) {
       const { sem1, sem2 } = calculateSemesterCredits(year);
       if (sem1 > 0 || sem2 > 0) {
         const warn1 = sem1 > 70 ? ' warning' : '';
