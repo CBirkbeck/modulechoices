@@ -619,3 +619,153 @@ footer a { color: #2d5a8e; }
   :root { --card-width: 100%; }
   .filter-group { flex-wrap: wrap; }
 }
+
+/* ===== DARK MODE ===== */
+[data-theme="dark"] {
+  --year-bg-1u: #1a1f2e;
+  --year-bg-2u: #1a2e1f;
+  --year-bg-3u: #2e261a;
+  --year-bg-4u: #2e1a26;
+  --shadow: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+[data-theme="dark"] body {
+  background: #111318;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] #site-header {
+  background: linear-gradient(135deg, #0f1a2e 0%, #1a2d4a 100%);
+}
+
+[data-theme="dark"] #controls {
+  background: #1a1d24;
+  border-bottom-color: #2d3039;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .control-group label { color: #9ca3af; }
+
+[data-theme="dark"] #entry-year,
+[data-theme="dark"] #search-input {
+  background: #23272f;
+  border-color: #3d424d;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] #entry-year:focus,
+[data-theme="dark"] #search-input:focus {
+  border-color: #4a7ab5;
+  box-shadow: 0 0 0 2px rgba(74,122,181,0.3);
+}
+
+[data-theme="dark"] .filter-btn {
+  background: #23272f;
+  border-color: #3d424d;
+  color: #d1d5db;
+}
+[data-theme="dark"] .filter-btn:hover { background: #2d3039; }
+[data-theme="dark"] .filter-btn.active {
+  background: #2d5a8e;
+  border-color: #2d5a8e;
+  color: white;
+}
+
+[data-theme="dark"] .action-group button {
+  background: #23272f;
+  border-color: #3d424d;
+  color: #d1d5db;
+}
+[data-theme="dark"] .action-group button:hover { background: #2d3039; }
+
+[data-theme="dark"] .legend {
+  background: #1a1d24;
+  border-bottom-color: #2d3039;
+  color: #9ca3af;
+}
+
+[data-theme="dark"] #credit-summary {
+  background: #1a1d24;
+  border-bottom-color: #2d3039;
+}
+
+[data-theme="dark"] .credit-item { background: #23272f; }
+[data-theme="dark"] .credit-item .label { color: #9ca3af; }
+[data-theme="dark"] .credit-item.warning { background: #2d1a1a; }
+[data-theme="dark"] .credit-item.valid { background: #1a2d1a; }
+
+[data-theme="dark"] .credit-warning-banner {
+  background: #2d1a1a;
+  border-color: #5c2020;
+}
+
+[data-theme="dark"] .year-section { border-bottom-color: #2d3039; }
+
+[data-theme="dark"] .year-heading { color: #7aaed4; }
+[data-theme="dark"] .year-academic { color: #9ca3af; }
+
+[data-theme="dark"] .section-heading { color: #d1d5db; }
+
+[data-theme="dark"] .credit-badge {
+  background: #1e2a4a;
+  color: #8b9dd4;
+}
+[data-theme="dark"] .credit-badge.range {
+  background: #1a2a4a;
+  color: #6b9dd4;
+}
+
+[data-theme="dark"] .credit-counter { background: #23272f; color: #9ca3af; }
+[data-theme="dark"] .credit-counter.warning { background: #2d1a1a; }
+[data-theme="dark"] .credit-counter.valid { background: #1a2d1a; }
+
+[data-theme="dark"] .section-note { color: #6b7280; }
+
+[data-theme="dark"] .module-card {
+  background: #1e2128;
+  border-color: #2d3039;
+}
+[data-theme="dark"] .module-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+[data-theme="dark"] .module-code { color: #7aaed4; }
+[data-theme="dark"] .card-title { color: #d1d5db; }
+[data-theme="dark"] .credits { color: #9ca3af; }
+[data-theme="dark"] .assessment { background: #23272f; color: #6b7280; }
+
+[data-theme="dark"] .semester-badge.sem1 { background: #1a2a4a; color: #6b9dd4; }
+[data-theme="dark"] .semester-badge.sem2 { background: #1a3a2a; color: #6bd49d; }
+[data-theme="dark"] .semester-badge.year { background: #2a1a4a; color: #9d6bd4; }
+
+[data-theme="dark"] .card-details {
+  color: #9ca3af;
+  border-top-color: #2d3039;
+}
+[data-theme="dark"] .content-section strong { color: #d1d5db; }
+[data-theme="dark"] .content-section p { color: #9ca3af; }
+[data-theme="dark"] .expand-btn { color: #6b7280; }
+[data-theme="dark"] .expand-btn:hover { color: #d1d5db; }
+
+[data-theme="dark"] .module-card.selected {
+  background: #2d2a1a;
+  border-color: var(--color-selected);
+}
+
+[data-theme="dark"] .module-card.highlighted-exclusion {
+  background: #2d1a1a;
+}
+
+[data-theme="dark"] .module-card.dimmed { opacity: 0.2; }
+
+[data-theme="dark"] footer {
+  background: #1a1d24;
+  border-top-color: #2d3039;
+  color: #6b7280;
+}
+[data-theme="dark"] footer a { color: #7aaed4; }
+
+[data-theme="dark"] .toast.warning { background: #2d1a1a; border-color: #5c2020; }
+[data-theme="dark"] .toast.success { background: #1a2d1a; border-color: #205c20; }
+[data-theme="dark"] .toast.info { background: #1a1a2d; border-color: #20205c; }

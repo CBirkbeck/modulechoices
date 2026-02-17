@@ -14,6 +14,7 @@
     searchQuery: '',
     periodFilter: 'all',
     showDetails: false,
+    darkMode: false,
     modules: [],
     moduleIndex: new Map(),
     ghostModules: new Set(),
@@ -721,7 +722,7 @@
     };
   }
 
-  function drawLine(svg, fromRect, toRect, lineType) {
+  function drawLine(svg, fromRect, toRect, lineType, lineIndex, totalLines) {
     const styleMap = {
       hard_prereq: { stroke: '#7c3aed', dash: '', marker: 'arrow-prereq' },
       soft_prereq: { stroke: '#8b5cf6', dash: '6,4', marker: 'arrow-soft-prereq' },
@@ -732,26 +733,36 @@
 
     const style = styleMap[lineType] || styleMap.hard_prereq;
 
-    // Determine start/end points
+    // Spread multiple lines along the card edge so they don't stack.
+    // t ranges from -1..+1 across the set of lines, mapping to positions
+    // along the card width/height.
+    const t = totalLines <= 1 ? 0 : (lineIndex / (totalLines - 1)) * 2 - 1; // -1 to +1
+    const spreadX = t * Math.min(fromRect.w * 0.35, 40); // spread along edge
+    const spreadY = t * Math.min(fromRect.h * 0.3, 20);
+
+    // Lateral wobble for Bezier control points so curves diverge mid-path
+    const wobble = t * 35;
+
     let x1, y1, x2, y2;
 
     if (Math.abs(fromRect.cy - toRect.cy) < 60) {
       // Same vertical level - connect side to side
       if (fromRect.cx < toRect.cx) {
         x1 = fromRect.x + fromRect.w;
-        y1 = fromRect.cy;
+        y1 = fromRect.cy + spreadY;
         x2 = toRect.x;
-        y2 = toRect.cy;
+        y2 = toRect.cy + spreadY;
       } else {
         x1 = fromRect.x;
-        y1 = fromRect.cy;
+        y1 = fromRect.cy + spreadY;
         x2 = toRect.x + toRect.w;
-        y2 = toRect.cy;
+        y2 = toRect.cy + spreadY;
       }
       const dx = Math.abs(x2 - x1);
       const controlOffset = Math.max(dx * 0.3, 30);
+      const arcY = -30 + wobble;
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('d', `M ${x1} ${y1} C ${x1 + (x2 > x1 ? controlOffset : -controlOffset)} ${y1 - 30}, ${x2 + (x2 > x1 ? -controlOffset : controlOffset)} ${y2 - 30}, ${x2} ${y2}`);
+      path.setAttribute('d', `M ${x1} ${y1} C ${x1 + (x2 > x1 ? controlOffset : -controlOffset)} ${y1 + arcY}, ${x2 + (x2 > x1 ? -controlOffset : controlOffset)} ${y2 + arcY}, ${x2} ${y2}`);
       path.setAttribute('fill', 'none');
       path.setAttribute('stroke', style.stroke);
       path.setAttribute('stroke-width', '2');
@@ -762,14 +773,14 @@
     } else {
       // Different vertical levels - connect bottom to top
       if (fromRect.cy < toRect.cy) {
-        x1 = fromRect.cx;
+        x1 = fromRect.cx + spreadX;
         y1 = fromRect.y + fromRect.h;
-        x2 = toRect.cx;
+        x2 = toRect.cx + spreadX;
         y2 = toRect.y;
       } else {
-        x1 = fromRect.cx;
+        x1 = fromRect.cx + spreadX;
         y1 = fromRect.y;
-        x2 = toRect.cx;
+        x2 = toRect.cx + spreadX;
         y2 = toRect.y + toRect.h;
       }
 
@@ -778,7 +789,7 @@
       const isDown = y2 > y1;
 
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('d', `M ${x1} ${y1} C ${x1} ${y1 + (isDown ? controlOffset : -controlOffset)}, ${x2} ${y2 + (isDown ? -controlOffset : controlOffset)}, ${x2} ${y2}`);
+      path.setAttribute('d', `M ${x1} ${y1} C ${x1 + wobble} ${y1 + (isDown ? controlOffset : -controlOffset)}, ${x2 + wobble} ${y2 + (isDown ? -controlOffset : controlOffset)}, ${x2} ${y2}`);
       path.setAttribute('fill', 'none');
       path.setAttribute('stroke', style.stroke);
       path.setAttribute('stroke-width', '2');
@@ -803,6 +814,9 @@
     const activeRect = getCardRect(activeCode);
     if (!activeRect) return;
 
+    // Collect all lines first, then draw with spread indices
+    const lines = [];
+
     // Lines TO prerequisites (from prereq to active)
     if (mod.rules && mod.rules.type !== 'exclusion') {
       for (const group of mod.rules.groups) {
@@ -810,7 +824,7 @@
           if (STATE.ghostModules.has(prereqCode)) continue;
           const fromRect = getCardRect(prereqCode);
           if (fromRect) {
-            drawLine(svg, fromRect, activeRect, mod.rules.type);
+            lines.push({ from: fromRect, to: activeRect, type: mod.rules.type });
           }
         }
       }
@@ -822,7 +836,7 @@
       if (!depRect) continue;
       const depMod = STATE.moduleIndex.get(depCode);
       if (depMod && depMod.rules) {
-        drawLine(svg, activeRect, depRect, 'dependent');
+        lines.push({ from: activeRect, to: depRect, type: 'dependent' });
       }
     }
 
@@ -830,8 +844,14 @@
     for (const exCode of mod.exclusionPeers) {
       const exRect = getCardRect(exCode);
       if (!exRect) continue;
-      drawLine(svg, activeRect, exRect, 'exclusion');
+      lines.push({ from: activeRect, to: exRect, type: 'exclusion' });
     }
+
+    // Draw all lines with spread
+    const total = lines.length;
+    lines.forEach((line, i) => {
+      drawLine(svg, line.from, line.to, line.type, i, total);
+    });
   }
 
   let resizeTimer;
@@ -1023,6 +1043,13 @@
     saveState();
   }
 
+  function handleToggleTheme() {
+    STATE.darkMode = !STATE.darkMode;
+    document.documentElement.setAttribute('data-theme', STATE.darkMode ? 'dark' : 'light');
+    document.getElementById('toggle-theme').textContent = STATE.darkMode ? 'Light' : 'Dark';
+    saveState();
+  }
+
   function handleClearSelection() {
     STATE.selectedModules.clear();
     document.querySelectorAll('.module-card.selected').forEach(c => c.classList.remove('selected'));
@@ -1099,6 +1126,7 @@
         selectedModules: [...STATE.selectedModules],
         entryYear: STATE.entryYear,
         showDetails: STATE.showDetails,
+        darkMode: STATE.darkMode,
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     } catch (e) { /* ignore */ }
@@ -1119,6 +1147,11 @@
       if (data.showDetails !== undefined) {
         STATE.showDetails = data.showDetails;
       }
+      if (data.darkMode) {
+        STATE.darkMode = true;
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('toggle-theme').textContent = 'Light';
+      }
     } catch (e) { /* ignore */ }
   }
 
@@ -1131,6 +1164,7 @@
     document.getElementById('toggle-details').addEventListener('click', handleToggleDetails);
     document.getElementById('clear-selection').addEventListener('click', handleClearSelection);
     document.getElementById('export-selection').addEventListener('click', handleExport);
+    document.getElementById('toggle-theme').addEventListener('click', handleToggleTheme);
     window.addEventListener('resize', handleResize);
 
     // Update details button text
