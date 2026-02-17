@@ -18,6 +18,7 @@
     moduleIndex: new Map(),
     ghostModules: new Set(),
     visibleSections: [],
+    dataYears: [],
   };
 
   const STORAGE_KEY = 'uea-mmath-catalogue-state';
@@ -119,17 +120,45 @@
     return { type, groups, excludes: [], allCodes };
   }
 
-  function getAcademicYearLabel(entryYear, yearOffset) {
-    // Entry "2025/6" means start year 2025; Year 2 is 2026/7, etc.
+  function getAcademicYearKey(entryYear, yearOffset) {
+    // Data format uses single trailing digit: "2024/5", "2025/6", "2026/7"
     const startYear = parseInt(entryYear.split('/')[0]);
     const y = startYear + yearOffset;
-    return `${y}/${String(y + 1).slice(-2)}`;
+    return `${y}/${(y + 1) % 10}`;
+  }
+
+  function formatYearDisplay(yearKey) {
+    // "2026/7" → "2026/27" for display
+    const [start] = yearKey.split('/');
+    const nextYear = parseInt(start) + 1;
+    return `${start}/${String(nextYear).slice(-2)}`;
+  }
+
+  function calendarYearToDataYear(calYear) {
+    // Check if we have this exact calendar year in our data
+    if (STATE.dataYears.includes(calYear)) return calYear;
+    // Otherwise infer from 2-year alternating cycle:
+    // pick the closest same-parity year in our data set
+    const calStart = parseInt(calYear.split('/')[0]);
+    let best = null;
+    let bestDist = Infinity;
+    for (const dy of STATE.dataYears) {
+      const dyStart = parseInt(dy.split('/')[0]);
+      if ((calStart % 2) === (dyStart % 2)) {
+        const dist = Math.abs(calStart - dyStart);
+        if (dist < bestDist) { best = dy; bestDist = dist; }
+      }
+    }
+    return best || STATE.dataYears[STATE.dataYears.length - 1];
   }
 
   function isModuleVisible(mod, entryYear) {
-    // available_years reflects which entry-cohort pathway the module is on,
-    // so just check if this entry year is listed.
-    return mod.available_years.includes(entryYear);
+    // Map this module's study year to the calendar year the student takes it
+    const yearNum = parseInt(mod.year.match(/\d/)[0]);
+    const calYear = getAcademicYearKey(entryYear, yearNum - 1);
+    // Map calendar year to a data year (exact or inferred via alternation)
+    const dataYear = calendarYearToDataYear(calYear);
+    return mod.available_years.includes(dataYear);
   }
 
   function isLevel5(code) {
@@ -352,7 +381,7 @@
       if (yearSections.length === 0) continue;
 
       const yearNum = parseInt(year.match(/\d/)[0]);
-      const activeAcademicYear = getAcademicYearLabel(STATE.entryYear, yearNum - 1);
+      const activeAcademicYear = formatYearDisplay(getAcademicYearKey(STATE.entryYear, yearNum - 1));
 
       const section = document.createElement('section');
       section.className = 'year-section';
@@ -991,7 +1020,7 @@
       if (yearMods.length === 0) continue;
 
       const yearNum = parseInt(year.match(/\d/)[0]);
-      const academicYear = getAcademicYearLabel(STATE.entryYear, yearNum - 1);
+      const academicYear = formatYearDisplay(getAcademicYearKey(STATE.entryYear, yearNum - 1));
       text += `${year} (${academicYear})\n`;
       text += '-'.repeat(30) + '\n';
 
@@ -1080,6 +1109,41 @@
     }
   }
 
+  function buildEntryYearDropdown() {
+    // Offer entry years covering every data year as a possible Year 1.
+    // Also offer one year before the earliest data year (its Year 2+ will use data years).
+    const select = document.getElementById('entry-year');
+    const dataStarts = STATE.dataYears.map(y => parseInt(y.split('/')[0])).sort((a, b) => a - b);
+    const earliest = dataStarts[0];
+    const latest = dataStarts[dataStarts.length - 1];
+
+    // Entry years: from (earliest - 1) up to latest
+    // e.g. data has 2024/5, 2025/6, 2026/7 → entry years 2023/4 .. 2026/7
+    const entryStarts = [];
+    for (let y = earliest; y <= latest; y++) {
+      entryStarts.push(y);
+    }
+
+    select.innerHTML = '';
+    for (const y of entryStarts) {
+      const key = `${y}/${(y + 1) % 10}`;
+      const display = `${y}/${String(y + 1).slice(-2)}`;
+      const opt = document.createElement('option');
+      opt.value = key;
+      opt.textContent = display;
+      select.appendChild(opt);
+    }
+
+    // Restore saved entry year if still valid, otherwise default to latest
+    const options = [...select.options].map(o => o.value);
+    if (options.includes(STATE.entryYear)) {
+      select.value = STATE.entryYear;
+    } else {
+      STATE.entryYear = options[options.length - 1];
+      select.value = STATE.entryYear;
+    }
+  }
+
   async function init() {
     loadState();
 
@@ -1087,12 +1151,14 @@
       const resp = await fetch('data/uea_modules_combined.json');
       const raw = await resp.json();
       STATE.modules = raw.modules;
+      STATE.dataYears = (raw.academic_years || ['2024/5', '2025/6']).sort();
     } catch (e) {
       document.getElementById('module-container').innerHTML =
         '<p style="padding:40px;text-align:center;color:#dc2626;">Failed to load module data. Please run from a local server (e.g. <code>python3 -m http.server</code>).</p>';
       return;
     }
 
+    buildEntryYearDropdown();
     buildModuleIndex();
 
     // Init SVG defs
