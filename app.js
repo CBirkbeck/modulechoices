@@ -9,14 +9,15 @@
   // ===== STATE =====
   const STATE = {
     entryYear: '2025/6',
-    activeModule: null,
-    selectedModules: new Set(),
+    activeModule: null,     // uid of currently clicked module
+    selectedModules: new Set(), // set of uids
     searchQuery: '',
     periodFilter: 'all',
     showDetails: false,
     darkMode: false,
     modules: [],
-    moduleIndex: new Map(),
+    moduleIndex: new Map(),   // uid -> enriched module (uid = "CODE|Year XU")
+    codeEntries: new Map(),   // plain code -> [enriched modules] (for dependency lookups)
     ghostModules: new Set(),
     visibleSections: [],
     dataYears: [],
@@ -122,24 +123,19 @@
   }
 
   function getAcademicYearKey(entryYear, yearOffset) {
-    // Data format uses single trailing digit: "2024/5", "2025/6", "2026/7"
     const startYear = parseInt(entryYear.split('/')[0]);
     const y = startYear + yearOffset;
     return `${y}/${(y + 1) % 10}`;
   }
 
   function formatYearDisplay(yearKey) {
-    // "2026/7" → "2026/27" for display
     const [start] = yearKey.split('/');
     const nextYear = parseInt(start) + 1;
     return `${start}/${String(nextYear).slice(-2)}`;
   }
 
   function calendarYearToDataYear(calYear) {
-    // Check if we have this exact calendar year in our data
     if (STATE.dataYears.includes(calYear)) return calYear;
-    // Otherwise infer from 2-year alternating cycle:
-    // pick the closest same-parity year in our data set
     const calStart = parseInt(calYear.split('/')[0]);
     let best = null;
     let bestDist = Infinity;
@@ -154,26 +150,30 @@
   }
 
   function isModuleVisible(mod, entryYear) {
-    // Map this module's study year to the calendar year the student takes it
     const yearNum = parseInt(mod.year.match(/\d/)[0]);
     const calYear = getAcademicYearKey(entryYear, yearNum - 1);
-    // Map calendar year to a data year (exact or inferred via alternation)
     const dataYear = calendarYearToDataYear(calYear);
     return mod.available_years.includes(dataYear);
   }
 
   function isLevel5(code) {
-    // Level digit is first digit after alpha prefix
     const match = code.match(/[A-Z]-?(\d)/);
     return match && match[1] === '5';
   }
 
+  function makeUid(code, year) {
+    return code + '|' + year;
+  }
+
   function buildModuleIndex() {
     STATE.moduleIndex.clear();
+    STATE.codeEntries.clear();
     STATE.ghostModules.clear();
 
     for (const mod of STATE.modules) {
+      const uid = makeUid(mod.module_code, mod.year);
       const enriched = {
+        uid: uid,
         code: mod.module_code,
         description: mod.description,
         assessment: mod.assessment,
@@ -189,29 +189,36 @@
         rules: parseModuleRules(mod.module_rules),
         rawRules: mod.module_rules,
         contentSections: mod.content_sections || {},
-        dependents: [],
-        exclusionPeers: [],
+        dependents: [],       // uids of modules that depend on this one
+        exclusionPeers: [],   // uids of mutually exclusive modules
       };
-      STATE.moduleIndex.set(enriched.code, enriched);
+      STATE.moduleIndex.set(uid, enriched);
+
+      // Secondary index: plain code -> all entries
+      if (!STATE.codeEntries.has(enriched.code)) {
+        STATE.codeEntries.set(enriched.code, []);
+      }
+      STATE.codeEntries.get(enriched.code).push(enriched);
     }
 
     // Build reverse dependencies and find ghost modules
-    for (const [code, mod] of STATE.moduleIndex) {
+    for (const [uid, mod] of STATE.moduleIndex) {
       if (!mod.rules) continue;
 
       for (const refCode of mod.rules.allCodes) {
-        if (!STATE.moduleIndex.has(refCode)) {
+        if (!STATE.codeEntries.has(refCode)) {
           STATE.ghostModules.add(refCode);
           continue;
         }
 
-        if (mod.rules.type === 'exclusion') {
-          const peer = STATE.moduleIndex.get(refCode);
-          if (!peer.exclusionPeers.includes(code)) peer.exclusionPeers.push(code);
-          if (!mod.exclusionPeers.includes(refCode)) mod.exclusionPeers.push(refCode);
-        } else {
-          const target = STATE.moduleIndex.get(refCode);
-          if (!target.dependents.includes(code)) target.dependents.push(code);
+        // Apply to all entries for this code
+        for (const target of STATE.codeEntries.get(refCode)) {
+          if (mod.rules.type === 'exclusion') {
+            if (!target.exclusionPeers.includes(uid)) target.exclusionPeers.push(uid);
+            if (!mod.exclusionPeers.includes(target.uid)) mod.exclusionPeers.push(target.uid);
+          } else {
+            if (!target.dependents.includes(uid)) target.dependents.push(uid);
+          }
         }
       }
     }
@@ -251,14 +258,12 @@
       structure[year][secKey].modules.push(mod);
     }
 
-    // Parse credit rules per section
     for (const year of YEARS) {
       for (const secKey in structure[year]) {
         const group = structure[year][secKey];
         if (!group.creditRule) {
           group.creditRule = parseCreditRule(group.rawCreditRule, group.notes);
         }
-        // Sort modules: SEM1, SEM2, YEAR, then by code
         const periodOrder = { SEM1: 0, SEM2: 1, YEAR: 2 };
         group.modules.sort((a, b) => {
           const pa = periodOrder[a.period] ?? 3;
@@ -275,11 +280,12 @@
   function renderModuleCard(mod) {
     const card = document.createElement('div');
     card.className = 'module-card';
+    card.dataset.uid = mod.uid;
     card.dataset.code = mod.code;
     card.dataset.period = mod.period;
 
     if (mod.credits >= 40) card.classList.add('wide-card');
-    if (STATE.selectedModules.has(mod.code)) card.classList.add('selected');
+    if (STATE.selectedModules.has(mod.uid)) card.classList.add('selected');
 
     const periodClass = mod.period === 'SEM1' ? 'sem1' : mod.period === 'SEM2' ? 'sem2' : 'year';
 
@@ -298,7 +304,7 @@
       indicators.push('<span class="indicator has-dependents" title="Required by other modules"></span>');
     }
 
-    // Details section - always present, expandable per-card
+    // Details section
     const hasContent = mod.rawRules || (mod.contentSections && Object.keys(mod.contentSections).length > 0);
     let detailsInner = '';
     if (mod.rawRules) {
@@ -312,14 +318,15 @@
       }
     }
 
+    const safeUid = CSS.escape(mod.uid);
     const detailsHTML = hasContent ? `<div class="card-details${STATE.showDetails ? ' visible' : ''}">${detailsInner}</div>` : '';
     const expandBtn = hasContent ? '<button class="expand-btn" title="Show details">&#9660;</button>' : '';
 
     card.innerHTML = `
       <div class="card-header">
-        <input type="checkbox" class="module-select" id="sel-${mod.code}"
-          ${STATE.selectedModules.has(mod.code) ? 'checked' : ''}>
-        <label class="module-code" for="sel-${mod.code}">${mod.code}</label>
+        <input type="checkbox" class="module-select" id="sel-${safeUid}"
+          ${STATE.selectedModules.has(mod.uid) ? 'checked' : ''}>
+        <label class="module-code" for="sel-${safeUid}">${mod.code}</label>
         <span class="semester-badge ${periodClass}">${mod.period}</span>
       </div>
       <div class="card-title">${titleCase(mod.description)}</div>
@@ -342,24 +349,23 @@
           const isVisible = details.classList.toggle('visible');
           expBtn.innerHTML = isVisible ? '&#9650;' : '&#9660;';
         }
-        // Redraw lines after layout change
         if (STATE.activeModule) {
           setTimeout(() => drawDependencyLines(STATE.activeModule), 100);
         }
       });
     }
 
-    // Click handler (not on checkbox or expand button)
+    // Click handler
     card.addEventListener('click', (e) => {
       if (e.target.classList.contains('module-select') || e.target.tagName === 'LABEL' || e.target.classList.contains('expand-btn')) return;
-      handleCardClick(mod.code);
+      handleCardClick(mod.uid);
     });
 
     // Checkbox handler
     const checkbox = card.querySelector('.module-select');
     checkbox.addEventListener('change', (e) => {
       e.stopPropagation();
-      handleCheckboxChange(mod.code, e.target.checked);
+      handleCheckboxChange(mod.uid, e.target.checked);
     });
 
     return card;
@@ -430,7 +436,6 @@
         const compulsoryCredits = parseSectionCredits(group.sectionLabel);
         const isCompulsory = secKey.startsWith('Compulsory') || secKey.startsWith('Core');
 
-        // Section heading
         const heading = document.createElement('h3');
         heading.className = 'section-heading';
         let headingHTML = secKey;
@@ -451,7 +456,6 @@
         heading.innerHTML = headingHTML;
         sectionDiv.appendChild(heading);
 
-        // Special notes
         if (group.notes) {
           const noteText = group.notes.replace(/Students will select.*$/i, '').trim();
           if (noteText && noteText.length > 5) {
@@ -462,7 +466,6 @@
           }
         }
 
-        // Module grid
         const grid = document.createElement('div');
         grid.className = 'module-grid';
         for (const mod of group.modules) {
@@ -479,9 +482,8 @@
     updateCreditSummary();
     applyFilters();
 
-    // If there was an active module, try to re-highlight
     if (STATE.activeModule) {
-      const card = document.querySelector(`[data-code="${STATE.activeModule}"]`);
+      const card = document.querySelector(`[data-uid="${CSS.escape(STATE.activeModule)}"]`);
       if (card) {
         highlightModule(STATE.activeModule);
       } else {
@@ -493,14 +495,14 @@
 
   // ===== INTERACTIONS =====
 
-  function handleCardClick(code) {
-    if (STATE.activeModule === code) {
+  function handleCardClick(uid) {
+    if (STATE.activeModule === uid) {
       STATE.activeModule = null;
       clearHighlights();
       clearLines();
     } else {
-      STATE.activeModule = code;
-      highlightModule(code);
+      STATE.activeModule = uid;
+      highlightModule(uid);
     }
   }
 
@@ -513,44 +515,46 @@
     });
   }
 
-  function highlightModule(code) {
+  function highlightModule(uid) {
     clearHighlights();
     clearLines();
 
-    const mod = STATE.moduleIndex.get(code);
+    const mod = STATE.moduleIndex.get(uid);
     if (!mod) return;
 
-    const relatedCodes = new Set([code]);
+    const relatedUids = new Set([uid]);
 
-    // Find prereqs/coreqs of this module
+    // Find prereqs/coreqs: rules reference plain codes, resolve to all visible uids
     if (mod.rules && mod.rules.type !== 'exclusion') {
-      for (const c of mod.rules.allCodes) {
-        if (STATE.moduleIndex.has(c)) relatedCodes.add(c);
+      for (const refCode of mod.rules.allCodes) {
+        if (STATE.codeEntries.has(refCode)) {
+          for (const entry of STATE.codeEntries.get(refCode)) {
+            relatedUids.add(entry.uid);
+          }
+        }
       }
     }
 
-    // Find exclusion peers
-    for (const c of mod.exclusionPeers) {
-      relatedCodes.add(c);
+    // Exclusion peers (stored as uids)
+    for (const peerUid of mod.exclusionPeers) {
+      relatedUids.add(peerUid);
     }
 
-    // Find dependents
-    for (const c of mod.dependents) {
-      relatedCodes.add(c);
+    // Dependents (stored as uids)
+    for (const depUid of mod.dependents) {
+      relatedUids.add(depUid);
     }
 
-    // Apply classes
     document.querySelectorAll('.module-card').forEach(card => {
-      const cardCode = card.dataset.code;
+      const cardUid = card.dataset.uid;
       if (card.classList.contains('search-hidden') || card.classList.contains('period-hidden')) return;
 
-      if (cardCode === code) {
+      if (cardUid === uid) {
         card.classList.add('highlighted-active');
-      } else if (relatedCodes.has(cardCode)) {
-        // Determine relationship type
-        if (mod.exclusionPeers.includes(cardCode)) {
+      } else if (relatedUids.has(cardUid)) {
+        if (mod.exclusionPeers.includes(cardUid)) {
           card.classList.add('highlighted-exclusion');
-        } else if (mod.dependents.includes(cardCode)) {
+        } else if (mod.dependents.includes(cardUid)) {
           card.classList.add('highlighted-dependent');
         } else if (mod.rules) {
           if (mod.rules.type === 'hard_prereq') card.classList.add('highlighted-prereq');
@@ -562,39 +566,44 @@
       }
     });
 
-    drawDependencyLines(code);
+    drawDependencyLines(uid);
   }
 
-  function handleCheckboxChange(code, checked) {
-    const mod = STATE.moduleIndex.get(code);
+  function handleCheckboxChange(uid, checked) {
+    const mod = STATE.moduleIndex.get(uid);
     if (!mod) return;
 
     if (checked) {
       // ── Pre-check: block illegal selections ──
 
       // 1. Exclusion conflict
-      for (const exCode of mod.exclusionPeers) {
-        if (STATE.selectedModules.has(exCode)) {
-          showToast(`Blocked: ${code} cannot be taken with ${exCode}`, 'warning');
-          revertCheckbox(code, false);
+      for (const exUid of mod.exclusionPeers) {
+        if (STATE.selectedModules.has(exUid)) {
+          const exMod = STATE.moduleIndex.get(exUid);
+          showToast(`Blocked: ${mod.code} cannot be taken with ${exMod ? exMod.code : exUid}`, 'warning');
+          revertCheckbox(uid, false);
           return;
         }
       }
 
-      // 2. MTHF5036B conditional: selecting a Level 5 Range C module while MTHF5036B is selected
-      if (STATE.selectedModules.has('MTHF5036B') && isLevel5(code) && mod.sectionKey === 'Options Range C') {
-        showToast(`Blocked: Level 5 module ${code} in Range C not allowed when MTHF5036B is selected`, 'warning');
-        revertCheckbox(code, false);
+      // 2. MTHF5036B conditional
+      const hasMTHF5036B = [...STATE.selectedModules].some(u => {
+        const m = STATE.moduleIndex.get(u);
+        return m && m.code === 'MTHF5036B';
+      });
+      if (hasMTHF5036B && isLevel5(mod.code) && mod.sectionKey === 'Options Range C') {
+        showToast(`Blocked: Level 5 module ${mod.code} in Range C not allowed when MTHF5036B is selected`, 'warning');
+        revertCheckbox(uid, false);
         return;
       }
 
       // 2b. Selecting MTHF5036B while a Level 5 Range C module is already selected
-      if (code === 'MTHF5036B') {
-        for (const selCode of STATE.selectedModules) {
-          const selMod = STATE.moduleIndex.get(selCode);
-          if (selMod && selMod.sectionKey === 'Options Range C' && isLevel5(selCode)) {
-            showToast(`Blocked: Cannot select MTHF5036B while Level 5 module ${selCode} is in Range C`, 'warning');
-            revertCheckbox(code, false);
+      if (mod.code === 'MTHF5036B') {
+        for (const selUid of STATE.selectedModules) {
+          const selMod = STATE.moduleIndex.get(selUid);
+          if (selMod && selMod.sectionKey === 'Options Range C' && isLevel5(selMod.code)) {
+            showToast(`Blocked: Cannot select MTHF5036B while Level 5 module ${selMod.code} is in Range C`, 'warning');
+            revertCheckbox(uid, false);
             return;
           }
         }
@@ -605,8 +614,8 @@
       if (sectionInfo) {
         const current = calculateSectionCredits(mod.year, mod.sectionKey);
         if (current + mod.credits > sectionInfo.creditRule.max) {
-          showToast(`Blocked: Adding ${code} (${mod.credits}cr) would exceed ${mod.sectionKey} limit of ${sectionInfo.creditRule.max} credits (currently ${current})`, 'warning');
-          revertCheckbox(code, false);
+          showToast(`Blocked: Adding ${mod.code} (${mod.credits}cr) would exceed ${mod.sectionKey} limit of ${sectionInfo.creditRule.max} credits (currently ${current})`, 'warning');
+          revertCheckbox(uid, false);
           return;
         }
       }
@@ -622,33 +631,33 @@
         if (sem1 + addSem1 > 70 || sem2 + addSem2 > 70) {
           const overSem = sem1 + addSem1 > 70 ? 'SEM1' : 'SEM2';
           const overVal = overSem === 'SEM1' ? sem1 + addSem1 : sem2 + addSem2;
-          showToast(`Blocked: Adding ${code} would put ${mod.year} ${overSem} at ${overVal} credits (max 70)`, 'warning');
-          revertCheckbox(code, false);
+          showToast(`Blocked: Adding ${mod.code} would put ${mod.year} ${overSem} at ${overVal} credits (max 70)`, 'warning');
+          revertCheckbox(uid, false);
           return;
         }
       }
 
       // 5. Total year credits (max 120 per year)
       let yearTotal = 0;
-      for (const selCode of STATE.selectedModules) {
-        const selMod = STATE.moduleIndex.get(selCode);
+      for (const selUid of STATE.selectedModules) {
+        const selMod = STATE.moduleIndex.get(selUid);
         if (selMod && selMod.year === mod.year && isModuleVisible(selMod, STATE.entryYear)) {
           yearTotal += selMod.credits;
         }
       }
       if (yearTotal + mod.credits > 120) {
-        showToast(`Blocked: Adding ${code} (${mod.credits}cr) would exceed ${mod.year} total of 120 credits (currently ${yearTotal})`, 'warning');
-        revertCheckbox(code, false);
+        showToast(`Blocked: Adding ${mod.code} (${mod.credits}cr) would exceed ${mod.year} total of 120 credits (currently ${yearTotal})`, 'warning');
+        revertCheckbox(uid, false);
         return;
       }
 
-      // ── All checks passed, add it ──
-      STATE.selectedModules.add(code);
+      // ── All checks passed ──
+      STATE.selectedModules.add(uid);
     } else {
-      STATE.selectedModules.delete(code);
+      STATE.selectedModules.delete(uid);
     }
 
-    const card = document.querySelector(`[data-code="${code}"]`);
+    const card = document.querySelector(`[data-uid="${CSS.escape(uid)}"]`);
     if (card) {
       card.classList.toggle('selected', checked);
     }
@@ -657,8 +666,8 @@
     saveState();
   }
 
-  function revertCheckbox(code, value) {
-    const cb = document.getElementById(`sel-${code}`);
+  function revertCheckbox(uid, value) {
+    const cb = document.getElementById(`sel-${CSS.escape(uid)}`);
     if (cb) cb.checked = value;
   }
 
@@ -666,7 +675,6 @@
 
   function clearLines() {
     const svg = document.getElementById('dependency-svg');
-    // Keep defs, remove everything else
     const defs = svg.querySelector('defs');
     svg.innerHTML = '';
     if (defs) svg.appendChild(defs);
@@ -704,8 +712,8 @@
     svg.appendChild(defs);
   }
 
-  function getCardRect(code) {
-    const el = document.querySelector(`[data-code="${code}"]`);
+  function getCardRect(uid) {
+    const el = document.querySelector(`[data-uid="${CSS.escape(uid)}"]`);
     if (!el || el.classList.contains('search-hidden') || el.classList.contains('period-hidden')) return null;
 
     const rect = el.getBoundingClientRect();
@@ -733,20 +741,14 @@
 
     const style = styleMap[lineType] || styleMap.hard_prereq;
 
-    // Spread multiple lines along the card edge so they don't stack.
-    // t ranges from -1..+1 across the set of lines, mapping to positions
-    // along the card width/height.
-    const t = totalLines <= 1 ? 0 : (lineIndex / (totalLines - 1)) * 2 - 1; // -1 to +1
-    const spreadX = t * Math.min(fromRect.w * 0.35, 40); // spread along edge
+    const t = totalLines <= 1 ? 0 : (lineIndex / (totalLines - 1)) * 2 - 1;
+    const spreadX = t * Math.min(fromRect.w * 0.35, 40);
     const spreadY = t * Math.min(fromRect.h * 0.3, 20);
-
-    // Lateral wobble for Bezier control points so curves diverge mid-path
     const wobble = t * 35;
 
     let x1, y1, x2, y2;
 
     if (Math.abs(fromRect.cy - toRect.cy) < 60) {
-      // Same vertical level - connect side to side
       if (fromRect.cx < toRect.cx) {
         x1 = fromRect.x + fromRect.w;
         y1 = fromRect.cy + spreadY;
@@ -771,7 +773,6 @@
       path.setAttribute('marker-end', `url(#${style.marker})`);
       svg.appendChild(path);
     } else {
-      // Different vertical levels - connect bottom to top
       if (fromRect.cy < toRect.cy) {
         x1 = fromRect.cx + spreadX;
         y1 = fromRect.y + fromRect.h;
@@ -800,54 +801,55 @@
     }
   }
 
-  function drawDependencyLines(activeCode) {
+  function drawDependencyLines(uid) {
     clearLines();
     const svg = document.getElementById('dependency-svg');
 
-    // Resize SVG to cover full document
     svg.style.width = document.documentElement.scrollWidth + 'px';
     svg.style.height = document.documentElement.scrollHeight + 'px';
 
-    const mod = STATE.moduleIndex.get(activeCode);
+    const mod = STATE.moduleIndex.get(uid);
     if (!mod) return;
 
-    const activeRect = getCardRect(activeCode);
+    const activeRect = getCardRect(uid);
     if (!activeRect) return;
 
-    // Collect all lines first, then draw with spread indices
     const lines = [];
 
-    // Lines TO prerequisites (from prereq to active)
+    // Lines TO prerequisites (rules reference plain codes → find visible cards)
     if (mod.rules && mod.rules.type !== 'exclusion') {
       for (const group of mod.rules.groups) {
         for (const prereqCode of group) {
           if (STATE.ghostModules.has(prereqCode)) continue;
-          const fromRect = getCardRect(prereqCode);
-          if (fromRect) {
-            lines.push({ from: fromRect, to: activeRect, type: mod.rules.type });
+          // Find all cards for this code and draw to visible ones
+          const entries = STATE.codeEntries.get(prereqCode) || [];
+          for (const entry of entries) {
+            const fromRect = getCardRect(entry.uid);
+            if (fromRect) {
+              lines.push({ from: fromRect, to: activeRect, type: mod.rules.type });
+            }
           }
         }
       }
     }
 
-    // Lines FROM active to dependents
-    for (const depCode of mod.dependents) {
-      const depRect = getCardRect(depCode);
+    // Lines FROM active to dependents (stored as uids)
+    for (const depUid of mod.dependents) {
+      const depRect = getCardRect(depUid);
       if (!depRect) continue;
-      const depMod = STATE.moduleIndex.get(depCode);
+      const depMod = STATE.moduleIndex.get(depUid);
       if (depMod && depMod.rules) {
         lines.push({ from: activeRect, to: depRect, type: 'dependent' });
       }
     }
 
-    // Exclusion lines
-    for (const exCode of mod.exclusionPeers) {
-      const exRect = getCardRect(exCode);
+    // Exclusion lines (stored as uids)
+    for (const exUid of mod.exclusionPeers) {
+      const exRect = getCardRect(exUid);
       if (!exRect) continue;
       lines.push({ from: activeRect, to: exRect, type: 'exclusion' });
     }
 
-    // Draw all lines with spread
     const total = lines.length;
     lines.forEach((line, i) => {
       drawLine(svg, line.from, line.to, line.type, i, total);
@@ -868,8 +870,8 @@
 
   function calculateSectionCredits(year, secKey) {
     let total = 0;
-    for (const code of STATE.selectedModules) {
-      const mod = STATE.moduleIndex.get(code);
+    for (const uid of STATE.selectedModules) {
+      const mod = STATE.moduleIndex.get(uid);
       if (mod && mod.year === year && mod.sectionKey === secKey) {
         total += mod.credits;
       }
@@ -879,8 +881,8 @@
 
   function calculateSemesterCredits(year) {
     let sem1 = 0, sem2 = 0;
-    for (const code of STATE.selectedModules) {
-      const mod = STATE.moduleIndex.get(code);
+    for (const uid of STATE.selectedModules) {
+      const mod = STATE.moduleIndex.get(uid);
       if (!mod || mod.year !== year) continue;
       if (!isModuleVisible(mod, STATE.entryYear)) continue;
       if (mod.period === 'SEM1') sem1 += mod.credits;
@@ -896,7 +898,6 @@
   function updateCreditSummary() {
     const container = document.getElementById('credit-summary');
 
-    // Update per-section counters in section headings
     for (const { year, secKey, creditRule } of STATE.visibleSections) {
       const counter = document.getElementById(`counter-${year}-${secKey}`);
       if (!counter) continue;
@@ -916,7 +917,6 @@
       }
     }
 
-    // Build summary bar
     const hasSelections = STATE.selectedModules.size > 0;
     container.className = hasSelections ? 'visible' : '';
 
@@ -927,11 +927,10 @@
 
     let html = '<div class="credit-row">';
 
-    // Per-year totals
     for (const year of YEARS) {
       let total = 0;
-      for (const code of STATE.selectedModules) {
-        const mod = STATE.moduleIndex.get(code);
+      for (const uid of STATE.selectedModules) {
+        const mod = STATE.moduleIndex.get(uid);
         if (mod && mod.year === year && isModuleVisible(mod, STATE.entryYear)) {
           total += mod.credits;
         }
@@ -942,7 +941,6 @@
       }
     }
 
-    // Semester balance info for Year 2U-4U
     for (const year of ['Year 2U', 'Year 3U', 'Year 4U']) {
       const { sem1, sem2 } = calculateSemesterCredits(year);
       if (sem1 > 0 || sem2 > 0) {
@@ -960,25 +958,22 @@
 
   function applyFilters() {
     document.querySelectorAll('.module-card').forEach(card => {
-      const code = card.dataset.code;
-      const mod = STATE.moduleIndex.get(code);
+      const uid = card.dataset.uid;
+      const mod = STATE.moduleIndex.get(uid);
       if (!mod) return;
 
-      // Search filter
       const query = STATE.searchQuery.toLowerCase();
       const matchesSearch = !query ||
         mod.code.toLowerCase().includes(query) ||
         mod.description.toLowerCase().includes(query);
       card.classList.toggle('search-hidden', !matchesSearch);
 
-      // Period filter
       const matchesPeriod = STATE.periodFilter === 'all' || mod.period === STATE.periodFilter;
       card.classList.toggle('period-hidden', !matchesPeriod);
     });
 
-    // If active module is hidden, clear it
     if (STATE.activeModule) {
-      const card = document.querySelector(`[data-code="${STATE.activeModule}"]`);
+      const card = document.querySelector(`[data-uid="${CSS.escape(STATE.activeModule)}"]`);
       if (card && (card.classList.contains('search-hidden') || card.classList.contains('period-hidden'))) {
         STATE.activeModule = null;
         clearHighlights();
@@ -1036,7 +1031,6 @@
     const btn = document.getElementById('toggle-details');
     btn.textContent = STATE.showDetails ? 'Hide All' : 'Details';
 
-    // Redraw lines after layout change
     if (STATE.activeModule) {
       setTimeout(() => drawDependencyLines(STATE.activeModule), 100);
     }
@@ -1070,8 +1064,8 @@
 
     for (const year of YEARS) {
       const yearMods = [];
-      for (const code of STATE.selectedModules) {
-        const mod = STATE.moduleIndex.get(code);
+      for (const uid of STATE.selectedModules) {
+        const mod = STATE.moduleIndex.get(uid);
         if (mod && mod.year === year) yearMods.push(mod);
       }
       if (yearMods.length === 0) continue;
@@ -1093,7 +1087,6 @@
     navigator.clipboard.writeText(text).then(() => {
       showToast('Pathway copied to clipboard', 'success');
     }).catch(() => {
-      // Fallback: download as file
       const blob = new Blob([text], { type: 'text/plain' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
@@ -1167,22 +1160,17 @@
     document.getElementById('toggle-theme').addEventListener('click', handleToggleTheme);
     window.addEventListener('resize', handleResize);
 
-    // Update details button text
     if (STATE.showDetails) {
       document.getElementById('toggle-details').textContent = 'Hide Details';
     }
   }
 
   function buildEntryYearDropdown() {
-    // Offer entry years covering every data year as a possible Year 1.
-    // Also offer one year before the earliest data year (its Year 2+ will use data years).
     const select = document.getElementById('entry-year');
     const dataStarts = STATE.dataYears.map(y => parseInt(y.split('/')[0])).sort((a, b) => a - b);
     const earliest = dataStarts[0];
     const latest = dataStarts[dataStarts.length - 1];
 
-    // Entry years: from (earliest - 1) up to latest
-    // e.g. data has 2024/5, 2025/6, 2026/7 → entry years 2023/4 .. 2026/7
     const entryStarts = [];
     for (let y = earliest; y <= latest; y++) {
       entryStarts.push(y);
@@ -1198,7 +1186,6 @@
       select.appendChild(opt);
     }
 
-    // Restore saved entry year if still valid, otherwise default to latest
     const options = [...select.options].map(o => o.value);
     if (options.includes(STATE.entryYear)) {
       select.value = STATE.entryYear;
@@ -1225,7 +1212,6 @@
     buildEntryYearDropdown();
     buildModuleIndex();
 
-    // Init SVG defs
     const svg = document.getElementById('dependency-svg');
     initSVGDefs(svg);
 
