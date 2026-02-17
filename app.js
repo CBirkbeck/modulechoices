@@ -1231,7 +1231,16 @@
 
     renderAll();
     attachEventListeners();
+    updateControlsHeight();
+  }
+
+  function updateControlsHeight() {
+    const controls = document.getElementById('controls');
+    if (controls) {
+      document.documentElement.style.setProperty('--controls-height', controls.offsetHeight + 'px');
+    }
   }
 
   document.addEventListener('DOMContentLoaded', init);
+  window.addEventListener('resize', () => updateControlsHeight());
 })();

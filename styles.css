@@ -144,6 +144,9 @@ body {
   border-bottom: 1px solid #e5e7eb;
   font-size: 0.72rem;
   color: #6b7280;
+  position: sticky;
+  top: var(--controls-height, 46px);
+  z-index: 29;
 }
 
 .legend-item {
