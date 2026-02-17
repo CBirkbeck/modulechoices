@@ -742,13 +742,19 @@
         }
       }
 
-      if (groupOk && newCount < bestNewCount) {
-        bestEntries = entries;
-        bestNewCount = newCount;
+      if (groupOk) {
+        // Prefer groups with real (non-ghost) entries over all-ghost groups;
+        // among groups with entries, prefer fewest new selections
+        const hasReal = entries.length > 0;
+        const bestHasReal = bestEntries !== null && bestEntries.length > 0;
+        if (bestEntries === null || (hasReal && !bestHasReal) || (hasReal === bestHasReal && newCount < bestNewCount)) {
+          bestEntries = entries;
+          bestNewCount = newCount;
+        }
       }
     }
 
-    if (!bestEntries) return;
+    if (!bestEntries || bestEntries.length === 0) return;
 
     for (const entry of bestEntries) {
       if (STATE.selectedModules.has(entry.uid) || toSelect.has(entry.uid)) continue;
