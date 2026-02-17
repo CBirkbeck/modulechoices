@@ -1,0 +1,979 @@
+{
+  "course": "MASTER OF MATHEMATICS (U1G103402)",
+  "academic_year": "2024/5",
+  "school": "ENGINEERING, MATHEMATICS AND PHYSICS",
+  "scraped_at": "2026-02-17 14:52:06",
+  "modules": [
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4001A",
+      "description": "MATHEMATICAL SKILLS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4003A",
+      "description": "SEQUENCES, SERIES AND LINEAR EQUATIONS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4003B",
+      "description": "REAL ANALYSIS AND GROUP THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4007B",
+      "description": "COMPUTATION AND MODELLING",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4008B",
+      "description": "PROBABILITY AND MULTIVARIABLE CALCULUS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "BEFORE OR WHILE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
+      "prerequisite_codes": [
+        "MTHA4008A"
+      ]
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4008A",
+      "description": "CALCULUS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5003A",
+      "description": "COMPLEX FUNCTIONS AND LINEAR ALGEBRA",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003Y AND TAKE MTHA4006Y OR TAKE MTHA4003A AND TAKE MTHA4003B",
+      "prerequisite_codes": [
+        "MTHA4003Y",
+        "MTHA4006Y",
+        "MTHA4003A",
+        "MTHA4003B"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5003B",
+      "description": "COMPLEX INTEGRATION AND RING THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B",
+      "module_rules": "BEFORE OR WHILE TAKING THIS MODULE YOU MUST TAKE MTHA5003A",
+      "prerequisite_codes": [
+        "MTHA5003A"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5005A",
+      "description": "DIFFERENTIAL EQUATIONS AND APPLIED METHODS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE MTHA4008B",
+      "prerequisite_codes": [
+        "MTHA4008Y",
+        "MTHA4008B"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5005B",
+      "description": "FLUID FLOW - THEORY AND COMPUTATION",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "Students will select 20-40 credits from the following modules:",
+      "module_code": "ENV-5043A",
+      "description": "WEATHER",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "Students will select 20-40 credits from the following modules:",
+      "module_code": "MTHF5032B",
+      "description": "MATHEMATICAL MODELLING",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D1, E",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE ENV-4015Y OR TAKE MTHA4008A OR TAKE MTHB4010Y",
+      "prerequisite_codes": [
+        "MTHA4008Y",
+        "ENV-4015Y",
+        "MTHA4008A",
+        "MTHB4010Y"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "Students will select 20-40 credits from the following modules:",
+      "module_code": "MTHF5035A",
+      "description": "CRYPTOGRAPHY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B OR TAKE MTHA4006Y",
+      "prerequisite_codes": [
+        "MTHA4001A",
+        "MTHA4003B",
+        "MTHA4006Y"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "Students will select 20-40 credits from the following modules:",
+      "module_code": "MTHS5050A",
+      "description": "MATHEMATICAL STATISTICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+      "prerequisite_codes": [
+        "MTHS6050A"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "Students will select 20-40 credits from the following modules:",
+      "module_code": "MTHS5051B",
+      "description": "LINEAR AND GENERALISED LINEAR MODELS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+      "prerequisite_codes": [
+        "MTHS5050A",
+        "MTHS6050A"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "Students will select 0-20 credits from the following modules:",
+      "module_code": "CMP-5020B",
+      "description": "PROGRAMMING FOR NON-SPECIALISTS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y OR TAKE CMP-4009B",
+      "prerequisite_codes": [
+        "CMP-4008Y",
+        "CMP-4009B"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "Students will select 0-20 credits from the following modules:",
+      "module_code": "NBS-4108B",
+      "description": "INTRODUCTION TO FINANCIAL AND MANAGEMENT ACCOUNTING",
+      "assessment": "EX",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "Students will select 0-20 credits from the following modules:",
+      "module_code": "PHY-4003A",
+      "description": "GEOPHYSICS AND ASTROPHYSICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHA6026A",
+      "description": "FINANCIAL MATHEMATICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHA5005A OR TAKE MTHB5011B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHA5005A",
+        "MTHB5011B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6007B",
+      "description": "DYNAMICAL OCEANOGRAPHY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5005B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6027B",
+      "description": "SETS AND CATEGORIES",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C1",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6030A",
+      "description": "DIFFERENTIAL GEOMETRY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5003A AND TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5001Y",
+        "MTHA5003Y",
+        "MTHA5003A",
+        "MTHA5003B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6031B",
+      "description": "WAVES",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5005A",
+        "MTHA5005B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6032A",
+      "description": "QUANTUM MECHANICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5005A",
+        "MTHA5005B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6033A",
+      "description": "GROUPS AND ALGEBRA",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003Y AND TAKE MTHA5001Y OR TAKE MTHA5003A AND TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5003Y",
+        "MTHA5001Y",
+        "MTHA5003A",
+        "MTHA5003B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6034A",
+      "description": "PARTIAL DIFFERENTIAL EQUATIONS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5005A",
+        "MTHA5005B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHE6035B",
+      "description": "NUMBER THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5003A AND TAKE MTHA5003B AND TAKE MTHF5035A",
+      "prerequisite_codes": [
+        "MTHA5001Y",
+        "MTHA5003Y",
+        "MTHA5003A",
+        "MTHA5003B",
+        "MTHF5035A"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "MTHS6047A",
+      "description": "STOCHASTIC PROCESSES",
+      "assessment": "WW",
+      "credits": "10",
+      "period": "SEM1",
+      "sub_slot": "A",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5043B",
+      "prerequisite_codes": [
+        "MTHS5043B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "PHY-6003B",
+      "description": "ANALYTICAL MECHANICS AND ELECTROMAGNETIC FIELD THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "60-100 credits",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-100 credits from the following modules:",
+      "module_code": "PHY-6007A",
+      "description": "GENERAL RELATIVITY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D2",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE PHY-7007A",
+      "prerequisite_codes": [
+        "PHY-7007A"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-60 credits",
+      "notes": "Students will select 20-60 credits from the following modules:",
+      "module_code": "BIO-6018Y",
+      "description": "SCIENCE COMMUNICATION",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "YEAR",
+      "sub_slot": "C1",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE BIO-5012B",
+      "prerequisite_codes": [
+        "BIO-5012B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-60 credits",
+      "notes": "Students will select 20-60 credits from the following modules:",
+      "module_code": "EDUB6014A",
+      "description": "THE LEARNING AND TEACHING OF MATHEMATICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-60 credits",
+      "notes": "Students will select 20-60 credits from the following modules:",
+      "module_code": "ENV-6004A",
+      "description": "MODELLING ENVIRONMENTAL PROCESSES",
+      "assessment": "CP",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-60 credits",
+      "notes": "Students will select 20-60 credits from the following modules:",
+      "module_code": "MTHA6002B",
+      "description": "HISTORY OF MATHEMATICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE MTHA4008A OR TAKE MTHB4010Y",
+      "prerequisite_codes": [
+        "MTHA4008Y",
+        "MTHA4008A",
+        "MTHB4010Y"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-60 credits",
+      "notes": "Students will select 20-60 credits from the following modules:",
+      "module_code": "MTHA6005Y",
+      "description": "MATHEMATICS PROJECT",
+      "assessment": "PR",
+      "credits": "20",
+      "period": "YEAR",
+      "sub_slot": "Z",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "CMP-5020B",
+      "description": "PROGRAMMING FOR NON-SPECIALISTS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y OR TAKE CMP-4009B",
+      "prerequisite_codes": [
+        "CMP-4008Y",
+        "CMP-4009B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "CMP-5046B",
+      "description": "FOUNDATIONS OF DATA SCIENCE",
+      "assessment": "CP",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "E",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "CMP-6040B",
+      "description": "ARTIFICIAL INTELLIGENCE",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "CMP-6044A",
+      "description": "INTRODUCTION TO CYBER SECURITY",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "EDUB6006A",
+      "description": "CHILDREN, TEACHERS AND MATHEMATICS: CHANGING PUBLIC DISCOURSES ABOUT MATHEMATICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D1",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "ENV-5004B",
+      "description": "EXPLORING THE EARTH'S SUBSURFACE",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE ENV-5005K",
+      "prerequisite_codes": [
+        "ENV-5005K"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "ENV-5005K",
+      "description": "EXPLORING THE EARTH'S SUBSURFACE WITH FIELDCOURSE",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE ENV-5004B",
+      "prerequisite_codes": [
+        "ENV-5004B"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "MTHF5032B",
+      "description": "MATHEMATICAL MODELLING",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D1, E",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008Y OR TAKE ENV-4015Y OR TAKE MTHA4008A OR TAKE MTHB4010Y",
+      "prerequisite_codes": [
+        "MTHA4008Y",
+        "ENV-4015Y",
+        "MTHA4008A",
+        "MTHB4010Y"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "MTHF5035A",
+      "description": "CRYPTOGRAPHY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B OR TAKE MTHA4006Y",
+      "prerequisite_codes": [
+        "MTHA4001A",
+        "MTHA4003B",
+        "MTHA4006Y"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "MTHS5043B",
+      "description": "LINEAR REGRESSION USING R",
+      "assessment": "CW",
+      "credits": "10",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS6047A",
+      "prerequisite_codes": [
+        "MTHS6047A"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "MTHS5050A",
+      "description": "MATHEMATICAL STATISTICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+      "prerequisite_codes": [
+        "MTHS6050A"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "MTHS5051B",
+      "description": "LINEAR AND GENERALISED LINEAR MODELS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+      "prerequisite_codes": [
+        "MTHS5050A",
+        "MTHS6050A"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "NBS-5101A",
+      "description": "FINANCIAL REPORTING",
+      "assessment": "EX",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "",
+      "notes": "Students will select 20 credits from the following modules:",
+      "module_code": "NBS-5104B",
+      "description": "MANAGEMENT ACCOUNTING",
+      "assessment": "EX",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 4U",
+      "section": "Core Modules ( 40 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA7029Y",
+      "description": "MATHEMATICS DISSERTATION",
+      "assessment": "DS",
+      "credits": "40",
+      "period": "YEAR",
+      "sub_slot": "Z",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7007B",
+      "description": "DYNAMICAL OCEANOGRAPHY WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5007Y OR TAKE MTHB5007B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5007Y",
+        "MTHB5007B"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7027B",
+      "description": "SETS AND CATEGORIES WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C1",
+      "module_rules": "",
+      "prerequisite_codes": []
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7030A",
+      "description": "DIFFERENTIAL GEOMETRY WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5003A AND TAKE MTHA5003B OR TAKE MTHA5004Y AND TAKE MTHA5007Y OR TAKE MTHB5011B",
+      "prerequisite_codes": [
+        "MTHA5001Y",
+        "MTHA5003Y",
+        "MTHA5003A",
+        "MTHA5003B",
+        "MTHA5004Y",
+        "MTHA5007Y",
+        "MTHB5011B"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7031B",
+      "description": "WAVES WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5005A",
+        "MTHA5005B"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7032A",
+      "description": "QUANTUM MECHANICS WITH QUANTUM FLUIDS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5005A",
+        "MTHA5005B"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7033A",
+      "description": "GROUPS AND ALGEBRA WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003Y AND TAKE MTHA5001Y OR TAKE MTHA5003A AND TAKE MTHA5003B OR TAKE MTHA5004Y AND TAKE MTHA5007Y",
+      "prerequisite_codes": [
+        "MTHA5003Y",
+        "MTHA5001Y",
+        "MTHA5003A",
+        "MTHA5003B",
+        "MTHA5004Y",
+        "MTHA5007Y"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7034A",
+      "description": "PARTIAL DIFFERENTIAL EQUATIONS WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5002B OR TAKE MTHB5011B OR TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5002B",
+        "MTHB5011B",
+        "MTHA5005A",
+        "MTHA5005B"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "MTHE7035B",
+      "description": "NUMBER THEORY WITH APPLICATIONS IN CRYPTOGRAPHY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5001Y AND TAKE MTHA5003Y OR TAKE MTHA5004Y AND TAKE MTHA5007Y OR TAKE MTHA5003A AND TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5001Y",
+        "MTHA5003Y",
+        "MTHA5004Y",
+        "MTHA5007Y",
+        "MTHA5003A",
+        "MTHA5003B"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "",
+      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80 credits from the following modules:",
+      "module_code": "PHY-7007A",
+      "description": "RELATIVISTIC ASTROPHYSICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D2",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE PHY-6007A",
+      "prerequisite_codes": [
+        "PHY-6007A"
+      ]
+    }
+  ]
+}

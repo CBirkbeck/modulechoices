@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UEA MMath Module Catalogue</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="site-header">
+    <h1>UEA Master of Mathematics &mdash; Module Catalogue</h1>
+    <p class="subtitle">MASTER OF MATHEMATICS (U1G103402) &bull; School of Engineering, Mathematics and Physics</p>
+  </header>
+
+  <nav id="controls">
+    <div class="control-group">
+      <label for="entry-year">Year of Entry:</label>
+      <select id="entry-year">
+        <option value="2024/5">2024/5</option>
+        <option value="2025/6" selected>2025/6</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" placeholder="Code or name...">
+    </div>
+    <div class="control-group filter-group">
+      <label>Semester:</label>
+      <button class="filter-btn active" data-period="all">All</button>
+      <button class="filter-btn" data-period="SEM1">SEM1</button>
+      <button class="filter-btn" data-period="SEM2">SEM2</button>
+      <button class="filter-btn" data-period="YEAR">Year</button>
+    </div>
+    <div class="control-group action-group">
+      <button id="toggle-details" title="Show/hide module details">Details</button>
+      <button id="clear-selection" title="Clear all selected modules">Clear</button>
+      <button id="export-selection" title="Export selected pathway">Export</button>
+    </div>
+  </nav>
+
+  <div id="credit-summary"></div>
+
+  <div id="legend" class="legend">
+    <span class="legend-item"><span class="legend-line solid purple"></span> Prerequisite</span>
+    <span class="legend-item"><span class="legend-line dashed purple"></span> Before or while</span>
+    <span class="legend-item"><span class="legend-line dotted blue"></span> Corequisite</span>
+    <span class="legend-item"><span class="legend-line dashed red"></span> Exclusion</span>
+    <span class="legend-item"><span class="legend-line solid green"></span> Dependent</span>
+  </div>
+
+  <svg id="dependency-svg"></svg>
+
+  <main id="module-container"></main>
+
+  <footer>
+    <p>Data sourced from UEA eVision. For official information, consult the
+    <a href="https://www.uea.ac.uk" target="_blank" rel="noopener">UEA website</a>.
+    Click a module to see dependencies. Use checkboxes to build your pathway.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
