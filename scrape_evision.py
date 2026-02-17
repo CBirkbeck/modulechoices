@@ -110,23 +110,71 @@ def scrape_module_detail_from_page(detail_page, module_code):
     detail = {
         "prerequisites": "",
         "module_rules": "",
-        "full_text": ""
+        "full_text": "",
+        "content_sections": {},
     }
 
     try:
         detail_data = detail_page.evaluate("""() => {
-            const data = {};
+            const data = { content_sections: {} };
 
-            // Find "Module Rules" table - contains prerequisites
             const tables = document.querySelectorAll('table.sv-table');
+
+            // Extract content from all captioned tables
             for (const table of tables) {
                 const caption = table.querySelector('caption');
-                if (caption && caption.textContent.trim() === 'Module Rules') {
+                if (!caption) continue;
+                const title = caption.textContent.trim();
+
+                if (title === 'Module Rules') {
                     const td = table.querySelector('tbody td');
                     if (td) {
                         data.module_rules = td.textContent.trim();
                     }
+                } else {
+                    // Capture content from other tables (Description, Aims,
+                    // Learning Outcomes, Indicative Syllabus, etc.)
+                    const rows = table.querySelectorAll('tbody tr');
+                    const texts = [];
+                    for (const row of rows) {
+                        const cells = row.querySelectorAll('td');
+                        if (cells.length === 1) {
+                            // Single-cell row: likely a description block
+                            const text = cells[0].textContent.trim();
+                            if (text) texts.push(text);
+                        } else if (cells.length >= 2) {
+                            const key = cells[0].textContent.trim().replace(':', '');
+                            const val = cells[1].textContent.trim();
+                            if (val) texts.push(key + ': ' + val);
+                        }
+                    }
+                    if (texts.length > 0) {
+                        data.content_sections[title] = texts.join('\\n');
+                    }
                 }
+            }
+
+            // Also look for any descriptive paragraphs or divs outside tables
+            // eVision sometimes puts descriptions in <p> or <div> blocks
+            // between/after tables, or in elements with specific classes
+            const descDivs = document.querySelectorAll(
+                '.sv-col-sm-12 > p, .module-description, [class*="description"], ' +
+                '.sv-col-sm-12 > div:not(.sv-row)'
+            );
+            const extraTexts = [];
+            for (const el of descDivs) {
+                // Skip if inside a table
+                if (el.closest('table')) continue;
+                const text = el.textContent.trim();
+                // Skip navigation/header text and very short strings
+                if (text && text.length > 30 &&
+                    !text.includes('Logged In') &&
+                    !text.includes('Pick an account')) {
+                    extraTexts.push(text);
+                }
+            }
+            if (extraTexts.length > 0 && !data.content_sections['Page Content']) {
+                data.content_sections['Page Content'] = extraTexts.join('\\n');
             }
 
             // Extract prerequisite module codes from the rules text
@@ -160,6 +208,7 @@ def scrape_module_detail_from_page(detail_page, module_code):
         detail["module_rules"] = detail_data.get("module_rules", "")
         detail["prerequisite_codes"] = detail_data.get("prerequisite_codes", [])
         detail["module_info"] = detail_data.get("module_info", {})
+        detail["content_sections"] = detail_data.get("content_sections", {})
 
     except PlaywrightTimeout:
         print(f"    Timeout loading {module_code}")
@@ -265,8 +314,12 @@ def main():
                     detail = scrape_module_detail_from_page(page, code)
                     mod["module_rules"] = detail.get("module_rules", "")
                     mod["prerequisite_codes"] = detail.get("prerequisite_codes", [])
+                    mod["content_sections"] = detail.get("content_sections", {})
                     if detail.get("module_rules"):
                         print(f"    Rules: {detail['module_rules'][:100]}")
+                    sec_names = list(mod["content_sections"].keys())
+                    if sec_names:
+                        print(f"    Content sections: {sec_names}")
 
                     # Go back to course profile
                     page.go_back(wait_until="domcontentloaded", timeout=15000)

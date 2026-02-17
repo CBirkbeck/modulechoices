@@ -106,11 +106,15 @@ def main():
         for code, mod in all_years[year_label].items():
             key = (code, mod['year'])
             if key not in combined_map:
-                combined_map[key] = {**mod, 'available_years': []}
+                combined_map[key] = {**mod, 'available_years': [], 'content_sections': {}}
             # Always update to the latest version of module data
-            # (rules, credits etc. may change), but keep available_years
+            # (rules, credits etc. may change), but keep available_years and
+            # merge content_sections (keep any descriptions we've collected)
             avail = combined_map[key]['available_years']
-            combined_map[key] = {**mod, 'available_years': avail}
+            existing_content = combined_map[key].get('content_sections', {})
+            new_content = mod.get('content_sections', {})
+            merged_content = {**existing_content, **new_content}
+            combined_map[key] = {**mod, 'available_years': avail, 'content_sections': merged_content}
             if year_label not in avail:
                 avail.append(year_label)
 

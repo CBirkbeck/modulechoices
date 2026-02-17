@@ -187,6 +187,7 @@
         available_years: mod.available_years,
         rules: parseModuleRules(mod.module_rules),
         rawRules: mod.module_rules,
+        contentSections: mod.content_sections || {},
         dependents: [],
         exclusionPeers: [],
       };
@@ -296,14 +297,22 @@
       indicators.push('<span class="indicator has-dependents" title="Required by other modules"></span>');
     }
 
-    // Details section
-    let detailsHTML = '';
+    // Details section - always present, expandable per-card
+    const hasContent = mod.rawRules || (mod.contentSections && Object.keys(mod.contentSections).length > 0);
+    let detailsInner = '';
     if (mod.rawRules) {
-      const rulesFormatted = formatRulesForDisplay(mod);
-      detailsHTML = `<div class="card-details${STATE.showDetails ? ' visible' : ''}">
-        <div class="rules-text">${rulesFormatted}</div>
-      </div>`;
+      detailsInner += `<div class="rules-text">${formatRulesForDisplay(mod)}</div>`;
     }
+    if (mod.contentSections) {
+      for (const [secName, secText] of Object.entries(mod.contentSections)) {
+        if (!secText || secText.length < 5) continue;
+        const escaped = secText.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+        detailsInner += `<div class="content-section"><strong>${secName}</strong><p>${escaped}</p></div>`;
+      }
+    }
+
+    const detailsHTML = hasContent ? `<div class="card-details${STATE.showDetails ? ' visible' : ''}">${detailsInner}</div>` : '';
+    const expandBtn = hasContent ? '<button class="expand-btn" title="Show details">&#9660;</button>' : '';
 
     card.innerHTML = `
       <div class="card-header">
@@ -316,14 +325,32 @@
       <div class="card-meta">
         <span class="credits">${mod.credits} cr</span>
         <span class="assessment">${mod.assessment}</span>
+        ${expandBtn}
       </div>
       ${detailsHTML}
       ${indicators.length ? '<div class="card-indicators">' + indicators.join('') + '</div>' : ''}
     `;
 
-    // Click handler (not on checkbox)
+    // Expand/collapse per-card
+    const expBtn = card.querySelector('.expand-btn');
+    if (expBtn) {
+      expBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const details = card.querySelector('.card-details');
+        if (details) {
+          const isVisible = details.classList.toggle('visible');
+          expBtn.innerHTML = isVisible ? '&#9650;' : '&#9660;';
+        }
+        // Redraw lines after layout change
+        if (STATE.activeModule) {
+          setTimeout(() => drawDependencyLines(STATE.activeModule), 100);
+        }
+      });
+    }
+
+    // Click handler (not on checkbox or expand button)
     card.addEventListener('click', (e) => {
-      if (e.target.classList.contains('module-select') || e.target.tagName === 'LABEL') return;
+      if (e.target.classList.contains('module-select') || e.target.tagName === 'LABEL' || e.target.classList.contains('expand-btn')) return;
       handleCardClick(mod.code);
     });
 
@@ -983,8 +1010,11 @@
     document.querySelectorAll('.card-details').forEach(el => {
       el.classList.toggle('visible', STATE.showDetails);
     });
+    document.querySelectorAll('.expand-btn').forEach(btn => {
+      btn.innerHTML = STATE.showDetails ? '&#9650;' : '&#9660;';
+    });
     const btn = document.getElementById('toggle-details');
-    btn.textContent = STATE.showDetails ? 'Hide Details' : 'Details';
+    btn.textContent = STATE.showDetails ? 'Hide All' : 'Details';
 
     // Redraw lines after layout change
     if (STATE.activeModule) {
