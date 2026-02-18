@@ -426,6 +426,15 @@
       yearHeading.innerHTML = `${year} <span class="year-academic">(${activeAcademicYear})</span>`;
       section.appendChild(yearHeading);
 
+      // Disclaimer for years beyond our data range
+      const calYear = getAcademicYearKey(STATE.entryYear, yearNum - 1);
+      if (!STATE.dataYears.includes(calYear)) {
+        const disclaimer = document.createElement('p');
+        disclaimer.className = 'year-disclaimer';
+        disclaimer.textContent = 'Module availability is based on projected data. The selection of modules offered may change for this academic year.';
+        section.appendChild(disclaimer);
+      }
+
       for (const secKey of yearSections) {
         const group = yearData[secKey];
         const sectionDiv = document.createElement('div');

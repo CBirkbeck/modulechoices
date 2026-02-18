@@ -623,26 +623,6 @@
     },
     {
       "year": "Year 3U",
-      "section": "Options Range B",
-      "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
-      "module_code": "MTHA6007Y",
-      "description": "MATHEMATICS PROJECT EXTENSION",
-      "assessment": "CW",
-      "credits": "20",
-      "period": "YEAR",
-      "sub_slot": "E",
-      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHA6005Y",
-      "prerequisite_codes": [
-        "MTHA6005Y",
-        "MTHA6006Y"
-      ],
-      "content_sections": {
-        "Module Description": "This module adds an additional 20 credits to the project from MTHA6006Y or MTHA6005Y, extending it from 20 credits to 40 credits. This gives the opportunity for a deeper investigation of the chosen subject, supported by additional meetings with the project supervisor."
-      }
-    },
-    {
-      "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
       "notes": "If you have selected MTHF5036B from Option Range A, you may not select a Level 5 Module from Option Range CStudents will select 0-20 credits from the following modules:",
