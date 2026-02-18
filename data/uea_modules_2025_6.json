@@ -1040,6 +1040,26 @@
       "content_sections": {
         "Module Description": "The module requires some knowledge of calculus, ordinary and partial differential equations, and some experience with coding. Please contact the module organiser if you need more detail on the prerequisites\n\nOur aim is to show how environmental problems may be solved from the initial problem, to mathematical formulation and numerical solution. Problems will be described conceptually, then defined mathematically, then solved numerically via computer programming. \n\nThe module consists of lectures on numerical methods and computing practical's; the practical's being designed to illustrate the solution of problems using the methods covered in lectures. We will guide students through the solution of a model of an environmental process of their own choosing. \n\nThe module provides training in mathematical and programming skills, as well support towards development of an independent numerical model project and associated project report. The skills developed in this module are highly valued by employers in such fields  as environmental research, meteorological agencies, , IT and quantitative analysis, environmental consulting and further study such as a PhD"
       }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-40 credits",
+      "notes": "Students will select 20-40 credits from the following modules:",
+      "module_code": "MTHA6007Y",
+      "description": "MATHEMATICS PROJECT EXTENSION",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "YEAR",
+      "sub_slot": "E",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHA6005Y",
+      "prerequisite_codes": [
+        "MTHA6005Y"
+      ],
+      "content_sections": {
+        "Module Description": "This module adds an additional 20 credits to the project from MTHA6006Y or MTHA6005Y, extending it from 20 credits to 40 credits. This gives the opportunity for a deeper investigation of the chosen subject, supported by additional meetings with the project supervisor."
+      },
+      "discontinued": true
     }
   ]
 }

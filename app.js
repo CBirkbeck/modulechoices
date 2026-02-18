@@ -152,6 +152,13 @@
   function isModuleVisible(mod, entryYear) {
     const yearNum = parseInt(mod.year.match(/\d/)[0]);
     const calYear = getAcademicYearKey(entryYear, yearNum - 1);
+
+    // Discontinued modules only show when the calendar year exactly
+    // matches a real data year — no parity-based inference
+    if (mod.discontinued) {
+      return mod.available_years.includes(calYear);
+    }
+
     const dataYear = calendarYearToDataYear(calYear);
     return mod.available_years.includes(dataYear);
   }
@@ -186,6 +193,7 @@
         credit_rule: mod.credit_rule,
         notes: mod.notes,
         available_years: mod.available_years,
+        discontinued: !!mod.discontinued,
         rules: parseModuleRules(mod.module_rules),
         rawRules: mod.module_rules,
         contentSections: mod.content_sections || {},
