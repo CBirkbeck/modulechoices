@@ -1249,6 +1249,35 @@
     saveState();
   }
 
+  function handleSelectCore() {
+    const visible = getVisibleModules(STATE.entryYear);
+    const core = visible.filter(mod =>
+      mod.sectionKey.startsWith('Compulsory') || mod.sectionKey.startsWith('Core')
+    );
+
+    let count = 0;
+    for (const mod of core) {
+      if (STATE.selectedModules.has(mod.uid)) continue;
+      STATE.selectedModules.add(mod.uid);
+      const card = document.querySelector(`[data-uid="${CSS.escape(mod.uid)}"]`);
+      if (card) {
+        card.classList.add('selected');
+        const cb = card.querySelector('.module-select');
+        if (cb) cb.checked = true;
+      }
+      count++;
+    }
+
+    updateCreditSummary();
+    saveState();
+
+    if (count > 0) {
+      showToast(`Selected ${count} compulsory/core module(s)`, 'info');
+    } else {
+      showToast('All core modules already selected', 'info');
+    }
+  }
+
   function handleClearSelection() {
     STATE.selectedModules.clear();
     document.querySelectorAll('.module-card.selected').forEach(c => c.classList.remove('selected'));
@@ -1360,6 +1389,7 @@
     document.getElementById('search-input').addEventListener('input', handleSearch);
     document.querySelector('.filter-group').addEventListener('click', handlePeriodFilter);
     document.getElementById('toggle-details').addEventListener('click', handleToggleDetails);
+    document.getElementById('select-core').addEventListener('click', handleSelectCore);
     document.getElementById('clear-selection').addEventListener('click', handleClearSelection);
     document.getElementById('export-selection').addEventListener('click', handleExport);
     document.getElementById('toggle-theme').addEventListener('click', handleToggleTheme);
