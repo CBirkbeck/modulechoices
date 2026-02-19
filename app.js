@@ -122,6 +122,17 @@
     return { type, groups, excludes: [], allCodes };
   }
 
+  function parseAllRules(ruleInput) {
+    if (!ruleInput) return [];
+    const texts = Array.isArray(ruleInput) ? ruleInput : [ruleInput];
+    const rules = [];
+    for (const text of texts) {
+      const parsed = parseModuleRules(text);
+      if (parsed) rules.push(parsed);
+    }
+    return rules;
+  }
+
   function getAcademicYearKey(entryYear, yearOffset) {
     const startYear = parseInt(entryYear.split('/')[0]);
     const y = startYear + yearOffset;
@@ -194,7 +205,7 @@
         notes: mod.notes,
         available_years: mod.available_years,
         discontinued: !!mod.discontinued,
-        rules: parseModuleRules(mod.module_rules),
+        rules: parseAllRules(mod.module_rules),
         rawRules: mod.module_rules,
         contentSections: mod.content_sections || {},
         dependents: [],       // uids of modules that depend on this one
@@ -211,21 +222,20 @@
 
     // Build reverse dependencies and find ghost modules
     for (const [uid, mod] of STATE.moduleIndex) {
-      if (!mod.rules) continue;
+      for (const rule of mod.rules) {
+        for (const refCode of rule.allCodes) {
+          if (!STATE.codeEntries.has(refCode)) {
+            STATE.ghostModules.add(refCode);
+            continue;
+          }
 
-      for (const refCode of mod.rules.allCodes) {
-        if (!STATE.codeEntries.has(refCode)) {
-          STATE.ghostModules.add(refCode);
-          continue;
-        }
-
-        // Apply to all entries for this code
-        for (const target of STATE.codeEntries.get(refCode)) {
-          if (mod.rules.type === 'exclusion') {
-            if (!target.exclusionPeers.includes(uid)) target.exclusionPeers.push(uid);
-            if (!mod.exclusionPeers.includes(target.uid)) mod.exclusionPeers.push(target.uid);
-          } else {
-            if (!target.dependents.includes(uid)) target.dependents.push(uid);
+          for (const target of STATE.codeEntries.get(refCode)) {
+            if (rule.type === 'exclusion') {
+              if (!target.exclusionPeers.includes(uid)) target.exclusionPeers.push(uid);
+              if (!mod.exclusionPeers.includes(target.uid)) mod.exclusionPeers.push(target.uid);
+            } else {
+              if (!target.dependents.includes(uid)) target.dependents.push(uid);
+            }
           }
         }
       }
@@ -299,10 +309,10 @@
 
     // Indicators
     const indicators = [];
-    if (mod.rules && (mod.rules.type === 'hard_prereq' || mod.rules.type === 'soft_prereq')) {
+    if (mod.rules.some(r => r.type === 'hard_prereq' || r.type === 'soft_prereq')) {
       indicators.push('<span class="indicator has-prereqs" title="Has prerequisites"></span>');
     }
-    if (mod.rules && mod.rules.type === 'corequisite') {
+    if (mod.rules.some(r => r.type === 'corequisite')) {
       indicators.push('<span class="indicator has-coreqs" title="Has corequisites"></span>');
     }
     if (mod.exclusionPeers.length > 0) {
@@ -313,9 +323,9 @@
     }
 
     // Details section
-    const hasContent = mod.rawRules || (mod.contentSections && Object.keys(mod.contentSections).length > 0);
+    const hasContent = mod.rules.length > 0 || (mod.contentSections && Object.keys(mod.contentSections).length > 0);
     let detailsInner = '';
-    if (mod.rawRules) {
+    if (mod.rules.length > 0) {
       detailsInner += `<div class="rules-text">${formatRulesForDisplay(mod)}</div>`;
     }
     if (mod.contentSections) {
@@ -380,26 +390,23 @@
   }
 
   function formatRulesForDisplay(mod) {
-    if (!mod.rules) return '';
-    const parts = [];
+    if (!mod.rules.length) return '';
 
-    if (mod.rules.type === 'exclusion') {
-      parts.push('<strong>Cannot take with:</strong> ');
-      parts.push(mod.rules.excludes.map(c => formatCodeRef(c)).join(' or '));
-    } else {
-      const typeLabels = {
-        hard_prereq: 'Prerequisites',
-        soft_prereq: 'Before or while',
-        corequisite: 'Take alongside',
-      };
-      parts.push(`<strong>${typeLabels[mod.rules.type]}:</strong> `);
-      const groupStrs = mod.rules.groups.map(group =>
+    const typeLabels = {
+      hard_prereq: 'Prerequisites',
+      soft_prereq: 'Before or while',
+      corequisite: 'Take alongside',
+    };
+
+    return mod.rules.map(rule => {
+      if (rule.type === 'exclusion') {
+        return '<strong>Cannot take with:</strong> ' + rule.excludes.map(c => formatCodeRef(c)).join(' or ');
+      }
+      const groupStrs = rule.groups.map(group =>
         group.map(c => formatCodeRef(c)).join(' + ')
       );
-      parts.push(groupStrs.join(' <em>or</em> '));
-    }
-
-    return parts.join('');
+      return `<strong>${typeLabels[rule.type]}:</strong> ` + groupStrs.join(' <em>or</em> ');
+    }).join('<br>');
   }
 
   function formatCodeRef(code) {
@@ -539,27 +546,32 @@
     const mod = STATE.moduleIndex.get(uid);
     if (!mod) return;
 
-    const relatedUids = new Set([uid]);
+    // Build a map of uid -> highlight CSS class
+    const highlightMap = new Map();
 
-    // Find prereqs/coreqs: rules reference plain codes, resolve to all visible uids
-    if (mod.rules && mod.rules.type !== 'exclusion') {
-      for (const refCode of mod.rules.allCodes) {
+    // Prereqs/coreqs from all rules
+    for (const rule of mod.rules) {
+      if (rule.type === 'exclusion') continue;
+      const cls = rule.type === 'hard_prereq' ? 'highlighted-prereq'
+        : rule.type === 'soft_prereq' ? 'highlighted-soft-prereq'
+        : 'highlighted-coreq';
+      for (const refCode of rule.allCodes) {
         if (STATE.codeEntries.has(refCode)) {
           for (const entry of STATE.codeEntries.get(refCode)) {
-            relatedUids.add(entry.uid);
+            highlightMap.set(entry.uid, cls);
           }
         }
       }
     }
 
-    // Exclusion peers (stored as uids)
+    // Exclusion peers
     for (const peerUid of mod.exclusionPeers) {
-      relatedUids.add(peerUid);
+      highlightMap.set(peerUid, 'highlighted-exclusion');
     }
 
-    // Dependents (stored as uids)
+    // Dependents
     for (const depUid of mod.dependents) {
-      relatedUids.add(depUid);
+      highlightMap.set(depUid, 'highlighted-dependent');
     }
 
     document.querySelectorAll('.module-card').forEach(card => {
@@ -568,16 +580,8 @@
 
       if (cardUid === uid) {
         card.classList.add('highlighted-active');
-      } else if (relatedUids.has(cardUid)) {
-        if (mod.exclusionPeers.includes(cardUid)) {
-          card.classList.add('highlighted-exclusion');
-        } else if (mod.dependents.includes(cardUid)) {
-          card.classList.add('highlighted-dependent');
-        } else if (mod.rules) {
-          if (mod.rules.type === 'hard_prereq') card.classList.add('highlighted-prereq');
-          else if (mod.rules.type === 'soft_prereq') card.classList.add('highlighted-soft-prereq');
-          else if (mod.rules.type === 'corequisite') card.classList.add('highlighted-coreq');
-        }
+      } else if (highlightMap.has(cardUid)) {
+        card.classList.add(highlightMap.get(cardUid));
       } else {
         card.classList.add('dimmed');
       }
@@ -736,51 +740,52 @@
 
   function gatherPrereqs(uid, toSelect, visited) {
     const mod = STATE.moduleIndex.get(uid);
-    if (!mod || !mod.rules) return;
-    if (mod.rules.type === 'exclusion') return;
+    if (!mod) return;
 
-    // mod.rules.groups = [[codeA, codeB], [codeC]] means (A AND B) OR C
-    // Pick the OR group that requires the fewest new selections
-    let bestEntries = null;
-    let bestNewCount = Infinity;
+    // Process each non-exclusion rule
+    for (const rule of mod.rules) {
+      if (rule.type === 'exclusion') continue;
 
-    for (const andGroup of mod.rules.groups) {
-      let groupOk = true;
-      const entries = [];
-      let newCount = 0;
+      // rule.groups = [[codeA, codeB], [codeC]] means (A AND B) OR C
+      // Pick the OR group that requires the fewest new selections
+      let bestEntries = null;
+      let bestNewCount = Infinity;
 
-      for (const code of andGroup) {
-        if (STATE.ghostModules.has(code)) continue;
-        const entry = findBestEntryForCode(code, mod.year);
-        if (!entry) { groupOk = false; break; }
-        entries.push(entry);
-        if (!STATE.selectedModules.has(entry.uid) && !toSelect.has(entry.uid)) {
-          newCount++;
+      for (const andGroup of rule.groups) {
+        let groupOk = true;
+        const entries = [];
+        let newCount = 0;
+
+        for (const code of andGroup) {
+          if (STATE.ghostModules.has(code)) continue;
+          const entry = findBestEntryForCode(code, mod.year);
+          if (!entry) { groupOk = false; break; }
+          entries.push(entry);
+          if (!STATE.selectedModules.has(entry.uid) && !toSelect.has(entry.uid)) {
+            newCount++;
+          }
+        }
+
+        if (groupOk) {
+          const hasReal = entries.length > 0;
+          const bestHasReal = bestEntries !== null && bestEntries.length > 0;
+          if (bestEntries === null || (hasReal && !bestHasReal) || (hasReal === bestHasReal && newCount < bestNewCount)) {
+            bestEntries = entries;
+            bestNewCount = newCount;
+          }
         }
       }
 
-      if (groupOk) {
-        // Prefer groups with real (non-ghost) entries over all-ghost groups;
-        // among groups with entries, prefer fewest new selections
-        const hasReal = entries.length > 0;
-        const bestHasReal = bestEntries !== null && bestEntries.length > 0;
-        if (bestEntries === null || (hasReal && !bestHasReal) || (hasReal === bestHasReal && newCount < bestNewCount)) {
-          bestEntries = entries;
-          bestNewCount = newCount;
-        }
+      if (!bestEntries || bestEntries.length === 0) continue;
+
+      for (const entry of bestEntries) {
+        if (STATE.selectedModules.has(entry.uid) || toSelect.has(entry.uid)) continue;
+        if (visited.has(entry.uid)) continue;
+
+        toSelect.add(entry.uid);
+        visited.add(entry.uid);
+        gatherPrereqs(entry.uid, toSelect, visited);
       }
-    }
-
-    if (!bestEntries || bestEntries.length === 0) return;
-
-    for (const entry of bestEntries) {
-      if (STATE.selectedModules.has(entry.uid) || toSelect.has(entry.uid)) continue;
-      if (visited.has(entry.uid)) continue;
-
-      toSelect.add(entry.uid);
-      visited.add(entry.uid);
-      // Recurse: gather this prereq's own prerequisites
-      gatherPrereqs(entry.uid, toSelect, visited);
     }
   }
 
@@ -1022,16 +1027,17 @@
     const lines = [];
 
     // Lines TO prerequisites (rules reference plain codes → find visible cards)
-    if (mod.rules && mod.rules.type !== 'exclusion') {
-      for (const group of mod.rules.groups) {
+    // Lines TO prerequisites (from all non-exclusion rules)
+    for (const rule of mod.rules) {
+      if (rule.type === 'exclusion') continue;
+      for (const group of rule.groups) {
         for (const prereqCode of group) {
           if (STATE.ghostModules.has(prereqCode)) continue;
-          // Find all cards for this code and draw to visible ones
           const entries = STATE.codeEntries.get(prereqCode) || [];
           for (const entry of entries) {
             const fromRect = getCardRect(entry.uid);
             if (fromRect) {
-              lines.push({ from: fromRect, to: activeRect, type: mod.rules.type });
+              lines.push({ from: fromRect, to: activeRect, type: rule.type });
             }
           }
         }
@@ -1042,10 +1048,7 @@
     for (const depUid of mod.dependents) {
       const depRect = getCardRect(depUid);
       if (!depRect) continue;
-      const depMod = STATE.moduleIndex.get(depUid);
-      if (depMod && depMod.rules) {
-        lines.push({ from: activeRect, to: depRect, type: 'dependent' });
-      }
+      lines.push({ from: activeRect, to: depRect, type: 'dependent' });
     }
 
     // Exclusion lines (stored as uids)

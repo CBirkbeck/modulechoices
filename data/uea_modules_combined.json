@@ -391,7 +391,10 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "D1",
-      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+      "module_rules": [
+        "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+        "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+      ],
       "prerequisite_codes": [
         "MTHS6050A"
       ],
@@ -415,7 +418,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "D",
-      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
       "prerequisite_codes": [
         "MTHS5050A",
         "MTHS6050A"
@@ -1044,7 +1047,10 @@
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "D1",
-      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
+      "module_rules": [
+        "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
+        "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+      ],
       "prerequisite_codes": [
         "MTHS5050A"
       ],
@@ -1090,7 +1096,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "C2",
-      "module_rules": "",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHS5051B AND TAKE MTHA4008B",
       "prerequisite_codes": [],
       "content_sections": {
         "Module Description": "Additional details for this module are not available."
@@ -1236,6 +1242,29 @@
         "2024/5",
         "2025/6",
         "2026/7"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-40 credits",
+      "notes": "Students will select 20-40 credits from the following modules:",
+      "module_code": "MTHA6007Y",
+      "description": "MATHEMATICS PROJECT EXTENSION",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "YEAR",
+      "sub_slot": "E",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHA6005Y",
+      "prerequisite_codes": [
+        "MTHA6005Y"
+      ],
+      "content_sections": {
+        "Module Description": "This module adds an additional 20 credits to the project from MTHA6006Y or MTHA6005Y, extending it from 20 credits to 40 credits. This gives the opportunity for a deeper investigation of the chosen subject, supported by additional meetings with the project supervisor."
+      },
+      "discontinued": true,
+      "available_years": [
+        "2025/6"
       ]
     },
     {
@@ -1656,7 +1685,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "D",
-      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
       "prerequisite_codes": [
         "MTHS5050A",
         "MTHS6050A"
@@ -2197,29 +2226,6 @@
       "available_years": [
         "2025/6",
         "2026/7"
-      ]
-    },
-    {
-      "year": "Year 3U",
-      "section": "Options Range B",
-      "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
-      "module_code": "MTHA6007Y",
-      "description": "MATHEMATICS PROJECT EXTENSION",
-      "assessment": "CW",
-      "credits": "20",
-      "period": "YEAR",
-      "sub_slot": "E",
-      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHA6005Y",
-      "prerequisite_codes": [
-        "MTHA6005Y"
-      ],
-      "content_sections": {
-        "Module Description": "This module adds an additional 20 credits to the project from MTHA6006Y or MTHA6005Y, extending it from 20 credits to 40 credits. This gives the opportunity for a deeper investigation of the chosen subject, supported by additional meetings with the project supervisor."
-      },
-      "discontinued": true,
-      "available_years": [
-        "2025/6"
       ]
     }
   ]
