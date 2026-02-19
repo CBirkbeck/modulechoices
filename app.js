@@ -562,7 +562,8 @@
     // Build a map of uid -> highlight CSS class
     const highlightMap = new Map();
 
-    // Prereqs/coreqs from all rules
+    // Prereqs/coreqs from all rules (filtered by year relationship)
+    const modYearNum = parseInt(mod.year.match(/\d/)[0]);
     for (const rule of mod.rules) {
       if (rule.type === 'exclusion') continue;
       const cls = rule.type === 'hard_prereq' ? 'highlighted-prereq'
@@ -571,6 +572,10 @@
       for (const refCode of rule.allCodes) {
         if (STATE.codeEntries.has(refCode)) {
           for (const entry of STATE.codeEntries.get(refCode)) {
+            const entryYearNum = parseInt(entry.year.match(/\d/)[0]);
+            if (rule.type === 'corequisite' && entryYearNum !== modYearNum) continue;
+            if (rule.type === 'hard_prereq' && entryYearNum >= modYearNum) continue;
+            if (rule.type === 'soft_prereq' && entryYearNum > modYearNum) continue;
             highlightMap.set(entry.uid, cls);
           }
         }
@@ -1039,8 +1044,8 @@
 
     const lines = [];
 
-    // Lines TO prerequisites (rules reference plain codes → find visible cards)
-    // Lines TO prerequisites (from all non-exclusion rules)
+    // Lines TO prerequisites (filtered by year relationship)
+    const modYearNum = parseInt(mod.year.match(/\d/)[0]);
     for (const rule of mod.rules) {
       if (rule.type === 'exclusion') continue;
       for (const group of rule.groups) {
@@ -1048,6 +1053,10 @@
           if (STATE.ghostModules.has(prereqCode)) continue;
           const entries = STATE.codeEntries.get(prereqCode) || [];
           for (const entry of entries) {
+            const entryYearNum = parseInt(entry.year.match(/\d/)[0]);
+            if (rule.type === 'corequisite' && entryYearNum !== modYearNum) continue;
+            if (rule.type === 'hard_prereq' && entryYearNum >= modYearNum) continue;
+            if (rule.type === 'soft_prereq' && entryYearNum > modYearNum) continue;
             const fromRect = getCardRect(entry.uid);
             if (fromRect) {
               lines.push({ from: fromRect, to: activeRect, type: rule.type });
