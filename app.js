@@ -133,6 +133,18 @@
     return rules;
   }
 
+  function getEffectiveRuleText(mod) {
+    if (mod.rules_by_year) {
+      const yearNum = parseInt(mod.year.match(/\d/)[0]);
+      const calYear = getAcademicYearKey(STATE.entryYear, yearNum - 1);
+      const dataYear = calendarYearToDataYear(calYear);
+      if (mod.rules_by_year[dataYear] !== undefined) {
+        return mod.rules_by_year[dataYear];
+      }
+    }
+    return mod.module_rules;
+  }
+
   function getAcademicYearKey(entryYear, yearOffset) {
     const startYear = parseInt(entryYear.split('/')[0]);
     const y = startYear + yearOffset;
@@ -190,6 +202,7 @@
 
     for (const mod of STATE.modules) {
       const uid = makeUid(mod.module_code, mod.year);
+      const effectiveRules = getEffectiveRuleText(mod);
       const enriched = {
         uid: uid,
         code: mod.module_code,
@@ -205,8 +218,8 @@
         notes: mod.notes,
         available_years: mod.available_years,
         discontinued: !!mod.discontinued,
-        rules: parseAllRules(mod.module_rules),
-        rawRules: mod.module_rules,
+        rules: parseAllRules(effectiveRules),
+        rawRules: effectiveRules,
         contentSections: mod.content_sections || {},
         dependents: [],       // uids of modules that depend on this one
         exclusionPeers: [],   // uids of mutually exclusive modules
@@ -1224,6 +1237,7 @@
     STATE.entryYear = e.target.value;
     STATE.activeModule = null;
     clearLines();
+    buildModuleIndex();   // rebuild so year-specific rules take effect
     renderAll();
     saveState();
   }

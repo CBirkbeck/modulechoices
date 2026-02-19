@@ -100,15 +100,19 @@ def main():
     print(f"\nCalendar years in data: {year_labels}")
 
     # Build combined: for each unique (code, year-of-study) pair,
-    # take the most recent year's version and track all available_years
+    # take the most recent year's version and track all available_years.
+    # Also track per-year module_rules so the app can show the right rules
+    # for each entry year (rules may change between academic years).
     # Key = (module_code, year_of_study)
     combined_map = {}
+    rules_tracker = {}  # key -> {year_label: module_rules}
 
     for year_label in year_labels:
         for (code, study_year), mod in all_years[year_label].items():
             key = (code, study_year)
             if key not in combined_map:
                 combined_map[key] = {**mod, 'available_years': [], 'content_sections': {}}
+                rules_tracker[key] = {}
             # Always update to the latest version of module data
             # (rules, credits etc. may change), but keep available_years and
             # merge content_sections (keep any descriptions we've collected)
@@ -119,6 +123,18 @@ def main():
             combined_map[key] = {**mod, 'available_years': avail, 'content_sections': merged_content}
             if year_label not in avail:
                 avail.append(year_label)
+
+            # Track per-year rules
+            rules_tracker[key][year_label] = mod.get('module_rules', '')
+
+    # Add rules_by_year when rules differ across years
+    for key, rules_map in rules_tracker.items():
+        unique_rules = set()
+        for r in rules_map.values():
+            # Normalize for comparison: convert list to tuple
+            unique_rules.add(json.dumps(r, sort_keys=True) if isinstance(r, list) else r)
+        if len(unique_rules) > 1:
+            combined_map[key]['rules_by_year'] = rules_map
 
     # Sort combined modules by year, section order, then code
     section_order = {

@@ -405,7 +405,15 @@
         "2024/5",
         "2025/6",
         "2026/7"
-      ]
+      ],
+      "rules_by_year": {
+        "2024/5": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+        "2025/6": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+        "2026/7": [
+          "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+          "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+        ]
+      }
     },
     {
       "year": "Year 2U",
@@ -430,7 +438,12 @@
         "2024/5",
         "2025/6",
         "2026/7"
-      ]
+      ],
+      "rules_by_year": {
+        "2024/5": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+        "2025/6": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+        "2026/7": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B"
+      }
     },
     {
       "year": "Year 2U",
@@ -1060,7 +1073,14 @@
       "available_years": [
         "2025/6",
         "2026/7"
-      ]
+      ],
+      "rules_by_year": {
+        "2025/6": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
+        "2026/7": [
+          "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
+          "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+        ]
+      }
     },
     {
       "year": "Year 3U",
@@ -1697,7 +1717,12 @@
         "2024/5",
         "2025/6",
         "2026/7"
-      ]
+      ],
+      "rules_by_year": {
+        "2024/5": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+        "2025/6": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
+        "2026/7": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B"
+      }
     },
     {
       "year": "Year 3U",

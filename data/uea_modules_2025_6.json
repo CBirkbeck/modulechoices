@@ -237,7 +237,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "D",
-      "module_rules": "",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
       "prerequisite_codes": [
         "MTHS5050A",
         "MTHS6050A"
@@ -826,7 +826,7 @@
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "D",
-      "module_rules": "",
+      "module_rules": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
       "prerequisite_codes": [
         "MTHS5050A",
         "MTHS6050A"
