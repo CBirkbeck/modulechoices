@@ -1101,6 +1101,7 @@
       "content_sections": {
         "Module Description": "This module covers the theory and practice of statistical modelling of time series and introduces stochastic processes."
       },
+      "discontinued": true,
       "available_years": [
         "2025/6"
       ]

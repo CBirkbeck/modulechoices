@@ -195,6 +195,24 @@
       return mod.available_years.includes(calYear);
     }
 
+    // Direct match with a data year we have
+    if (STATE.dataYears.includes(calYear)) {
+      return mod.available_years.includes(calYear);
+    }
+
+    // Future year beyond data range:
+    // If module runs in both parities (every year), show it
+    const parities = new Set(mod.available_years.map(y => parseInt(y.split('/')[0]) % 2));
+    if (parities.size === 2) return true;
+
+    // If module only appears in the latest data year, assume it's
+    // new/continuing and will run every year going forward
+    const latestDataYear = STATE.dataYears[STATE.dataYears.length - 1];
+    if (mod.available_years.length === 1 && mod.available_years[0] === latestDataYear) {
+      return true;
+    }
+
+    // Otherwise use parity inference for alternate-year modules
     const dataYear = calendarYearToDataYear(calYear);
     return mod.available_years.includes(dataYear);
   }
