@@ -135,12 +135,25 @@
 
   function getEffectiveRuleText(mod) {
     if (mod.rules_by_year) {
-      // Rules are determined by the entry year (course regulations are
-      // fixed at the point of entry), not the per-module calendar year
-      const entryDataYear = calendarYearToDataYear(STATE.entryYear);
-      if (mod.rules_by_year[entryDataYear] !== undefined) {
-        return mod.rules_by_year[entryDataYear];
+      // Rules depend on the calendar year the module runs in
+      const yearNum = parseInt(mod.year.match(/\d/)[0]);
+      const calYear = getAcademicYearKey(STATE.entryYear, yearNum - 1);
+
+      // Direct match
+      if (mod.rules_by_year[calYear] !== undefined) {
+        return mod.rules_by_year[calYear];
       }
+
+      // For future years beyond data, carry forward the latest rules
+      const calStart = parseInt(calYear.split('/')[0]);
+      const available = Object.keys(mod.rules_by_year)
+        .map(y => ({ year: y, start: parseInt(y.split('/')[0]) }))
+        .sort((a, b) => a.start - b.start);
+      let best = available[available.length - 1];
+      for (const entry of available) {
+        if (entry.start <= calStart) best = entry;
+      }
+      return mod.rules_by_year[best.year];
     }
     return mod.module_rules;
   }
