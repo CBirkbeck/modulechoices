@@ -1,0 +1,1115 @@
+{
+  "course": "MASTER OF MATHEMATICS (U1G103402)",
+  "academic_year": "2028/9",
+  "school": "ENGINEERING, MATHEMATICS AND PHYSICS",
+  "scraped_at": "2026-02-23 (generated from Excel)",
+  "modules": [
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4004A",
+      "description": "PROOFS AND LIMITS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module provides an introduction to various fundamental mathematical concepts and techniques that you will need to study more advanced mathematics later in your degree.\n\nYou will gain a thorough introduction to some systems of numbers commonly found in Mathematics including: natural numbers, integers, rational numbers and real numbers. You will also learn about common set-theoretic notation and terminology, and a precise language with which to talk about functions. There is emphasis on precise definitions of concepts and careful proofs of results, which will prepare you for doing the same in future mathematics modules. You will study different techniques of mathematical proof, including: proof by induction, direct proofs, proof by contradiction, contrapositive statements, equivalent statements, the role of examples and counterexamples, and how to deal with “there exists” and “for all” statements.\n\nYou will explore the mathematical notion of a limit, which is the start of the branch of mathematics known as analysis. You will see the precise definition of the limit of a sequence of real numbers, and learn how to prove that a sequence converges to a limit. After studying limits of infinite sequences, you will move on to studying series, which capture the notion of an infinite sum, and learn techniques to prove that a series converges."
+      }
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4005A",
+      "description": "LINEAR EQUATIONS AND DIGITAL SKILLS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module covers two distinct topics that will underpin a lot of your further studies on your degree.\n\nIn the Linear Equations part, you will learn about the theory of matrices. You will study: matrix operations; the relationship between matrices and systems of linear equations; how determinants can help tell whether a system of equations has just one solution; eigenvalues and eigenvectors, which give directions where a matrix behaves just as a contraction or expansion; and geometric interpretations of all these. \n\nIn the Digital Skills part, you will learn how modern computer software including AI can be used to help in the study and communication of mathematics.  You will also learn how to produce mathematical documents using a typesetting system called “LaTeX”, and how to solve mathematical problems computationally using both symbolic algebra software and Excel."
+      }
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4008A",
+      "description": "CALCULUS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "Calculus is the mathematical study of rates of change. It underpins much of applied mathematics, since we are often interested in determining how quickly things will change, whether that is looking at changes in space or in time.\n\nYou will start this module by studying complex numbers and vectors. (These topics are not strictly calculus but will be needed in calculus later on.) You will then study differentiation – how to determine the rate of change of one variable or function as another variable changes. You will meet the formal definition of the derivative, and discover how to differentiate from first principles, before learning various rules and techniques for differentiating more complex functions. You will also learn about applications to curve sketching and power series.\n\nNext you will study integration (the inverse of differentiation), learning various techniques, including substitution and integration by parts, and considering applications to finding areas and arc lengths. You will then learn about methods for solving first and second-order ordinary differential equations. Techniques covered here include reduction of order. and integrating factors. You will learn how to use the computer program Maple to solve differential equations numerically."
+      }
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4003B",
+      "description": "REAL ANALYSIS AND GROUP THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module continues the study of real analysis from the previous semester and will introduce you to another important area of pure mathematics – group theory.\n\nReal Analysis is fundamental to Mathematics as it is the reason why Calculus works. You will learn about limits of functions and continuity before moving on to study the formal definitions of the derivative and integral of a function, and for what sorts of functions these actually make sense. This then leads to the Fundamental Theorem of Calculus, which proves that integration and differentiation are essentially inverses of each other.\n\nGroup Theory is the study of symmetry, treated in an abstract way which then allows for application in many situations in Mathematics and beyond. You will start by developing a list of axioms for what a group should be, and then study the implications of these axioms: for example, what one can deduce about the possible sizes of subgroups (Lagrange’s Theorem), how to define functions between groups in sensible way (homomorphisms), when different groups are really the same (isomorphism), and how to use known groups to build new ones (product and quotient groups). Throughout, you will see many examples."
+      }
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4007B",
+      "description": "COMPUTATION AND MODELLING",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "Computation and modelling are essential skills for the modern mathematician. While many applied problems are amenable to analytic methods, many require some numerical computation to complete the solution. The synthesis of these two approaches can provide deep insight into highly complex mathematical ideas.\n\nThis module will introduce you to the art of mathematical modelling, and train you in the computer programming skills needed to perform numerical computations. You will be introduced to the Python programming language and study algorithms for problems such as root finding. A particular focus of mathematical modelling is classical mechanics, which describes the motion of solid bodies. Central to this is Newton’s second law of motion, which states that a mass will accelerate at a rate proportional to the force imposed upon it. This leads to an ordinary differential equation to be solved for the velocity and position of the mass. In the simplest cases, the solution can be constructed using analytical methods, but in more complex situations, for example motion under resistance, you will use numerical methods to find the motion of a particle."
+      }
+    },
+    {
+      "year": "Year 1U",
+      "section": "Compulsory Modules (120 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA4008B",
+      "description": "PROBABILITY AND MULTIVARIABLE CALCULUS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "BEFORE OR WHILE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
+      "prerequisite_codes": [
+        "MTHA4008A"
+      ],
+      "content_sections": {
+        "Module Description": "The module combines two important topics in preparation for your future studies. \n\nProbability is the study of the chance of events occurring. It has important applications to understand the likelihood of multiple events happening together in order to make rational decisions. You will be introduced to Kolmogorov’s modern axiomatic theory of probability and the concept of random variables. You will study both discrete and continuous random variables. Finally, will explore two applications of probability: reliability theory (which looks at the likelihood of the failure of a piece of equipment at some point in the future) and Markov chains (which model how the likelihood of being in different states evolves in time).\n\nMultivariable calculus extends concepts of calculus to functions of more than one variable. This leads to the idea of partial derivatives. You will learn how to differentiate functions of more than one variable, and how to do integrals of such functions along curves and over areas. You will also learn how to change coordinates in multiple integrals using Jacobians, and study Green's theorem in the plane."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5003A",
+      "description": "COMPLEX FUNCTIONS AND LINEAR ALGEBRA",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003A AND TAKE MTHA4003B",
+      "prerequisite_codes": [
+        "MTHA4003A",
+        "MTHA4003B"
+      ],
+      "content_sections": {
+        "Module Description": "This module comprises two distinct parts, building on the Analysis and Algebra streams you studied in first year.\n\nLinear Algebra follows on from the study of the concrete examples of vectors and matrices, to the abstract notions of a vector space and linear transformations between them. The power of this abstraction is that it allows the theory to be applied in many more situations: Linear Algebra underpins much of modern mathematics and is used in most sciences. You will learn what an abstract vector space is and its basic properties: in particular, how to make precise the notion of dimension by studying their bases. You will then look at linear transformation between vector spaces, including their kernel and image and the Rank-Nullity Theorem. You will see how, by fixing bases, a linear transformation can be encoded in matrix form, and how changing the bases changes that matrix. This will then allow you to study eigenvectors and the diagonalization of linear transformations.\n\nIn Analysis, you will cover the basic theory of functions of the complex plane, building on the theory of real functions. As well as being of intrinsic interest, complex functions are important for many applications in applied mathematics and beyond. While continuous complex functions behave in a similar way to real functions, you will learn how differentiability brings surprising extra constraints and rigidity, including the so-called Cauchy–Riemann equations. You will also study how power series can be used to represent functions, making precise the Taylor series seen in Calculus."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5005A",
+      "description": "DIFFERENTIAL EQUATIONS AND APPLIED METHODS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
+      "prerequisite_codes": [
+        "MTHA4008B"
+      ],
+      "content_sections": {
+        "Module Description": "In applied mathematics, you will often need to solve equations involving derivatives of the unknown function that you are trying to find. Such equations are known as “differential equations”, and you will learn about various techniques for solving them in this module. \n\nWhen the unknown quantity is a function of one variable then the equation is known as an “ordinary differential equation”. While you will already have seen some techniques of solving ordinary differential equations, you will see  new techniques such as  series solutions and the method of Frobenius.  When the unknown quantity is a function more than one variable then the equation is known as a “partial differential equation” and the method of separation of variables will be introduced. Solutions involving Fourier series (representations of functions as infinite series involving trigonometric functions) are also considered. You will encounter a variety of important partial differential equations from applied mathematics, including heat equation, the wave equation, and Laplace’s equation. \n\nYou will then move on to study two methods that can be used to solve problems that occur in applied mathematics. Fourier transforms can be used to solve ordinary differential equations, partial differential equations, and integral equations. The method of characteristics is a particular technique for solving partial differential equations by converting them to ordinary differential equations.  \n\nFinally, you will learn about techniques for analysing collections of coupled differential equations known as “dynamical systems”, which describe how certain variables evolve in time. The techniques here will help you analyse and understand the behaviour of nonlinear differential equations and acts as a starting point for the study of chaos."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5003B",
+      "description": "COMPLEX INTEGRATION AND RING THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE OR WHILE TAKING THIS MODULE YOU MUST TAKE MTHA5003A",
+      "prerequisite_codes": [
+        "MTHA5003A"
+      ],
+      "content_sections": {
+        "Module Description": "This module comprises two distinct parts, building on Complex Functions and Group Theory respectively.\n\nComplex Integration is a beautiful theory extending integration to complex functions: rather than integrating over an interval of real numbers, you will learn to integrate along a path in the complex plane. The theory you will see often allows these integrals to be done without calculus: instead, the Residue Theorem says it is enough to understand the function at a few specific points (the singularities of the function). This is especially important in applications in Applied Mathematics. This theory also allows you to calculate some real integrals which cannot be computed using real methods alone, as well as infinite series. Along the way, you will also see how Cauchy’s Theorem leads to the result that, in a certain sense, all differentiable complex functions are given by power series – which is not true for real functions.\n\nRing Theory is the study of mathematical structures like the integers, where we have good notions of addition and multiplication (as opposed to a group, where we only have one of these). Similar structures abound in mathematics so it is useful to see how much the theory of the integers can be extended to other rings – for example, factorization into primes, division with remainder and substitution. You will learn the basic theory of rings, including the notion of an ideal in a ring and its quotient ring, and study a variety of examples including polynomial rings."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Compulsory Modules ( 80 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA5005B",
+      "description": "FLUID FLOW - THEORY AND COMPUTATION",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "In this module you will consider how to model the flow of liquids and gases using mathematics. Understanding fluid flows is important for weather predictions, the aerodynamics of air flow round a car, and understanding why planes are able to stay in the air.\n\nYou will first study the fundamentals of “vector calculus”, which deals with how differentiation can be applied to vectors fields (vectors that vary in space), such as the velocity of a fluid. You will then apply your knowledge of vector calculus to see how we formulate the differential equations that govern fluid flows. You will go on to solve simple fluid-flow problems, such as the determining the rate of flow out of a reservoir. \n\nYou will then examine how computers can solve differential equations and approximate continuous functions. This will involve studying the underlying algorithms relevant to understanding fluid flow, and also some practical programming using Python to study the motion of systems of vortices through a fluid.\n\nIn the final part of the module, you will learn about how complex variables and functions can be used to solve problems in inviscid fluid flow, using what is known as “complex potentials”. This represents a nice application of some theory from pure mathematics in an applied mathematics context.  The methods you will study can be used, for example, to estimate the lift on an aerofoil."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "",
+      "module_code": "MTHS5050A",
+      "description": "MATHEMATICAL STATISTICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D1",
+      "module_rules": [
+        "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+        "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+      ],
+      "prerequisite_codes": [
+        "MTHS6050A"
+      ],
+      "content_sections": {
+        "Module Description": "This module introduces the essential concepts of mathematical statistics deriving the necessary distribution theory as required. In consequence in addition to ideas of sampling and central limit theorem, it will cover estimation methods and hypothesis testing."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "",
+      "module_code": "MTHE5037B",
+      "description": "CRYPTOGRAPHY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C2",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "Additional details for this module are not available."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "",
+      "module_code": "MTHS5051B",
+      "description": "LINEAR AND GENERALISED LINEAR MODELS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
+      "prerequisite_codes": [
+        "MTHS5050A",
+        "MTHS6050A"
+      ],
+      "content_sections": {
+        "Module Description": "This module covers Linear and Generalised Linear models. It introduces you to R and then gives you the opportunity to apply linear regression techniques. It covers both the theory and practice of statistical model fitting and students will be expected to analyse real data using R."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "MTHT4001A",
+      "description": "INTRODUCTION TO FINANCIAL MATHEMATICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C2",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "You will learn introductory material relating to financial maths such as present values, accumulations, annuities. You will also get an introduction to spreadsheet skills for actuaries as well as some discrete maths material in preparation for later modules."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "ENV-5048A",
+      "description": "METEOROLOGY",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "The weather affects everyone and influences decisions that are made continuously around the world. From designing and siting a wind farm to assessing flood risk and public safety, weather plays a vital role. \n\nHave you ever wondered what actually causes the weather we experience, for example why large storms are so frequent across north western Europe, especially in Winter? In this module you will learn the fundamentals of the science of meteorology. We will concentrate on the physical processes that underpin the radiation balance, thermodynamics, wind-flow, atmospheric stability, weather systems and the water cycle. We will link these to the weather we experience throughout the Semester. You will learn how weather is a rich fusion of descriptive and numerical elements and you will be able to draw effectively on your own skill strengths while practising and developing others, such that by the end of the module you will understand regional and spatial variations in weather patterns."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "PHY-4003A",
+      "description": "GEOPHYSICS AND ASTROPHYSICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "In this module, you will learn about the methods used to model the physics of the Earth and Universe. You will explore the energy, mechanics, and physical processes underpinning Earth's systems. This includes the study of its formation, subsequent evolution and current state through the understanding of its structure and behaviour - from our planet's interior to the dynamic surface and into the atmosphere. In the second part of this module, you will study aspects of astrophysics including the history of astrophysics, radiation, matter, gravitation, astrophysical measurements, spectroscopy, stars and some aspects of cosmology. You will learn to predict differences between idealised physics and real life situations. You’ll also improve your skills in problem solving, written communication, information retrieval, poster design, information technology, numeracy and calculations, time management and organisation.  In this module, you will learn about the methods used to model the physics of the Earth and Universe. You will explore the energy, mechanics, and physical processes underpinning Earth's systems. This includes the study of its formation, subsequent evolution and current state through the understanding of its structure and behaviour - from our planet's interior to the dynamic surface and into the atmosphere. In the second part of this module, you will study aspects of astrophysics including the history of astrophysics, radiation, matter, gravitation, astrophysical measurements, spectroscopy, stars and some aspects of cosmology. You will learn to predict differences between idealised physics and real life situations. You’ll also improve your skills in problem solving, written communication, information retrieval, poster design, information technology, numeracy and calculations, time management and organisation."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "PHY-5250A",
+      "description": "QUANTUM THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "You’ll cover the foundation and basics of quantum theory including foundations and mathematics of quantum mechanics, atomic theory, perturbation theory which is an approach for modelling more complicated systems. You will then look at more complicated systems involving mixed states and entangled states. Finally we will some time considered relatively modern topics in quantum information."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "CMP-5046B",
+      "description": "FOUNDATIONS OF DATA SCIENCE",
+      "assessment": "CP",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "E",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module is designed as an optional module which can be taken by second and third year students within the Science Faculty. You will explore the methodology of Data Science through application of inferential statistical approaches and development of a basic machine learning classification model. You will adopt a programmatic approach to building and applying inferential statistical models in a browser based, interactive coding environment. In terms of data analysis, we will focus on regression and classification algorithms to build prediction models. Through this module, you will gain knowledge of algorithms and methods for data analysis, as well as practical experience programming in Python using popular libraries such as Numpy, Pandas, Polars, Scikit-learn, Matplotlib and Seaborne."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "EDUB5021B",
+      "description": "EDUCATIONAL PSYCHOLOGY",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1+D",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "In this module we will examine the psychological and social processes that impact education from critical and applied perspectives. Using a range of theoretical viewpoints, students will explore education challenges faced on national and global levels. This will enable students to transfer the skills and knowledge developed on the module to a host of different learning, teaching and inclusion contexts."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "NBS-4108B",
+      "description": "INTRODUCTION TO FINANCIAL AND MANAGEMENT ACCOUNTING",
+      "assessment": "EX",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module provides a foundation in the theory and practice of accounting and an introduction to the role, context and language of financial reporting and management accounting. The module assumes no previous study of accounting. It is be taken to provide a foundation to underpin subsequent specialist studies in accounting."
+      }
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range B",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "CMP-4008Y",
+      "description": "PROGRAMMING 1",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "YEAR",
+      "sub_slot": "E",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-5020B",
+      "prerequisite_codes": [
+        "CMP-5020B"
+      ],
+      "content_sections": {
+        "Module Description": "The purpose of the module is to give the student a solid grounding in the essential features of object-oriented computer programming using the Java programming language. The module is designed to meet the needs of a student who has not previously studied programming, although it is recognised that many will in fact have done so in some measure. On completing this module the student should be capable of developing, testing and documenting simple but non-trivial object-oriented programs, and of using the appropriate technical terminology in discussing these programs.  The purpose of this module is to give the student a solid grounding in the essential features of object-orientated programming using the Java programming language.  The module is designed to meet the needs of the student who has not previously studied programming, although it is recognised that many will have done so in some measure.  Gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java.  \n\nThis module is designed in such a way that you are not expected to have previously studied programming, although it’s recognised that many students taking the module will have done so to some extent.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java.  The module is designed such that you are not expected to have previously studied programming, although it is recognized that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.\nAdditional details for this module are not available."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHE6033A",
+      "description": "GROUPS AND ALGEBRA",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5003A",
+        "MTHA5003B"
+      ],
+      "content_sections": {
+        "Module Description": "This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHE6034A",
+      "description": "PARTIAL DIFFERENTIAL EQUATIONS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5005A",
+        "MTHA5005B"
+      ],
+      "content_sections": {
+        "Module Description": "Partial Differential Equations (PDEs) are ubiquitous in applied mathematics. They arise in many models of physical systems where there is coupling between the variation in space and time, or more than one spatial dimension. Examples include fluid flows, electromagnetism, population dynamics, and the spread on infectious diseases. It is therefore important to understand the theory of PDEs, as well as different analytic and numerical methods for solving them.\n\nThis module will provide you with an understanding of the different types of PDE, including linear, non-linear, elliptic, parabolic and hyperbolic; and how these features affect the required boundary conditions and solution techniques. We will study different methods of analytical solution (such as greens functions, boundary-integral methods, similarity solutions, and characteristics); as well as appropriate numerical methods (with topics such as implicit versus explicit schemes, convergence and stability). Examples and applications will be taken from a variety of fields."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHS6050A",
+      "description": "MATHEMATICAL STATISTICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D1",
+      "module_rules": [
+        "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
+        "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+      ],
+      "prerequisite_codes": [
+        "MTHS5050A"
+      ],
+      "content_sections": {
+        "Module Description": "This module introduces the essential concepts of mathematical statistics deriving the necessary distribution theory as required. In consequence in addition to ideas of sampling and central limit theorem, it will cover estimation methods and hypothesis testing."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "PHY-6007A",
+      "description": "GENERAL RELATIVITY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D2",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE PHY-7007A",
+      "prerequisite_codes": [
+        "PHY-7007A"
+      ],
+      "content_sections": {
+        "Module Description": "General relativity is the modern understanding of the physics of gravity, and is required to describe strong-gravity physics - like that of black holes - which cannot be explained with Newtonian gravity.  Beginning with special relativity, this module teaches the physical reasoning and mathematics (e.g. metrics and tensors) that lead to the equations of general relativity.  You will learn about the importance of general relativity in astrophysics - such as black holes, neutron stars, and gravitational waves - and some of the ways in which general relativity has been tested.\n\nIf taking this module, you will not later be able to take PHY-7007A, which covers the same material together with more advanced topics."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHE6035B",
+      "description": "NUMBER THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B AND TAKE MTHF5035A",
+      "prerequisite_codes": [
+        "MTHA5003A",
+        "MTHA5003B",
+        "MTHF5035A"
+      ],
+      "content_sections": {
+        "Module Description": "Number Theory is the study of arithmetical properties of the integers: properties of, and patterns in, prime numbers, integer solutions of equations with integer coefficients, etc. Gauss called Number Theory \"The Queen of Mathematics\" and, following on from work of Fermat and Euler, is responsible for the emergence of Number Theory as a central subject in modern mathematics. Since then, Number Theory has developed in many directions, including Algebraic, Analytic and Probabilistic Number Theory, and Diophantine Geometry, and has found surprising applications in modern life (notably in Cryptography). \n\nIn this module, building on previous material on prime factorization and congruences, and second year material on groups, rings and fields, you will study various aspects of Number Theory, including certain Diophantine equations and patterns in primes."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHE6036B",
+      "description": "FLUIDS AND WAVES",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
+      "prerequisite_codes": [
+        "MTHA5005A"
+      ],
+      "content_sections": {
+        "Module Description": "Fluid dynamics concerns the mathematical modelling of the flow of liquids and\ngases. It has wide ranging applications across nature, engineering, and biology.\nApplications include understanding the behaviour of ocean waves and weather,\ndesigning efficient aircraft and ships, and describing the flow of blood around the\nbody.\n\nWaves are a general physical phenomenon that allow the transfer of energy from one\nplace to another without the net transfer of matter. Fluids can support waves\nthrough a variety of different mechanisms. Two common examples are gravity waves\nin the surface of a body of water, and sound waves travelling through compressible\nliquid or gas.\n\nIn this module, you will study aspects of linear and nonlinear waves using analytical\ntechniques. You will also consider mathematical models of fluids, particularly\nincluding viscosity (or stickiness) of a fluid. Illustrated by practical examples, you\nwill develop the governing differential Navier-Stokes equations, and then consider\ntheir solution either finding exact solutions, or using analytical techniques to obtain\nsolutions in certain limits (for example low viscosity or high viscosity)."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHE6037B",
+      "description": "CRYPTOGRAPHY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C2",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "Additional details for this module are not available."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHS6052B",
+      "description": "STOCHASTIC PROCESSES AND TIME SERIES",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C2???",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHS5051B AND TAKE MTHA4008B",
+      "prerequisite_codes": [
+        "MTHS5051B",
+        "MTHA4008B"
+      ],
+      "content_sections": {
+        "Module Description": "Additional details for this module are not available."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHT6005B",
+      "description": "FINANCIAL MATHEMATICS",
+      "assessment": "",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C1",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE ECO-7013B",
+      "prerequisite_codes": [
+        "ECO-7013B"
+      ],
+      "content_sections": {
+        "Module Description": "This is a technical finance module and ideal if you are wishing to pursue a career in the financial sector. The focus will be on derivatives valuation and  use of derivatives for both hedging and speculation purposes. The module will be highly analytical, with workshop sessions in Python. The module is highly practical and integral part of it is futures trading exercise. Topics covered will include: bonds; futures/ forwards; options; swaps; hedging; VaR; continuous time stochastic processes and calculus; and stochastic models of security prices."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "PHY-6003B",
+      "description": "ANALYTICAL MECHANICS AND ELECTROMAGNETIC FIELD THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "On this module you will study fundamental, higher-level concepts in classical physics that provide powerful tools in applications as well as theoretical background for further advanced studies in classical and quantum physics. These include extended systems, analytical mechanics, the fundamental laws of electromagnetic fields, and electromagnetic waves."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-40 credits",
+      "notes": "",
+      "module_code": "EDUB6014A",
+      "description": "THE LEARNING AND TEACHING OF MATHEMATICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "E",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "The aim of the module is to introduce you to the study of the teaching and learning of mathematics with particular focus to secondary and post compulsory level. In this module, you will explore theories of learning and teaching of mathematical concepts typically included in the secondary and post compulsory curriculum. Also, you will learn about knowledge related to mathematical teaching. If you are interested in mathematics teaching as a career or interested in mathematics education as a research discipline, then this module will equip you with the necessary knowledge and skills."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-40 credits",
+      "notes": "",
+      "module_code": "MTHA6002B",
+      "description": "HISTORY OF MATHEMATICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
+      "prerequisite_codes": [
+        "MTHA4008A"
+      ],
+      "content_sections": {
+        "Module Description": "We trace the development of mathematics from prehistory to the high cultures of old Egypt, Mesopotamia and the Valley of Ind, through Islamic mathematics onto the mathematical modernity through a selection of results from the present time. We present the rise of calculus from the first work of the Indian and Greek mathematicians’ differentiation and integration through at the time of Newton and Leibniz. We discuss mathematical logic, the ideas of propositions, the axiomatisation of mathematics, and the idea of quantifiers. Our style is to explore mathematical practice and conceptual developments in different historical and geographic contexts."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range B",
+      "credit_rule": "20-40 credits",
+      "notes": "",
+      "module_code": "MTHA6005Y",
+      "description": "MATHEMATICS PROJECT",
+      "assessment": "PR",
+      "credits": "20",
+      "period": "YEAR",
+      "sub_slot": "Z",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "In this module you will undertake an individual project on a mathematical topic of interest to you. Your work on the project will be supervised by a member of staff within the School of Mathematics or a related School. Topics can be chosen from a booklet of suggestions, or you can propose your own. The focus of the module is on independent research and study. You will also learn how to use the mathematical typesetting system LaTeX. The module is assessed via a written report and a short oral presentation. As well as learning about your particular topic, you will also gain a number of useful transferable skills from this module."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "PHY-5250A",
+      "description": "QUANTUM THEORY",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "You’ll cover the foundation and basics of quantum theory including foundations and mathematics of quantum mechanics, atomic theory, perturbation theory which is an approach for modelling more complicated systems. You will then look at more complicated systems involving mixed states and entangled states. Finally we will some time considered relatively modern topics in quantum information."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "CMP-5015A",
+      "description": "PROGRAMMING 2",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE CMP-4008Y",
+      "prerequisite_codes": [
+        "CMP-4008Y"
+      ],
+      "content_sections": {
+        "Module Description": "This is a compulsory module for all computing students and is a continuation of Programming 1. It contains greater breadth and depth and provides students with the range of skills needed for many of their subsequent modules. We introduce C in order to improve your low level understanding of how programming works, and cover C++ for an advanced industry-used programming language. We also recap Java and deepen your understanding of the language by teaching topics such as nested classes, generics, reflection, collections and threaded programming."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "CMP-6058A",
+      "description": "ARTIFICIAL INTELLIGENCE",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-7058A",
+      "prerequisite_codes": [
+        "CMP-7058A"
+      ],
+      "content_sections": {
+        "Module Description": "The module aims to introduce the fundamentals of machine learning and artificial intelligence, and their application in a variety of domains. Topics to be covered include: fundamentals for classification, supervised machine learning algorithms for classification (Decision Trees, Nearest Neighbours and introduction to Neural Networks), Clustering algorithms (K-means, Hierarchical), Probabilistic models (Bayesian), Markov models, State Space representation, Search algorithms, and Game playing for decision making.\n \nThis module prepares you with a strong foundation for further study in advanced artificial intelligence topics"
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "CMP-6044A",
+      "description": "INTRODUCTION TO CYBER SECURITY",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module provides a broad understanding of the core topics and issues relating to the rapidly evolving world of cyber security. As security becomes an increasingly important part of our daily lives, then it is essential to develop an understanding of the theories of security and their application to the wider world. \n\nIntroduction to Cyber Security covers topics including: the value of data and the role of security, of risk and threat modelling, human aspects of cyber security, social engineering, deception, and cyber and information warfare. \n\nThe module prepares you with essential knowledge and understanding of cyber security and provides the tools for further study and research in specialist areas."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "EDUB6006A",
+      "description": "CHILDREN, TEACHERS AND MATHEMATICS: CHANGING PUBLIC DISCOURSES ABOUT MATHEMATICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module will introduce you to key issues in mathematics education, particularly those that relate to the years of compulsory schooling. \nSpecifically, in this module, we:\n•\tintroduce the mathematics curriculum and pupils' experiences of learning key mathematical topics; \n•\tdiscuss public and popular culture discourses on mathematics, mathematical ability and mathematicians as well as address ways in which these discourses can be challenged; \n•\toutline and discuss specific pedagogical actions (focused on challenge and motivation) that can be taken as early as possible during children’s schooling and can provide a solid basis for pupils' competence, confidence and and appreciation of mathematics.\nIn this module, you will:\n•\tgain insight into key curricular, pedagogical, social and cultural issues that relate to the teaching and learning of mathematics, a crucial subject area in the curriculum; \n•\treflect on pedagogical action that aims to address those issues, particularly in the years of compulsory schooling; \n•\tbe informed and able to consider the potential of pursuing a career in mathematics education, either as a teacher, educational professional or researcher with particular specialisation in the teaching and learning of mathematics."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "ENV-5047A",
+      "description": "THE OCEAN SYSTEM",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "The ocean is a dynamic component of the Earth system and plays a critical role in the modulation of our climate by both transporting excess heat from the equator to the poles and drawing down carbon dioxide from the atmosphere. It is also important economically through commercial fisheries, internationally shipping, and renewable energy developments such as offshore wind farms. \n\nIn this module you will explore the fundamental physical processes that drive global ocean circulation, building on concepts introduced in the first-year module Earth Systems. You will find out how the ocean interacts with the overlying atmosphere and together help modulate our climate. You will also explore the different set of physical processes that dominate circulation in the shallow seas that surround the continents, including how they drive biogeochemical fluxes and primary productivity. \n\nCareer development: You will develop new skills during this module that will support careers in the marine renewable energy industry, environmental consultancy, government laboratories, and academia. Applied aspects of the module will be taught by guest lecturers from the Centre for Environment Fisheries and Aquaculture Science (Cefas), through the Collaborative Centre for Sustainable Use of the Seas."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "ENV-5048A",
+      "description": "METEOROLOGY",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "The weather affects everyone and influences decisions that are made continuously around the world. From designing and siting a wind farm to assessing flood risk and public safety, weather plays a vital role. \n\nHave you ever wondered what actually causes the weather we experience, for example why large storms are so frequent across north western Europe, especially in Winter? In this module you will learn the fundamentals of the science of meteorology. We will concentrate on the physical processes that underpin the radiation balance, thermodynamics, wind-flow, atmospheric stability, weather systems and the water cycle. We will link these to the weather we experience throughout the Semester. You will learn how weather is a rich fusion of descriptive and numerical elements and you will be able to draw effectively on your own skill strengths while practising and developing others, such that by the end of the module you will understand regional and spatial variations in weather patterns."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "ENV-6004A",
+      "description": "MODELLING ENVIRONMENTAL PROCESSES",
+      "assessment": "CP",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "Our aim is to show how environmental problems may be solved from the initial problem, to mathematical formulation and numerical solution. Problems will be described conceptually, then defined mathematically, then solved numerically via computer programming. \n\nThe module requires some knowledge of calculus, ordinary and partial differential equations, and some experience with coding. Please contact the module organiser if you need more detail on the prerequisites.\n\nThe module consists of lectures on numerical methods and computing practicals; the practicals being designed to illustrate the solution of problems using the methods covered in lectures. We will guide you through the solution of a model of an environmental process of your own choosing. The skills developed in this module are very relevant to jobs that involve modelling to better understand and predict natural . processes such as weather forecasting, impact of hazards, effects of climate change and possible outcomes of proposed environmental management scenarios."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "NBS-5101A",
+      "description": "FINANCIAL REPORTING",
+      "assessment": "EX",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "What are the rules that dictate how company accounts should be prepared and why do those rules exist? This is the essence of this module. Whilst company directors may wish to present the financial condition of a business in the best possible light, rules have been developed to protect investors and users of the accounts from being misled. You’ll develop knowledge and skills in understanding and applying accounting standards when preparing financial statements. You will also prepare and analyse statements of both individual businesses and groups of companies. Large UK companies report using International Financial Reporting Standards, and these are the standards that you’ll use. You’ll begin by preparing basic financial statements and progress, preparing accounts of increasing complexity by looking at topics including goodwill, leases, cashflow statements, foreign currency transactions, financial instruments and group accounts. You will also deepen your analytical skills through ratio analysis. You’ll learn through a mixture of lectures, seminars and self-study, and be assessed by one three-hour examination. On successful completion of this module, you’ll have acquired significant technical skills in both the preparation and analysis of financial statements. This will give you a strong basis from which to build if you are planning on a career in business or accounting."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "CMP-5046B",
+      "description": "FOUNDATIONS OF DATA SCIENCE",
+      "assessment": "CP",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "E",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module is designed as an optional module which can be taken by second and third year students within the Science Faculty. You will explore the methodology of Data Science through application of inferential statistical approaches and development of a basic machine learning classification model. You will adopt a programmatic approach to building and applying inferential statistical models in a browser based, interactive coding environment. In terms of data analysis, we will focus on regression and classification algorithms to build prediction models. Through this module, you will gain knowledge of algorithms and methods for data analysis, as well as practical experience programming in Python using popular libraries such as Numpy, Pandas, Polars, Scikit-learn, Matplotlib and Seaborne."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "EDUB5021B",
+      "description": "EDUCATIONAL PSYCHOLOGY",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "In this module we will examine the psychological and social processes that impact education from critical and applied perspectives. Using a range of theoretical viewpoints, students will explore education challenges faced on national and global levels. This will enable students to transfer the skills and knowledge developed on the module to a host of different learning, teaching and inclusion contexts."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "MTHS5051B",
+      "description": "LINEAR AND GENERALISED LINEAR MODELS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
+      "prerequisite_codes": [
+        "MTHS5050A",
+        "MTHS6050A"
+      ],
+      "content_sections": {
+        "Module Description": "This module covers Linear and Generalised Linear models. It introduces you to R and then gives you the opportunity to apply linear regression techniques. It covers both the theory and practice of statistical model fitting and students will be expected to analyse real data using R."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "NBS-5104B",
+      "description": "MANAGEMENT ACCOUNTING",
+      "assessment": "EX",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "The module aims to develop students’ understanding of the theory and practice of management accounting. It develops underpinning competencies in management accounting and builds on topics introduced in the first year. It extends comprehension of the role and system of management accounting for performance measurement, planning, decision making and control across a range of organisations. Additionally, it introduces recent developments in management accounting practice, particularly those which underpin its growing strategic role."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "ENV-6035B",
+      "description": "CLIMATE AND WEATHER PREDICTION",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "D",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This module is about the science of weather prediction and climate on timescales from days to multiple decades and is for those interested in furthering their interest or career in climate science or meteorology.\n\nThe module covers:  short-term weather forecasting and the relevant important processes, longer-term monthly to seasonal prediction, climate and its variability, and decadal climate prediction. It also considers the differing roles of the atmosphere and ocean as the module moves from shorter to longer timescales, demonstrating a \"seamless\" way of thinking about weather and climate prediction.  \n\nYou will develop a clear understanding of risks and opportunities of weather to people, organisations and to the wider environment. You’ll learn how to confidently source a diverse range of real-time weather information and you’ll practice analysing such data, leading subsequently to successful interpretation and effective communication. You’ll see, first hand, how weather and climate prediction depend upon computer systems for the efficient sharing, processing and visualisation of information. Being taught by weather practitioners and climate scientists with long experience of providing weather and climate services to users, you will get the inside track on what it’s like to work in weather and climate.\n\nThe module is taught using a combination of lectures and practical classes.  It is assessed by one piece of coursework which combines two short essay-style reports with data analysis of a synoptic weather situation, and analysis of how similar situations are projected to change in different parts of the world. \n\nThe module prepares students with skills required for weather forecasting, understanding climate prediction, and contributing to decisions on responses to climate change in both public and private sectors."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range C",
+      "credit_rule": "0-20 credits",
+      "notes": "",
+      "module_code": "BIO-6018Y",
+      "description": "SCIENCE COMMUNICATION",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "YEAR",
+      "sub_slot": "C1",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "You will gain an understanding of how science is disseminated to the public and explore the theories surrounding learning and communication. You will investigate science as a culture and how this culture interfaces with the public. Examining case studies in a variety of different scientific areas, alongside looking at how information is released in scientific literature and subsequently picked up by the public press, will give you an understanding of science communication. You will gain an appreciation of how science information can be used to change public perception and how it can sometimes be misinterpreted. You will also learn practical skills by designing, running and evaluating a public outreach event at a school or in a public area.\n\nIf you wish to take this module you will be required to write a statement of selection. These statements will be assessed and students will be allocated to the module accordingly."
+      }
+    },
+    {
+      "year": "Year 3U",
+      "section": "",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHX6014Y",
+      "description": "YEAR ABROAD",
+      "assessment": "CW",
+      "credits": "120",
+      "period": "YEAR",
+      "sub_slot": "",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {}
+    },
+    {
+      "year": "Year 4U",
+      "section": "Core Modules ( 40 credits)",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHA7029Y",
+      "description": "MATHEMATICS DISSERTATION",
+      "assessment": "DS",
+      "credits": "40",
+      "period": "YEAR",
+      "sub_slot": "U",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "In this module you will undertake an individually supervised research project on a mathematical topic of interest to you. Topics can be chosen from a booklet of suggestions, or you can propose your own. Throughout the year, you will have regular meetings with your supervisor, to discuss your progress, ask questions and get feedback. The focus of the module is on independent research and study, and the presentation of mathematical ideas to others. The module is assessed via a formal written report and an oral presentation. As well as learning about your particular topic, you will also gain a number of useful transferable skills from this module."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "MTHE7033A",
+      "description": "GROUPS AND ALGEBRA WITH ADVANCED TOPICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5003A",
+        "MTHA5003B"
+      ],
+      "content_sections": {
+        "Module Description": "This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "MTHE7034A",
+      "description": "PARTIAL DIFFERENTIAL EQUATIONS WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
+      "prerequisite_codes": [
+        "MTHA5005A",
+        "MTHA5005B"
+      ],
+      "content_sections": {
+        "Module Description": "Partial Differential Equations (PDEs) are ubiquitous in applied mathematics. They arise in many models of physical systems where there is coupling between the variation in space and time, or more than one spatial dimension. Examples include fluid flows, electromagnetism, population dynamics, and the spread of infectious diseases. It is therefore important to understand the theory of PDEs, as well as different analytic and numerical methods for solving them.\n\nThis module will provide you with an understanding of the different types of PDE, including linear, non-linear, elliptic, parabolic and hyperbolic; and how these features affect the required boundary conditions and solution techniques. We will study different methods of analytical solution (such as greens functions, boundary-integral methods, similarity solutions, and characteristics); as well as appropriate numerical methods (with topics such as implicit versus explicit schemes, convergence, and stability). Examples and applications will be taken from a variety of fields.\n\nFor the advanced topics, you will study similarity solutions and implicit numerical methods for non-linear PDES."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "PHY-7007A",
+      "description": "RELATIVISTIC ASTROPHYSICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D2",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE PHY-6007A",
+      "prerequisite_codes": [
+        "PHY-6007A"
+      ],
+      "content_sections": {
+        "Module Description": "General relativity is the modern understanding of the physics of gravity, and is required to describe strong-gravity physics - like that of black holes - which cannot be explained with Newtonian gravity.  Beginning with special relativity, this module teaches the physical reasoning and mathematics (e.g. metrics and tensors) that lead to the equations of general relativity.  You will learn about the importance of general relativity in astrophysics - such as black holes, neutron stars, and gravitational waves - and some of the ways in which general relativity has been tested.\n\nSome of the material in this module is co-taught with PHY-6007A (general relativity); you may not take both. In this level-7 version you will also learn more advanced topics, including a greater focus on astrophysical phenomena where general relativity is important."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "MTHA7030B",
+      "description": "RESEARCH TOPICS IN PURE MATHEMATICS",
+      "assessment": "CW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "E",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "Additional details for this module are not available."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "MTHE7036B",
+      "description": "FLUIDS AND WAVES WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
+      "prerequisite_codes": [
+        "MTHA5005A"
+      ],
+      "content_sections": {
+        "Module Description": "Fluid dynamics concerns the mathematical modelling of the flow of liquids and gases. It has wide ranging applications across nature, engineering, and biology.  Applications include understanding the behaviour of ocean waves and weather, designing efficient aircraft and ships, and describing the flow of blood around the body.\n\nWaves are a general physical phenomenon that allow the transfer of energy from one place to another without the net transfer of matter. Fluids can support waves through a variety of different mechanisms. Two common examples are gravity waves in the surface of a body of water, and sound waves travelling through compressible liquid or gas.\n\nIn this module, you will study aspects of linear and nonlinear waves using analytical techniques. You will also consider mathematical models of fluids, particularly including viscosity (or stickiness) of a fluid. Illustrated by practical examples, you will develop the governing differential Navier-Stokes equations, and then consider their solution either finding exact solutions, or using analytical techniques to obtain solutions in certain limits (for example low viscosity or high viscosity)"
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "MTHE7035B",
+      "description": "NUMBER THEORY WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "A2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5003A",
+        "MTHA5003B"
+      ],
+      "content_sections": {
+        "Module Description": "Number Theory is the study of arithmetical properties of the integers: properties of, and patterns in, prime numbers, integer solutions of equations with integer coefficients, etc. Gauss called Number Theory \"The Queen of Mathematics\" and, following on from work of Fermat and Euler, is responsible for the emergence of Number Theory as a central subject in modern mathematics. Since then, Number Theory has developed in many directions, including Algebraic, Analytic and Probabilistic Number Theory, and Diophantine Geometry, and has found surprising applications in modern life (notably in Cryptography). \n\nIn this module, building on previous material on prime factorization and congruences, and second year material on groups, rings and fields, you will study various aspects of Number Theory, including certain Diophantine equations and patterns in primes.\n\nFor the advanced topics, you will study applications of Number Theory to Cryptography. Important cryptographic methods like RSA rely on the computational difficulty of factorizing large integers into primes. You will learn some techniques, based on the Number Theory you have learnt, to attack this factorizing problem."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range B",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
+      "module_code": "ENV-7003A",
+      "description": "MODELLING ENVIRONMENTAL PROCESSES",
+      "assessment": "CP",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "C",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE ENV-6004A",
+      "prerequisite_codes": [
+        "ENV-6004A"
+      ],
+      "content_sections": {
+        "Module Description": "Our aim is to show how environmental problems may be solved from the initial problem, to mathematical formulation and numerical solution. Problems will be described conceptually, then defined mathematically, then solved numerically via computer programming. \n\nThe module consists of lectures on numerical methods and computing practical's; the practical's being designed to illustrate the solution of problems using the methods covered in lectures. We will guide students through the solution of a model of an environmental process of their own choosing. \n\nThe module provides training in mathematical and programming skills, as well support towards development of an independent numerical model project and associated project report. The skills developed in this module are highly valued by employers in such fields  as environmental research, meteorological agencies, , IT and quantitative analysis, environmental consulting and further study such as a PhD"
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range B",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
+      "module_code": "CMP-7058A",
+      "description": "ARTIFICIAL INTELLIGENCE",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "D",
+      "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-6058A",
+      "prerequisite_codes": [
+        "CMP-6058A"
+      ],
+      "content_sections": {
+        "Module Description": "This module will introduce foundations of artificial intelligence (AI), symbolic AI, supervised and unsupervised learning and their application in a variety of domains. Topics to be covered include state space representation, search algorithms, probabilistic methods, a range of supervised learning algorithms (decision trees, nearest neighbours and neural networks) and unsupervised learning (clustering methods). You will gain knowledge on supervised learning and application of AI models to solve real-world problems.\n\nThis module prepares you with strong foundations for further study in advanced artificial intelligence topics."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range B",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
+      "module_code": "ECO-7013B",
+      "description": "FINANCIAL MATHEMATICS",
+      "assessment": "",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {
+        "Module Description": "This is a technical finance module and ideal if you are wishing to pursue a career in the financial sector. The focus will be on derivatives valuation and  use of derivatives for both hedging and speculation purposes. The module will be highly analytical, with workshop sessions in Python. The module is highly practical and integral part of it is futures trading exercise. Topics covered will include: bonds; futures/ forwards; options (incl real options); swaps; hedging; VaR; continuous time stochastic processes and calculus; and stochastic models of security prices."
+      }
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range B",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
+      "module_code": "CMP-7059B",
+      "description": "ADVANCED ARTIFICIAL INTELLIGENCE",
+      "assessment": "CP",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "",
+      "module_rules": "BEFORE OR WHILE TAKING THIS MODULE YOU MUST TAKE CMP-6058A OR TAKE CMP-7058A OR TAKE NMECMPMC6",
+      "prerequisite_codes": [
+        "CMP-6058A",
+        "CMP-7058A"
+      ],
+      "content_sections": {
+        "Module Description": "This module, built upon the basic artificial intelligence module, will teach a range of advanced and modern methods and techniques in artificial intelligence. The main contents will include natural language processing and understanding, deep learning methods and large language models (LLM), e.g. convolutional neural networks (CNN), auto-encoder and decoder, transformer model, mixture of experts, reinforcement learning from human feedback(RLHF), Retrieval Augmented Generation(RAG), Embedding and Vector Database and the lates development and trends on Artificial General Intelligence etc.  It also covers some advanced programming libraries such as PyTorch, Tensorflow. in the laboratory exercises."
+      }
+    }
+  ]
+}

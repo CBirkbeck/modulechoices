@@ -121,8 +121,6 @@
       "sub_slot": "B",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003A AND TAKE MTHA4003B",
       "prerequisite_codes": [
-        "MTHA4003Y",
-        "MTHA4006Y",
         "MTHA4003A",
         "MTHA4003B"
       ],
@@ -162,7 +160,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
       "prerequisite_codes": [
-        "MTHA4008Y",
         "MTHA4008B"
       ],
       "content_sections": {
@@ -259,9 +256,7 @@
       "sub_slot": "E",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-5020B",
       "prerequisite_codes": [
-        "CMP-4009B",
-        "CMP-5020B",
-        "CMP-5048A"
+        "CMP-5020B"
       ],
       "content_sections": {
         "Module Description": "In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure."
@@ -401,8 +396,6 @@
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5008Y",
         "MTHA5003B"
       ],
       "content_sections": {
@@ -422,9 +415,7 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHA5002B",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Mathematical Biology concerns the application of mathematics to problems in biology. It is a rapidly developing and hugely exciting field with many areas the focus of dedicated research.\nIn this module, you will discover how to use the mathematics you have learned to date to understand a wide range of interesting biological problems. In many cases, important biological insights can be gained from quite simple mathematical models. Examples include the diffusion-limited growth of solid tumours, and the reasons why animal coats patterns are so widely varied - for example, why does the tiger have stripes and the leopard have spots? Mathematics has made fundamental contributions in these and many other areas which we will explore during the module. Further examples may include the propagation of wave-fronts in migrating animal populations, blood flow in arteries and veins and the onset of arterial disease, cochlear mechanics in the ear, and tear film dynamics on the human eye.\n\nNo prior knowledge of biology is required to be able to take this module."
@@ -443,9 +434,7 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHA5005A",
-        "MTHB5010A"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "In applied mathematics, we will often model a real-life problem and obtain an integral or differential equation to solve. Sometimes we can find exact solutions to these equations, but we often need to resort to approximations. This module will teach you a range of useful techniques that can be used across a variety of applied mathematics problems.\n\nWe provide techniques for a wide range of applications, while stressing the importance of rigour in developing such techniques. The Calculus of Variations includes techniques for maximising integrals subject to constraints. A typical problem is the curve described by a heavy chain hanging under the effect of gravity. Asymptotic analysis provides a method for solving equations, or evaluating integrals, which involve small parameters, when exact results can not be found and when numerical solutions are difficult. A range of integral transforms are discussed which are useful for solving problems including integro-differential equations. This unit will include illustration of concepts using numerical investigation with MAPLE but no previous experience of using this software is assumed."
@@ -597,9 +586,7 @@
       "sub_slot": "D1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ],
       "content_sections": {
         "Module Description": "We trace the development of mathematics from prehistory to the high cultures of old Egypt, Mesopotamia and the Valley of Ind, through Islamic mathematics onto the mathematical modernity through a selection of results from the present time. We present the rise of calculus from the first work of the Indian and Greek mathematicians’ differentiation and integration through at the time of Newton and Leibniz. We discuss mathematical logic, the ideas of propositions, the axiomatisation of mathematics, and the idea of quantifiers. Our style is to explore mathematical practice and conceptual developments in different historical and geographic contexts."
@@ -634,9 +621,7 @@
       "period": "YEAR",
       "sub_slot": "C1",
       "module_rules": "",
-      "prerequisite_codes": [
-        "BIO-5012B"
-      ],
+      "prerequisite_codes": [],
       "content_sections": {
         "Module Description": "You will gain an understanding of how science is disseminated to the public and explore the theories surrounding learning and communication. You will investigate science as a culture and how this culture interfaces with the public. Examining case studies in a variety of different scientific areas, alongside looking at how information is released in scientific literature and subsequently picked up by the public press, will give you an understanding of science communication. You will gain an appreciation of how science information can be used to change public perception and how it can sometimes be misinterpreted. You will also learn practical skills by designing, running and evaluating a public outreach event at a school or in a public area.\n\nIf you wish to take this module you will be required to write a statement of selection. These statements will be assessed and students will be allocated to the module accordingly."
       }
@@ -707,7 +692,6 @@
       "sub_slot": "B",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-7058A",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-7058A"
       ],
       "content_sections": {
@@ -919,9 +903,7 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHA5002B",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Mathematical Biology is a rapidly developing and hugely exciting field with many areas the focus of dedicated research. In this module, you will discover how to use the mathematics you have learned to date to understand a wide range of interesting biological problems. \n\nIn many cases, important biological insights can be gained from quite simple mathematical models. Examples include the diffusion-limited growth of solid tumours, and the reasons why animal coats patterns are so widely varied - for example, why does the tiger have stripes and the leopard have spots? Mathematics has made fundamental contributions in these and many other areas which we will explore during the module. Further examples may include the propagation of wave-fronts in migrating animal populations, blood flow in arteries and veins and the onset of arterial disease, cochlear mechanics in the ear, and tear film dynamics on the human eye. No prior knowledge of biology is required to be able to take this module.\n\nThe main part of the module description is the same as for the Level 6 variant of the module - the Advanced Topic work will be announced during lectures."
@@ -940,9 +922,7 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHA5005A",
-        "MTHB5010A"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "In applied mathematics, we will often model a real-life problem and obtain an integral or differential equation to solve. Sometimes we can find exact solutions to these equations, but we often need to resort to approximations. This module will teach you a range of useful techniques that can be used across a variety of applied mathematics problems.\n\nWe provide techniques for a wide range of applications, while stressing the importance of rigour in developing such techniques. The Calculus of Variations includes techniques for maximising integrals subject to constraints. A typical problem is the curve described by a heavy chain hanging under the effect of gravity. Asymptotic analysis provides a method for solving equations, or evaluating integrals, which involve small parameters, when exact results can not be found and when numerical solutions are difficult. A range of integral transforms are discussed which are useful for solving problems including integro-differential equations. This unit will include illustration of concepts using numerical investigation with MAPLE but no previous experience of using this software is assumed.\n\nFor the advanced topics, you will study further techniques in asymptotic analysis, including the method of matched asymptotic expansions and the WKB approximation."
@@ -999,7 +979,6 @@
       "sub_slot": "",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-6058A",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-6058A"
       ],
       "content_sections": {

@@ -103,8 +103,6 @@
       "sub_slot": "B",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003A AND TAKE MTHA4003B",
       "prerequisite_codes": [
-        "MTHA4003Y",
-        "MTHA4006Y",
         "MTHA4003A",
         "MTHA4003B"
       ]
@@ -138,7 +136,6 @@
       "sub_slot": "A",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
       "prerequisite_codes": [
-        "MTHA4008Y",
         "MTHA4008B"
       ]
     },
@@ -183,10 +180,7 @@
       "sub_slot": "D1, E",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "ENV-4015Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ]
     },
     {
@@ -203,8 +197,7 @@
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B",
       "prerequisite_codes": [
         "MTHA4001A",
-        "MTHA4003B",
-        "MTHA4006Y"
+        "MTHA4003B"
       ]
     },
     {
@@ -253,8 +246,7 @@
       "sub_slot": "C",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y",
       "prerequisite_codes": [
-        "CMP-4008Y",
-        "CMP-4009B"
+        "CMP-4008Y"
       ]
     },
     {
@@ -298,9 +290,7 @@
       "sub_slot": "D1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHA5005A",
-        "MTHB5011B"
+        "MTHA5005A"
       ]
     },
     {
@@ -316,8 +306,6 @@
       "sub_slot": "C2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005B"
       ]
     },
@@ -348,8 +336,6 @@
       "sub_slot": "B2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
         "MTHA5003A",
         "MTHA5003B"
       ]
@@ -367,8 +353,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ]
@@ -386,8 +370,6 @@
       "sub_slot": "C1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ]
@@ -405,8 +387,6 @@
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5001Y",
         "MTHA5003A",
         "MTHA5003B"
       ]
@@ -424,8 +404,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ]
@@ -443,8 +421,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B AND TAKE MTHF5035A",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
         "MTHA5003A",
         "MTHA5003B",
         "MTHF5035A"
@@ -508,9 +484,7 @@
       "period": "YEAR",
       "sub_slot": "C1",
       "module_rules": "",
-      "prerequisite_codes": [
-        "BIO-5012B"
-      ]
+      "prerequisite_codes": []
     },
     {
       "year": "Year 3U",
@@ -553,9 +527,7 @@
       "sub_slot": "D1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ]
     },
     {
@@ -585,8 +557,7 @@
       "sub_slot": "C",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y",
       "prerequisite_codes": [
-        "CMP-4008Y",
-        "CMP-4009B"
+        "CMP-4008Y"
       ]
     },
     {
@@ -690,10 +661,7 @@
       "sub_slot": "D1, E",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "ENV-4015Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ]
     },
     {
@@ -710,8 +678,7 @@
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B",
       "prerequisite_codes": [
         "MTHA4001A",
-        "MTHA4003B",
-        "MTHA4006Y"
+        "MTHA4003B"
       ]
     },
     {
@@ -817,12 +784,7 @@
       "period": "SEM2",
       "sub_slot": "C2",
       "module_rules": "",
-      "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
-        "MTHA5007Y",
-        "MTHB5007B"
-      ]
+      "prerequisite_codes": []
     },
     {
       "year": "Year 4U",
@@ -851,13 +813,8 @@
       "sub_slot": "B2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
         "MTHA5003A",
-        "MTHA5003B",
-        "MTHA5004Y",
-        "MTHA5007Y",
-        "MTHB5011B"
+        "MTHA5003B"
       ]
     },
     {
@@ -873,8 +830,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ]
@@ -892,8 +847,6 @@
       "sub_slot": "C1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ]
@@ -911,12 +864,8 @@
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5001Y",
         "MTHA5003A",
-        "MTHA5003B",
-        "MTHA5004Y",
-        "MTHA5007Y"
+        "MTHA5003B"
       ]
     },
     {
@@ -932,8 +881,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ]
@@ -951,10 +898,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
-        "MTHA5004Y",
-        "MTHA5007Y",
         "MTHA5003A",
         "MTHA5003B"
       ]

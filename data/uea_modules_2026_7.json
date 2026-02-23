@@ -121,8 +121,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003A AND TAKE MTHA4003B",
       "prerequisite_codes": [
-        "MTHA4003Y",
-        "MTHA4006Y",
         "MTHA4003A",
         "MTHA4003B"
       ],
@@ -162,7 +160,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
       "prerequisite_codes": [
-        "MTHA4008Y",
         "MTHA4008B"
       ],
       "content_sections": {
@@ -275,9 +272,7 @@
       "sub_slot": "",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-5020B",
       "prerequisite_codes": [
-        "CMP-4009B",
-        "CMP-5020B",
-        "CMP-5048A"
+        "CMP-5020B"
       ],
       "content_sections": {
         "Module Description": "The purpose of the module is to give the student a solid grounding in the essential features of object-oriented computer programming using the Java programming language. The module is designed to meet the needs of a student who has not previously studied programming, although it is recognised that many will in fact have done so in some measure. On completing this module the student should be capable of developing, testing and documenting simple but non-trivial object-oriented programs, and of using the appropriate technical terminology in discussing these programs.  The purpose of this module is to give the student a solid grounding in the essential features of object-orientated programming using the Java programming language.  The module is designed to meet the needs of the student who has not previously studied programming, although it is recognised that many will have done so in some measure.  Gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java.  \n\nThis module is designed in such a way that you are not expected to have previously studied programming, although it’s recognised that many students taking the module will have done so to some extent.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java.  The module is designed such that you are not expected to have previously studied programming, although it is recognized that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.\nAdditional details for this module are not available."
@@ -398,8 +393,6 @@
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5001Y",
         "MTHA5003A",
         "MTHA5003B"
       ],
@@ -420,8 +413,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -442,8 +433,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B AND TAKE MTHF5035A",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
         "MTHA5003A",
         "MTHA5003B",
         "MTHF5035A"
@@ -465,8 +454,7 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Fluid dynamics concerns the mathematical modelling of the flow of liquids and\ngases. It has wide ranging applications across nature, engineering, and biology.\nApplications include understanding the behaviour of ocean waves and weather,\ndesigning efficient aircraft and ships, and describing the flow of blood around the\nbody.\n\nWaves are a general physical phenomenon that allow the transfer of energy from one\nplace to another without the net transfer of matter. Fluids can support waves\nthrough a variety of different mechanisms. Two common examples are gravity waves\nin the surface of a body of water, and sound waves travelling through compressible\nliquid or gas.\n\nIn this module, you will study aspects of linear and nonlinear waves using analytical\ntechniques. You will also consider mathematical models of fluids, particularly\nincluding viscosity (or stickiness) of a fluid. Illustrated by practical examples, you\nwill develop the governing differential Navier-Stokes equations, and then consider\ntheir solution either finding exact solutions, or using analytical techniques to obtain\nsolutions in certain limits (for example low viscosity or high viscosity)."
@@ -523,7 +511,10 @@
       "period": "SEM2",
       "sub_slot": "C2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHS5051B AND TAKE MTHA4008B",
-      "prerequisite_codes": [],
+      "prerequisite_codes": [
+        "MTHS5051B",
+        "MTHA4008B"
+      ],
       "content_sections": {
         "Module Description": "Additional details for this module are not available."
       }
@@ -613,9 +604,7 @@
       "sub_slot": "D1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ],
       "content_sections": {
         "Module Description": "We trace the development of mathematics from prehistory to the high cultures of old Egypt, Mesopotamia and the Valley of Ind, through Islamic mathematics onto the mathematical modernity through a selection of results from the present time. We present the rise of calculus from the first work of the Indian and Greek mathematicians’ differentiation and integration through at the time of Newton and Leibniz. We discuss mathematical logic, the ideas of propositions, the axiomatisation of mathematics, and the idea of quantifiers. Our style is to explore mathematical practice and conceptual developments in different historical and geographic contexts."
@@ -650,9 +639,7 @@
       "period": "YEAR",
       "sub_slot": "C1",
       "module_rules": "",
-      "prerequisite_codes": [
-        "BIO-5012B"
-      ],
+      "prerequisite_codes": [],
       "content_sections": {
         "Module Description": "You will gain an understanding of how science is disseminated to the public and explore the theories surrounding learning and communication. You will investigate science as a culture and how this culture interfaces with the public. Examining case studies in a variety of different scientific areas, alongside looking at how information is released in scientific literature and subsequently picked up by the public press, will give you an understanding of science communication. You will gain an appreciation of how science information can be used to change public perception and how it can sometimes be misinterpreted. You will also learn practical skills by designing, running and evaluating a public outreach event at a school or in a public area.\n\nIf you wish to take this module you will be required to write a statement of selection. These statements will be assessed and students will be allocated to the module accordingly."
       }
@@ -723,7 +710,6 @@
       "sub_slot": "B",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-7058A",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-7058A"
       ],
       "content_sections": {
@@ -950,12 +936,8 @@
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5001Y",
         "MTHA5003A",
-        "MTHA5003B",
-        "MTHA5004Y",
-        "MTHA5007Y"
+        "MTHA5003B"
       ],
       "content_sections": {
         "Module Description": "This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with."
@@ -974,8 +956,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -1016,8 +996,7 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Fluid dynamics concerns the mathematical modelling of the flow of liquids and gases. It has wide ranging applications across nature, engineering, and biology.  Applications include understanding the behaviour of ocean waves and weather, designing efficient aircraft and ships, and describing the flow of blood around the body.\n\nWaves are a general physical phenomenon that allow the transfer of energy from one place to another without the net transfer of matter. Fluids can support waves through a variety of different mechanisms. Two common examples are gravity waves in the surface of a body of water, and sound waves travelling through compressible liquid or gas.\n\nIn this module, you will study aspects of linear and nonlinear waves using analytical techniques. You will also consider mathematical models of fluids, particularly including viscosity (or stickiness) of a fluid. Illustrated by practical examples, you will develop the governing differential Navier-Stokes equations, and then consider their solution either finding exact solutions, or using analytical techniques to obtain solutions in certain limits (for example low viscosity or high viscosity)"
@@ -1055,7 +1034,6 @@
       "sub_slot": "",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-6058A",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-6058A"
       ],
       "content_sections": {
@@ -1075,10 +1053,8 @@
       "sub_slot": "",
       "module_rules": "BEFORE OR WHILE TAKING THIS MODULE YOU MUST TAKE CMP-6058A OR TAKE CMP-7058A OR TAKE NMECMPMC6",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-6058A",
-        "CMP-7058A",
-        "CMP-7023B"
+        "CMP-7058A"
       ],
       "content_sections": {
         "Module Description": "This module, built upon the basic artificial intelligence module, will teach a range of advanced and modern methods and techniques in artificial intelligence. The main contents will include natural language processing and understanding, deep learning methods and large language models (LLM), e.g. convolutional neural networks (CNN), auto-encoder and decoder, transformer model, mixture of experts, reinforcement learning from human feedback(RLHF), Retrieval Augmented Generation(RAG), Embedding and Vector Database and the lates development and trends on Artificial General Intelligence etc.  It also covers some advanced programming libraries such as PyTorch, Tensorflow. in the laboratory exercises."

@@ -4,7 +4,9 @@
   "academic_years": [
     "2024/5",
     "2025/6",
-    "2026/7"
+    "2026/7",
+    "2027/8",
+    "2028/9"
   ],
   "modules": [
     {
@@ -62,7 +64,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -83,7 +87,9 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -104,7 +110,9 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -126,7 +134,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -148,7 +158,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -172,7 +184,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -188,8 +202,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4003A AND TAKE MTHA4003B",
       "prerequisite_codes": [
-        "MTHA4003Y",
-        "MTHA4006Y",
         "MTHA4003A",
         "MTHA4003B"
       ],
@@ -199,7 +211,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -223,7 +237,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -239,7 +255,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
       "prerequisite_codes": [
-        "MTHA4008Y",
         "MTHA4008B"
       ],
       "content_sections": {
@@ -248,7 +263,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -270,7 +287,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -295,7 +314,27 @@
       "year": "Year 2U",
       "section": "Options Range A",
       "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
+      "notes": "",
+      "module_code": "MTHD5038B",
+      "description": "MATHEMATICAL MODELLING",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C2",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
+      "prerequisite_codes": [
+        "MTHA4008A"
+      ],
+      "content_sections": {},
+      "available_years": [
+        "2027/8"
+      ]
+    },
+    {
+      "year": "Year 2U",
+      "section": "Options Range A",
+      "credit_rule": "20-40 credits",
+      "notes": "",
       "module_code": "MTHE5037B",
       "description": "CRYPTOGRAPHY",
       "assessment": "WW",
@@ -308,7 +347,8 @@
         "Module Description": "Additional details for this module are not available."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
@@ -324,10 +364,7 @@
       "sub_slot": "D1, E",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "ENV-4015Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ],
       "available_years": [
         "2024/5"
@@ -348,8 +385,7 @@
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B",
       "prerequisite_codes": [
         "MTHA4001A",
-        "MTHA4003B",
-        "MTHA4006Y"
+        "MTHA4003B"
       ],
       "available_years": [
         "2024/5"
@@ -384,7 +420,7 @@
       "year": "Year 2U",
       "section": "Options Range A",
       "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHS5050A",
       "description": "MATHEMATICAL STATISTICS",
       "assessment": "WW",
@@ -404,12 +440,22 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ],
       "rules_by_year": {
         "2024/5": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
         "2025/6": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
         "2026/7": [
+          "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+          "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+        ],
+        "2027/8": [
+          "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
+          "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+        ],
+        "2028/9": [
           "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS6050A",
           "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
         ]
@@ -419,7 +465,7 @@
       "year": "Year 2U",
       "section": "Options Range A",
       "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHS5051B",
       "description": "LINEAR AND GENERALISED LINEAR MODELS",
       "assessment": "WW",
@@ -437,12 +483,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ],
       "rules_by_year": {
         "2024/5": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
         "2025/6": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
-        "2026/7": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B"
+        "2026/7": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
+        "2027/8": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
+        "2028/9": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B"
       }
     },
     {
@@ -469,25 +519,25 @@
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "CMP-4008Y",
       "description": "PROGRAMMING 1",
       "assessment": "WW",
       "credits": "20",
       "period": "YEAR",
-      "sub_slot": "",
+      "sub_slot": "E",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-5020B",
       "prerequisite_codes": [
-        "CMP-4009B",
-        "CMP-5020B",
-        "CMP-5048A"
+        "CMP-5020B"
       ],
       "content_sections": {
         "Module Description": "The purpose of the module is to give the student a solid grounding in the essential features of object-oriented computer programming using the Java programming language. The module is designed to meet the needs of a student who has not previously studied programming, although it is recognised that many will in fact have done so in some measure. On completing this module the student should be capable of developing, testing and documenting simple but non-trivial object-oriented programs, and of using the appropriate technical terminology in discussing these programs.  The purpose of this module is to give the student a solid grounding in the essential features of object-orientated programming using the Java programming language.  The module is designed to meet the needs of the student who has not previously studied programming, although it is recognised that many will have done so in some measure.  Gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java.  \n\nThis module is designed in such a way that you are not expected to have previously studied programming, although it’s recognised that many students taking the module will have done so to some extent.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java.  The module is designed such that you are not expected to have previously studied programming, although it is recognized that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.  In taking this module you will gain a solid grounding in the essential features of object-oriented programming, using a modern programming language such as Java. The module is designed such that you are not expected to have previously studied programming, although it is recognised that many students taking the module will have done so in some measure.\nAdditional details for this module are not available."
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -503,8 +553,7 @@
       "sub_slot": "C",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y",
       "prerequisite_codes": [
-        "CMP-4008Y",
-        "CMP-4009B"
+        "CMP-4008Y"
       ],
       "available_years": [
         "2024/5"
@@ -515,7 +564,7 @@
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "CMP-5046B",
       "description": "FOUNDATIONS OF DATA SCIENCE",
       "assessment": "CP",
@@ -529,20 +578,22 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "EDUB5021B",
       "description": "EDUCATIONAL PSYCHOLOGY",
       "assessment": "CW",
       "credits": "20",
       "period": "SEM2",
-      "sub_slot": "B",
+      "sub_slot": "B1+D",
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
@@ -550,14 +601,16 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "ENV-5048A",
       "description": "METEOROLOGY",
       "assessment": "CW",
@@ -571,14 +624,16 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHT4001A",
       "description": "INTRODUCTION TO FINANCIAL MATHEMATICS",
       "assessment": "WW",
@@ -591,14 +646,16 @@
         "Module Description": "You will learn introductory material relating to financial maths such as present values, accumulations, annuities. You will also get an introduction to spreadsheet skills for actuaries as well as some discrete maths material in preparation for later modules."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "NBS-4108B",
       "description": "INTRODUCTION TO FINANCIAL AND MANAGEMENT ACCOUNTING",
       "assessment": "EX",
@@ -613,20 +670,22 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "PHY-4003A",
       "description": "GEOPHYSICS AND ASTROPHYSICS",
       "assessment": "WW",
       "credits": "20",
       "period": "SEM1",
-      "sub_slot": "B",
+      "sub_slot": "C",
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
@@ -635,14 +694,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 2U",
       "section": "Options Range B",
       "credit_rule": "0-20 credits",
-      "notes": "Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "PHY-5250A",
       "description": "QUANTUM THEORY",
       "assessment": "WW",
@@ -655,7 +716,9 @@
         "Module Description": "You’ll cover the foundation and basics of quantum theory including foundations and mathematics of quantum mechanics, atomic theory, perturbation theory which is an approach for modelling more complicated systems. You will then look at more complicated systems involving mixed states and entangled states. Finally we will some time considered relatively modern topics in quantum information."
       },
       "available_years": [
-        "2025/6"
+        "2025/6",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -671,9 +734,7 @@
       "sub_slot": "D1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHA5005A",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "available_years": [
         "2024/5"
@@ -684,7 +745,7 @@
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHD6006B",
       "description": "GALOIS THEORY",
       "assessment": "WW",
@@ -699,7 +760,8 @@
         "Module Description": "Galois theory is one of the most spectacular mathematical theories. Named after the French mathematician Evariste Galois, who died in a duel aged 20, it gives a beautiful connection between the theory of solving polynomial equations and group theory. In fact, many fundamental notions of group theory originated in the work of Galois. For example, why are some groups called \"solvable\"? Because they correspond to the equations which can be solved (by some formula based on the coefficients and involving algebraic operations and extracting roots of various degrees). Galois theory explains why we can solve quadratic, cubic and quartic equations, but no similar formulae exist for equations of degree greater than four. In modern exposition, Galois theory deals with \"field extensions\", and the central topic is the \"Galois correspondence\" between extensions and groups."
       },
       "available_years": [
-        "2025/6"
+        "2025/6",
+        "2027/8"
       ]
     },
     {
@@ -715,8 +777,6 @@
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5008Y",
         "MTHA5003B"
       ],
       "content_sections": {
@@ -730,7 +790,7 @@
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHD6021B",
       "description": "MATHEMATICAL BIOLOGY",
       "assessment": "WW",
@@ -739,22 +799,41 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHA5002B",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Mathematical Biology concerns the application of mathematics to problems in biology. It is a rapidly developing and hugely exciting field with many areas the focus of dedicated research.\nIn this module, you will discover how to use the mathematics you have learned to date to understand a wide range of interesting biological problems. In many cases, important biological insights can be gained from quite simple mathematical models. Examples include the diffusion-limited growth of solid tumours, and the reasons why animal coats patterns are so widely varied - for example, why does the tiger have stripes and the leopard have spots? Mathematics has made fundamental contributions in these and many other areas which we will explore during the module. Further examples may include the propagation of wave-fronts in migrating animal populations, blood flow in arteries and veins and the onset of arterial disease, cochlear mechanics in the ear, and tear film dynamics on the human eye.\n\nNo prior knowledge of biology is required to be able to take this module."
       },
       "available_years": [
-        "2025/6"
+        "2025/6",
+        "2027/8"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
+      "module_code": "MTHD6029A",
+      "description": "SETS AND LOGIC",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5003B"
+      ],
+      "content_sections": {},
+      "available_years": [
+        "2027/8"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
       "module_code": "MTHD6032A",
       "description": "MATHEMATICAL TECHNIQUES",
       "assessment": "WW",
@@ -763,15 +842,32 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHA5005A",
-        "MTHB5010A"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "In applied mathematics, we will often model a real-life problem and obtain an integral or differential equation to solve. Sometimes we can find exact solutions to these equations, but we often need to resort to approximations. This module will teach you a range of useful techniques that can be used across a variety of applied mathematics problems.\n\nWe provide techniques for a wide range of applications, while stressing the importance of rigour in developing such techniques. The Calculus of Variations includes techniques for maximising integrals subject to constraints. A typical problem is the curve described by a heavy chain hanging under the effect of gravity. Asymptotic analysis provides a method for solving equations, or evaluating integrals, which involve small parameters, when exact results can not be found and when numerical solutions are difficult. A range of integral transforms are discussed which are useful for solving problems including integro-differential equations. This unit will include illustration of concepts using numerical investigation with MAPLE but no previous experience of using this software is assumed."
       },
       "available_years": [
-        "2025/6"
+        "2025/6",
+        "2027/8"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "Options Range A",
+      "credit_rule": "80-100 credits",
+      "notes": "",
+      "module_code": "MTHD6038B",
+      "description": "MATHEMATICAL MODELLING",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "C2",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {},
+      "available_years": [
+        "2027/8"
       ]
     },
     {
@@ -787,8 +883,6 @@
       "sub_slot": "C2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005B"
       ],
       "available_years": [
@@ -827,8 +921,6 @@
       "sub_slot": "B2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
         "MTHA5003A",
         "MTHA5003B"
       ],
@@ -850,8 +942,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -873,8 +963,6 @@
       "sub_slot": "C1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -887,7 +975,7 @@
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHE6033A",
       "description": "GROUPS AND ALGEBRA",
       "assessment": "WW",
@@ -896,8 +984,6 @@
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5001Y",
         "MTHA5003A",
         "MTHA5003B"
       ],
@@ -906,14 +992,15 @@
       },
       "available_years": [
         "2024/5",
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHE6034A",
       "description": "PARTIAL DIFFERENTIAL EQUATIONS",
       "assessment": "WW",
@@ -922,8 +1009,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -932,14 +1017,15 @@
       },
       "available_years": [
         "2024/5",
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHE6035B",
       "description": "NUMBER THEORY",
       "assessment": "WW",
@@ -948,8 +1034,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B AND TAKE MTHF5035A",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
         "MTHA5003A",
         "MTHA5003B",
         "MTHF5035A"
@@ -959,14 +1043,15 @@
       },
       "available_years": [
         "2024/5",
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHE6036B",
       "description": "FLUIDS AND WAVES",
       "assessment": "WW",
@@ -975,21 +1060,21 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Fluid dynamics concerns the mathematical modelling of the flow of liquids and\ngases. It has wide ranging applications across nature, engineering, and biology.\nApplications include understanding the behaviour of ocean waves and weather,\ndesigning efficient aircraft and ships, and describing the flow of blood around the\nbody.\n\nWaves are a general physical phenomenon that allow the transfer of energy from one\nplace to another without the net transfer of matter. Fluids can support waves\nthrough a variety of different mechanisms. Two common examples are gravity waves\nin the surface of a body of water, and sound waves travelling through compressible\nliquid or gas.\n\nIn this module, you will study aspects of linear and nonlinear waves using analytical\ntechniques. You will also consider mathematical models of fluids, particularly\nincluding viscosity (or stickiness) of a fluid. Illustrated by practical examples, you\nwill develop the governing differential Navier-Stokes equations, and then consider\ntheir solution either finding exact solutions, or using analytical techniques to obtain\nsolutions in certain limits (for example low viscosity or high viscosity)."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHE6037B",
       "description": "CRYPTOGRAPHY",
       "assessment": "WW",
@@ -1002,7 +1087,8 @@
         "Module Description": "Additional details for this module are not available."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
@@ -1053,7 +1139,7 @@
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHS6050A",
       "description": "MATHEMATICAL STATISTICS",
       "assessment": "WW",
@@ -1072,11 +1158,21 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ],
       "rules_by_year": {
         "2025/6": "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
         "2026/7": [
+          "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
+          "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+        ],
+        "2027/8": [
+          "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
+          "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
+        ],
+        "2028/9": [
           "IN TAKING THIS MODULE YOU CANNOT TAKE MTHS5050A",
           "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B AND TAKE MTHA4008A"
         ]
@@ -1110,33 +1206,38 @@
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHS6052B",
       "description": "STOCHASTIC PROCESSES AND TIME SERIES",
       "assessment": "WW",
       "credits": "20",
       "period": "SEM2",
-      "sub_slot": "C2",
+      "sub_slot": "C2???",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHS5051B AND TAKE MTHA4008B",
-      "prerequisite_codes": [],
+      "prerequisite_codes": [
+        "MTHS5051B",
+        "MTHA4008B"
+      ],
       "content_sections": {
         "Module Description": "Additional details for this module are not available."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHT6005B",
       "description": "FINANCIAL MATHEMATICS",
-      "assessment": "WW",
+      "assessment": "",
       "credits": "20",
       "period": "SEM2",
-      "sub_slot": "D",
+      "sub_slot": "C1",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE ECO-7013B",
       "prerequisite_codes": [
         "ECO-7013B"
@@ -1146,14 +1247,16 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "PHY-6003B",
       "description": "ANALYTICAL MECHANICS AND ELECTROMAGNETIC FIELD THEORY",
       "assessment": "WW",
@@ -1168,14 +1271,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range A",
       "credit_rule": "80-100 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 80-100 credits from the following modules:",
+      "notes": "",
       "module_code": "PHY-6007A",
       "description": "GENERAL RELATIVITY",
       "assessment": "WW",
@@ -1192,14 +1297,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range B",
       "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
+      "notes": "",
       "module_code": "EDUB6014A",
       "description": "THE LEARNING AND TEACHING OF MATHEMATICS",
       "assessment": "CW",
@@ -1214,14 +1321,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range B",
       "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHA6002B",
       "description": "HISTORY OF MATHEMATICS",
       "assessment": "CW",
@@ -1230,9 +1339,7 @@
       "sub_slot": "D1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ],
       "content_sections": {
         "Module Description": "We trace the development of mathematics from prehistory to the high cultures of old Egypt, Mesopotamia and the Valley of Ind, through Islamic mathematics onto the mathematical modernity through a selection of results from the present time. We present the rise of calculus from the first work of the Indian and Greek mathematicians’ differentiation and integration through at the time of Newton and Leibniz. We discuss mathematical logic, the ideas of propositions, the axiomatisation of mathematics, and the idea of quantifiers. Our style is to explore mathematical practice and conceptual developments in different historical and geographic contexts."
@@ -1240,20 +1347,22 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range B",
       "credit_rule": "20-40 credits",
-      "notes": "Students will select 20-40 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHA6005Y",
       "description": "MATHEMATICS PROJECT",
       "assessment": "PR",
       "credits": "20",
       "period": "YEAR",
-      "sub_slot": "",
+      "sub_slot": "Z",
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
@@ -1262,7 +1371,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -1292,7 +1403,7 @@
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "BIO-6018Y",
       "description": "SCIENCE COMMUNICATION",
       "assessment": "CW",
@@ -1300,29 +1411,29 @@
       "period": "YEAR",
       "sub_slot": "C1",
       "module_rules": "",
-      "prerequisite_codes": [
-        "BIO-5012B"
-      ],
+      "prerequisite_codes": [],
       "content_sections": {
         "Module Description": "You will gain an understanding of how science is disseminated to the public and explore the theories surrounding learning and communication. You will investigate science as a culture and how this culture interfaces with the public. Examining case studies in a variety of different scientific areas, alongside looking at how information is released in scientific literature and subsequently picked up by the public press, will give you an understanding of science communication. You will gain an appreciation of how science information can be used to change public perception and how it can sometimes be misinterpreted. You will also learn practical skills by designing, running and evaluating a public outreach event at a school or in a public area.\n\nIf you wish to take this module you will be required to write a statement of selection. These statements will be assessed and students will be allocated to the module accordingly."
       },
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "CMP-5015A",
       "description": "PROGRAMMING 2",
       "assessment": "WW",
       "credits": "20",
       "period": "SEM1",
-      "sub_slot": "C1",
+      "sub_slot": "D2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE CMP-4008Y",
       "prerequisite_codes": [
         "CMP-4008Y"
@@ -1332,7 +1443,9 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -1348,8 +1461,7 @@
       "sub_slot": "C",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-4008Y",
       "prerequisite_codes": [
-        "CMP-4008Y",
-        "CMP-4009B"
+        "CMP-4008Y"
       ],
       "available_years": [
         "2024/5"
@@ -1360,7 +1472,7 @@
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "CMP-5046B",
       "description": "FOUNDATIONS OF DATA SCIENCE",
       "assessment": "CP",
@@ -1375,7 +1487,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -1400,7 +1514,7 @@
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "CMP-6044A",
       "description": "INTRODUCTION TO CYBER SECURITY",
       "assessment": "CW",
@@ -1415,23 +1529,24 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "CMP-6058A",
       "description": "ARTIFICIAL INTELLIGENCE",
-      "assessment": "CP",
+      "assessment": "WW",
       "credits": "20",
       "period": "SEM1",
-      "sub_slot": "B",
+      "sub_slot": "",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-7058A",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-7058A"
       ],
       "content_sections": {
@@ -1439,20 +1554,22 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "EDUB5021B",
       "description": "EDUCATIONAL PSYCHOLOGY",
       "assessment": "CW",
       "credits": "20",
       "period": "SEM2",
-      "sub_slot": "B",
+      "sub_slot": "",
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
@@ -1460,20 +1577,22 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "EDUB6006A",
       "description": "CHILDREN, TEACHERS AND MATHEMATICS: CHANGING PUBLIC DISCOURSES ABOUT MATHEMATICS",
       "assessment": "CW",
       "credits": "20",
       "period": "SEM1",
-      "sub_slot": "D",
+      "sub_slot": "D1",
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
@@ -1482,7 +1601,9 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -1529,7 +1650,7 @@
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "ENV-5047A",
       "description": "THE OCEAN SYSTEM",
       "assessment": "WW",
@@ -1543,14 +1664,16 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "ENV-5048A",
       "description": "METEOROLOGY",
       "assessment": "CW",
@@ -1564,14 +1687,16 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "ENV-6004A",
       "description": "MODELLING ENVIRONMENTAL PROCESSES",
       "assessment": "CP",
@@ -1586,14 +1711,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "ENV-6035B",
       "description": "CLIMATE AND WEATHER PREDICTION",
       "assessment": "CW",
@@ -1607,7 +1734,9 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -1623,10 +1752,7 @@
       "sub_slot": "D1, E",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008A",
       "prerequisite_codes": [
-        "MTHA4008Y",
-        "ENV-4015Y",
-        "MTHA4008A",
-        "MTHB4010Y"
+        "MTHA4008A"
       ],
       "available_years": [
         "2024/5"
@@ -1647,8 +1773,7 @@
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4001A AND TAKE MTHA4003B",
       "prerequisite_codes": [
         "MTHA4001A",
-        "MTHA4003B",
-        "MTHA4006Y"
+        "MTHA4003B"
       ],
       "available_years": [
         "2024/5"
@@ -1699,7 +1824,7 @@
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "MTHS5051B",
       "description": "LINEAR AND GENERALISED LINEAR MODELS",
       "assessment": "WW",
@@ -1717,25 +1842,29 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ],
       "rules_by_year": {
         "2024/5": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
         "2025/6": "WHILE TAKING THIS MODULE YOU MUST TAKE MTHS5050A OR TAKE MTHS6050A",
-        "2026/7": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B"
+        "2026/7": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
+        "2027/8": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B",
+        "2028/9": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA4008B"
       }
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "NBS-5101A",
       "description": "FINANCIAL REPORTING",
       "assessment": "EX",
       "credits": "20",
       "period": "SEM1",
-      "sub_slot": "A1",
+      "sub_slot": "A",
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
@@ -1744,14 +1873,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "NBS-5104B",
       "description": "MANAGEMENT ACCOUNTING",
       "assessment": "EX",
@@ -1766,14 +1897,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 3U",
       "section": "Options Range C",
       "credit_rule": "0-20 credits",
-      "notes": "Please Note: Not all modules listed may be available, depending on student choice and timetabling constraints.Students will select 0-20 credits from the following modules:",
+      "notes": "",
       "module_code": "PHY-5250A",
       "description": "QUANTUM THEORY",
       "assessment": "WW",
@@ -1786,7 +1919,28 @@
         "Module Description": "You’ll cover the foundation and basics of quantum theory including foundations and mathematics of quantum mechanics, atomic theory, perturbation theory which is an approach for modelling more complicated systems. You will then look at more complicated systems involving mixed states and entangled states. Finally we will some time considered relatively modern topics in quantum information."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
+      ]
+    },
+    {
+      "year": "Year 3U",
+      "section": "",
+      "credit_rule": "",
+      "notes": "",
+      "module_code": "MTHX6014Y",
+      "description": "YEAR ABROAD",
+      "assessment": "CW",
+      "credits": "120",
+      "period": "YEAR",
+      "sub_slot": "",
+      "module_rules": "",
+      "prerequisite_codes": [],
+      "content_sections": {},
+      "available_years": [
+        "2027/8",
+        "2028/9"
       ]
     },
     {
@@ -1799,7 +1953,7 @@
       "assessment": "DS",
       "credits": "40",
       "period": "YEAR",
-      "sub_slot": "",
+      "sub_slot": "U",
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
@@ -1808,14 +1962,16 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester. Note students who have taken PHY-6007A cannot take PHY-7007AStudents will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "MTHA7030B",
       "description": "RESEARCH TOPICS IN PURE MATHEMATICS",
       "assessment": "CW",
@@ -1828,14 +1984,16 @@
         "Module Description": "Additional details for this module are not available."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "MTHD7006B",
       "description": "GALOIS THEORY WITH ADVANCED TOPICS",
       "assessment": "WW",
@@ -1850,7 +2008,8 @@
         "Module Description": "Galois theory is one of the most spectacular mathematical theories. Named after the French mathematician Evariste Galois, who died in a duel aged 20, it gives a beautiful connection between the theory of solving polynomial equations and group theory. In fact, many fundamental notions of group theory originated in the work of Galois. For example, why are some groups called \"solvable\"? Because they correspond to the equations which can be solved (by some formula based on the coefficients and involving algebraic operations and extracting roots of various degrees). Galois theory explains why we can solve quadratic, cubic and quartic equations, but no similar formulae exist for equations of degree greater than four. In modern exposition, Galois theory deals with \"field extensions\", and the central topic is the \"Galois correspondence\" between extensions and groups.\n\nFor the advanced topics, you will study the so-called \"Inverse Galois problem\": does every group correspond to some polynomial, and is the answer dependent on the base field?"
       },
       "available_years": [
-        "2025/6"
+        "2025/6",
+        "2027/8"
       ]
     },
     {
@@ -1866,9 +2025,7 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHA5002B",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Mathematical Biology is a rapidly developing and hugely exciting field with many areas the focus of dedicated research. In this module, you will discover how to use the mathematics you have learned to date to understand a wide range of interesting biological problems. \n\nIn many cases, important biological insights can be gained from quite simple mathematical models. Examples include the diffusion-limited growth of solid tumours, and the reasons why animal coats patterns are so widely varied - for example, why does the tiger have stripes and the leopard have spots? Mathematics has made fundamental contributions in these and many other areas which we will explore during the module. Further examples may include the propagation of wave-fronts in migrating animal populations, blood flow in arteries and veins and the onset of arterial disease, cochlear mechanics in the ear, and tear film dynamics on the human eye. No prior knowledge of biology is required to be able to take this module.\n\nThe main part of the module description is the same as for the Level 6 variant of the module - the Advanced Topic work will be announced during lectures."
@@ -1881,7 +2038,47 @@
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester.Students will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "MTHD7021B",
+      "description": "MATHEMATICAL BIOLOGY WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM2",
+      "sub_slot": "B1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
+      "prerequisite_codes": [
+        "MTHA5005A"
+      ],
+      "content_sections": {},
+      "available_years": [
+        "2027/8"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
+      "module_code": "MTHD7029A",
+      "description": "SETS AND LOGIC WITH ADVANCED TOPICS",
+      "assessment": "WW",
+      "credits": "20",
+      "period": "SEM1",
+      "sub_slot": "A1",
+      "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003B",
+      "prerequisite_codes": [
+        "MTHA5003B"
+      ],
+      "content_sections": {},
+      "available_years": [
+        "2027/8"
+      ]
+    },
+    {
+      "year": "Year 4U",
+      "section": "Options Range A",
+      "credit_rule": "60-80 credits",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "MTHD7032A",
       "description": "MATHEMATICAL TECHNIQUES WITH ADVANCED TOPICS",
       "assessment": "WW",
@@ -1890,15 +2087,14 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHA5005A",
-        "MTHB5010A"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "In applied mathematics, we will often model a real-life problem and obtain an integral or differential equation to solve. Sometimes we can find exact solutions to these equations, but we often need to resort to approximations. This module will teach you a range of useful techniques that can be used across a variety of applied mathematics problems.\n\nWe provide techniques for a wide range of applications, while stressing the importance of rigour in developing such techniques. The Calculus of Variations includes techniques for maximising integrals subject to constraints. A typical problem is the curve described by a heavy chain hanging under the effect of gravity. Asymptotic analysis provides a method for solving equations, or evaluating integrals, which involve small parameters, when exact results can not be found and when numerical solutions are difficult. A range of integral transforms are discussed which are useful for solving problems including integro-differential equations. This unit will include illustration of concepts using numerical investigation with MAPLE but no previous experience of using this software is assumed.\n\nFor the advanced topics, you will study further techniques in asymptotic analysis, including the method of matched asymptotic expansions and the WKB approximation."
       },
       "available_years": [
-        "2025/6"
+        "2025/6",
+        "2027/8"
       ]
     },
     {
@@ -1935,12 +2131,7 @@
       "period": "SEM2",
       "sub_slot": "C2",
       "module_rules": "",
-      "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
-        "MTHA5007Y",
-        "MTHB5007B"
-      ],
+      "prerequisite_codes": [],
       "available_years": [
         "2024/5"
       ],
@@ -1977,13 +2168,8 @@
       "sub_slot": "B2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5001Y",
-        "MTHA5003Y",
         "MTHA5003A",
-        "MTHA5003B",
-        "MTHA5004Y",
-        "MTHA5007Y",
-        "MTHB5011B"
+        "MTHA5003B"
       ],
       "available_years": [
         "2024/5"
@@ -2003,8 +2189,6 @@
       "sub_slot": "A2",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -2026,8 +2210,6 @@
       "sub_slot": "C1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -2040,35 +2222,32 @@
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester. Note students who have taken PHY-6007A cannot take PHY-7007AStudents will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "MTHE7033A",
       "description": "GROUPS AND ALGEBRA WITH ADVANCED TOPICS",
-      "assessment": "WW",
+      "assessment": "CW",
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "A1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5003A AND TAKE MTHA5003B",
       "prerequisite_codes": [
-        "MTHA5003Y",
-        "MTHA5001Y",
         "MTHA5003A",
-        "MTHA5003B",
-        "MTHA5004Y",
-        "MTHA5007Y"
+        "MTHA5003B"
       ],
       "content_sections": {
         "Module Description": "This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with.  This module is about further topics in algebra. It builds on the knowledge obtained on groups, rings and vector spaces in the first two years of your degree. Groups can be studied directly, or via objects called algebras (which have the structures of both rings and vector spaces). On the other hand, algebras can also be studied in their own right. Some of these concepts will be explored in this module. In particular, you will study the the representation theory of algebras. Algebras can have very complicated structures, and the idea of representation theory is to consider homomorphisms (special correspondences) to matrix algebras, which are easier to understand and work with."
       },
       "available_years": [
         "2024/5",
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester. Note students who have taken PHY-6007A cannot take PHY-7007AStudents will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "MTHE7034A",
       "description": "PARTIAL DIFFERENTIAL EQUATIONS WITH ADVANCED TOPICS",
       "assessment": "WW",
@@ -2077,8 +2256,6 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A AND TAKE MTHA5005B",
       "prerequisite_codes": [
-        "MTHA5002B",
-        "MTHB5011B",
         "MTHA5005A",
         "MTHA5005B"
       ],
@@ -2087,14 +2264,15 @@
       },
       "available_years": [
         "2024/5",
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester. Note students who have taken PHY-6007A cannot take PHY-7007AStudents will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "MTHE7035B",
       "description": "NUMBER THEORY WITH ADVANCED TOPICS",
       "assessment": "WW",
@@ -2111,14 +2289,15 @@
       },
       "available_years": [
         "2024/5",
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester. Note students who have taken PHY-6007A cannot take PHY-7007AStudents will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "MTHE7036B",
       "description": "FLUIDS AND WAVES WITH ADVANCED TOPICS",
       "assessment": "WW",
@@ -2127,21 +2306,21 @@
       "sub_slot": "B1",
       "module_rules": "BEFORE TAKING THIS MODULE YOU MUST TAKE MTHA5005A",
       "prerequisite_codes": [
-        "MTHA5005A",
-        "MTHB5011B"
+        "MTHA5005A"
       ],
       "content_sections": {
         "Module Description": "Fluid dynamics concerns the mathematical modelling of the flow of liquids and gases. It has wide ranging applications across nature, engineering, and biology.  Applications include understanding the behaviour of ocean waves and weather, designing efficient aircraft and ships, and describing the flow of blood around the body.\n\nWaves are a general physical phenomenon that allow the transfer of energy from one place to another without the net transfer of matter. Fluids can support waves through a variety of different mechanisms. Two common examples are gravity waves in the surface of a body of water, and sound waves travelling through compressible liquid or gas.\n\nIn this module, you will study aspects of linear and nonlinear waves using analytical techniques. You will also consider mathematical models of fluids, particularly including viscosity (or stickiness) of a fluid. Illustrated by practical examples, you will develop the governing differential Navier-Stokes equations, and then consider their solution either finding exact solutions, or using analytical techniques to obtain solutions in certain limits (for example low viscosity or high viscosity)"
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range A",
       "credit_rule": "60-80 credits",
-      "notes": "Please select your modules so that your module credit split does not exceed 70 in a single semester. Note students who have taken PHY-6007A cannot take PHY-7007AStudents will select 60-80 credits from the following modules:",
+      "notes": "Note students who have taken PHY-6007A cannot take PHY-7007A",
       "module_code": "PHY-7007A",
       "description": "RELATIVISTIC ASTROPHYSICS",
       "assessment": "WW",
@@ -2158,23 +2337,24 @@
       "available_years": [
         "2024/5",
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range B",
-      "credit_rule": "0-20 credits",
-      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058AStudents will select 0-20 credits from the following modules:",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
       "module_code": "CMP-7058A",
       "description": "ARTIFICIAL INTELLIGENCE",
-      "assessment": "CP",
+      "assessment": "WW",
       "credits": "20",
       "period": "SEM1",
-      "sub_slot": "",
+      "sub_slot": "D",
       "module_rules": "IN TAKING THIS MODULE YOU CANNOT TAKE CMP-6058A",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-6058A"
       ],
       "content_sections": {
@@ -2182,14 +2362,16 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range B",
-      "credit_rule": "0-20 credits",
-      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058AStudents will select 0-20 credits from the following modules:",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
       "module_code": "CMP-7059B",
       "description": "ADVANCED ARTIFICIAL INTELLIGENCE",
       "assessment": "CP",
@@ -2198,26 +2380,26 @@
       "sub_slot": "",
       "module_rules": "BEFORE OR WHILE TAKING THIS MODULE YOU MUST TAKE CMP-6058A OR TAKE CMP-7058A OR TAKE NMECMPMC6",
       "prerequisite_codes": [
-        "CMP-5058A",
         "CMP-6058A",
-        "CMP-7058A",
-        "CMP-7023B"
+        "CMP-7058A"
       ],
       "content_sections": {
         "Module Description": "This module, built upon the basic artificial intelligence module, will teach a range of advanced and modern methods and techniques in artificial intelligence. The main contents will include natural language processing and understanding, deep learning methods and large language models (LLM), e.g. convolutional neural networks (CNN), auto-encoder and decoder, transformer model, mixture of experts, reinforcement learning from human feedback(RLHF), Retrieval Augmented Generation(RAG), Embedding and Vector Database and the lates development and trends on Artificial General Intelligence etc.  It also covers some advanced programming libraries such as PyTorch, Tensorflow. in the laboratory exercises."
       },
       "available_years": [
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range B",
-      "credit_rule": "0-20 credits",
-      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058AStudents will select 0-20 credits from the following modules:",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
       "module_code": "ECO-7013B",
       "description": "FINANCIAL MATHEMATICS",
-      "assessment": "WW",
+      "assessment": "",
       "credits": "20",
       "period": "SEM2",
       "sub_slot": "",
@@ -2228,17 +2410,19 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     },
     {
       "year": "Year 4U",
       "section": "Options Range B",
-      "credit_rule": "0-20 credits",
-      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058AStudents will select 0-20 credits from the following modules:",
+      "credit_rule": "",
+      "notes": "Note students who have taken MTHT6005B cannot take ECO-7013B, and students who have taken CMP-6058A cannot take CMP-7058A",
       "module_code": "ENV-7003A",
       "description": "MODELLING ENVIRONMENTAL PROCESSES",
-      "assessment": "CW",
+      "assessment": "CP",
       "credits": "20",
       "period": "SEM1",
       "sub_slot": "C",
@@ -2251,7 +2435,9 @@
       },
       "available_years": [
         "2025/6",
-        "2026/7"
+        "2026/7",
+        "2027/8",
+        "2028/9"
       ]
     }
   ]
