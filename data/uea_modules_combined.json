@@ -344,7 +344,7 @@
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
-        "Module Description": "Additional details for this module are not available."
+        "Module Description": "Cryptography is the science of coding and decoding messages so as to keep these messages secure. It has been used in different forms throughout history. In the past, encryption was mainly used by a small number of individuals in positions of authority. Nowadays the universal presence of the internet and e-commerce means that we all have transactions that we need to be keep secret. The speed of modern home computers means that an encrypted message that would have been perfectly secure (that is, would have taken an inordinately long time to break) a few decades ago can now be broken in seconds. But as decryption methods have advanced, the methods of encryption have also become more sophisticated. Modern cryptosystems depend on mathematics, in particular Number Theory and Algebra. The most famous example of a public key cryptosystem, RSA, relies on the fact that it is 'hard' to factor a large number into a product of primes. In this module, you will examine the mathematics underpinning both classical and modern methods of cryptography and consider how these methods can be applied. You will compare material on symmetric key cryptography and public key cryptography. Examples of both will be given, along with discussion of their strengths and weaknesses, with the emphasis being on the mathematics. The mathematical techniques involved are primarily from Number Theory, building on the modular arithmetic you learn in 1st year to study simultaneous linear congruences and quadratic congruences, including the famous theorem of Quadratic Reciprocity. You will look at how prime numbers can be used in cryptography, with material on primality testing and factorisation."
       },
       "available_years": [
         "2026/7",
@@ -1084,7 +1084,7 @@
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
-        "Module Description": "Additional details for this module are not available."
+        "Module Description": "Cryptography is the science of coding and decoding messages so as to keep these messages secure. It has been used in different forms throughout history. In the past, encryption was mainly used by a small number of individuals in positions of authority. Nowadays the universal presence of the internet and e-commerce means that we all have transactions that we need to be keep secret. The speed of modern home computers means that an encrypted message that would have been perfectly secure (that is, would have taken an inordinately long time to break) a few decades ago can now be broken in seconds. But as decryption methods have advanced, the methods of encryption have also become more sophisticated. Modern cryptosystems depend on mathematics, in particular Number Theory and Algebra. The most famous example of a public key cryptosystem, RSA, relies on the fact that it is 'hard' to factor a large number into a product of primes. In this module, you will examine the mathematics underpinning both classical and modern methods of cryptography and consider how these methods can be applied. You will compare material on symmetric key cryptography and public key cryptography. Examples of both will be given, along with discussion of their strengths and weaknesses, with the emphasis being on the mathematics. The mathematical techniques involved are primarily from Number Theory, building on the modular arithmetic you learn in 1st year to study simultaneous linear congruences and quadratic congruences, including the famous theorem of Quadratic Reciprocity. You will look at how prime numbers can be used in cryptography, with material on primality testing and factorisation."
       },
       "available_years": [
         "2026/7",
@@ -1981,7 +1981,7 @@
       "module_rules": "",
       "prerequisite_codes": [],
       "content_sections": {
-        "Module Description": "Additional details for this module are not available."
+        "Module Description": "This Masters level module provides experience in learning a topic in pure mathematics at a level preparatory to doing mathematics research.\n\nYou will be assigned reading and associated written problems and assignments each week, and at a weekly meeting you will present and discuss the mathematics you have covered with the Module Organiser. The Module Organiser will also give feedback on the written assignments.\n\nLearning Outcomes:\nIn studying this module you should:\n- Get experience in reading, presenting and discussing mathematics at a level approaching current research topics.\n- Learn to write mathematics in the appropriate style and with the level of precision needed at research level.\n- Get a deep understanding of a particular topic in research-level pure mathematics."
       },
       "available_years": [
         "2026/7",
